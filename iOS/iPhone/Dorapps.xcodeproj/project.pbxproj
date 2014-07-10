@@ -1594,6 +1594,7 @@
 				694BDBB1196ED7B100E60CF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		694BDBB2196ED7B100E60CF1 /* Build configuration list for PBXNativeTarget "DorappsTests" */ = {
 			isa = XCConfigurationList;
@@ -1602,6 +1603,7 @@
 				694BDBB4196ED7B100E60CF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		694BDD45196EDCF100E60CF1 /* Build configuration list for PBXAggregateTarget "CoreFrameWork" */ = {
 			isa = XCConfigurationList;
@@ -1610,6 +1612,7 @@
 				694BDD47196EDCF100E60CF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
