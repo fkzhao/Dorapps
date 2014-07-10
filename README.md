@@ -1,4 +1,4 @@
 Dorapps
 =======
 
-Dorapps iOS Client &amp; Server
+About Dorapps. 
