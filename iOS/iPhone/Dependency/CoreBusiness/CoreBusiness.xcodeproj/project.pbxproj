@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		693CAFE2195D0D9800518DAC /* FBExaminationSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CAFE1195D0D9800518DAC /* FBExaminationSender.m */; };
+		693CAFE6195D0DB100518DAC /* FBSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CAFE5195D0DB100518DAC /* FBSender.m */; };
+		693CAFF4195D11F700518DAC /* FBExaminationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CAFF3195D11F700518DAC /* FBExaminationRequest.m */; };
+		693CAFF7195D121100518DAC /* FBExaminationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CAFF6195D121100518DAC /* FBExaminationResponse.m */; };
+		693CAFFF195D5BE500518DAC /* FBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CAFFE195D5BE500518DAC /* FBModel.m */; };
+		693CB002195D5BF900518DAC /* FBCacheBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CB001195D5BF900518DAC /* FBCacheBean.m */; };
+		693CB007195D5C6B00518DAC /* FBViewCacheBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CB006195D5C6B00518DAC /* FBViewCacheBean.m */; };
+		693CB011195D60D600518DAC /* FBServiceStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CB010195D60D600518DAC /* FBServiceStatusModel.m */; };
+		693CB014195D63AD00518DAC /* FBBaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CB013195D63AD00518DAC /* FBBaseResponse.m */; };
+		6979585E195945960017D864 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6979585D195945960017D864 /* Foundation.framework */; };
+		69795863195945960017D864 /* CoreBusiness.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69795862195945960017D864 /* CoreBusiness.h */; };
+		69795865195945960017D864 /* CoreBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 69795864195945960017D864 /* CoreBusiness.m */; };
+		69A42FE3195B409A00670DD1 /* libCoreNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A42FE2195B409A00670DD1 /* libCoreNetWork.a */; };
+		69B77BA9195FCBF600EB8D0D /* FBServiceResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B77BA8195FCBF600EB8D0D /* FBServiceResultModel.m */; };
+		69B77BAC195FCC1A00EB8D0D /* FBServiceCallBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B77BAB195FCC1A00EB8D0D /* FBServiceCallBack.m */; };
+		69B77BAF195FCC8300EB8D0D /* FBHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B77BAE195FCC8300EB8D0D /* FBHomeModel.m */; };
+		69B77BB7195FCEBA00EB8D0D /* FBServiceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B77BB6195FCEBA00EB8D0D /* FBServiceUtil.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		69795858195945960017D864 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				69795863195945960017D864 /* CoreBusiness.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		693CAFE0195D0D9800518DAC /* FBExaminationSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBExaminationSender.h; sourceTree = "<group>"; };
+		693CAFE1195D0D9800518DAC /* FBExaminationSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBExaminationSender.m; sourceTree = "<group>"; };
+		693CAFE4195D0DB100518DAC /* FBSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSender.h; sourceTree = "<group>"; };
+		693CAFE5195D0DB100518DAC /* FBSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSender.m; sourceTree = "<group>"; };
+		693CAFF2195D11F700518DAC /* FBExaminationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBExaminationRequest.h; sourceTree = "<group>"; };
+		693CAFF3195D11F700518DAC /* FBExaminationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBExaminationRequest.m; sourceTree = "<group>"; };
+		693CAFF5195D121100518DAC /* FBExaminationResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBExaminationResponse.h; sourceTree = "<group>"; };
+		693CAFF6195D121100518DAC /* FBExaminationResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBExaminationResponse.m; sourceTree = "<group>"; };
+		693CAFFD195D5BE500518DAC /* FBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBModel.h; sourceTree = "<group>"; };
+		693CAFFE195D5BE500518DAC /* FBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBModel.m; sourceTree = "<group>"; };
+		693CB000195D5BF900518DAC /* FBCacheBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCacheBean.h; sourceTree = "<group>"; };
+		693CB001195D5BF900518DAC /* FBCacheBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCacheBean.m; sourceTree = "<group>"; };
+		693CB005195D5C6B00518DAC /* FBViewCacheBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBViewCacheBean.h; sourceTree = "<group>"; };
+		693CB006195D5C6B00518DAC /* FBViewCacheBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBViewCacheBean.m; sourceTree = "<group>"; };
+		693CB00F195D60D600518DAC /* FBServiceStatusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBServiceStatusModel.h; sourceTree = "<group>"; };
+		693CB010195D60D600518DAC /* FBServiceStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBServiceStatusModel.m; sourceTree = "<group>"; };
+		693CB012195D63AD00518DAC /* FBBaseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBBaseResponse.h; sourceTree = "<group>"; };
+		693CB013195D63AD00518DAC /* FBBaseResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBBaseResponse.m; sourceTree = "<group>"; };
+		6979585A195945960017D864 /* libCoreBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreBusiness.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6979585D195945960017D864 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		69795861195945960017D864 /* CoreBusiness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreBusiness-Prefix.pch"; sourceTree = "<group>"; };
+		69795862195945960017D864 /* CoreBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreBusiness.h; sourceTree = "<group>"; };
+		69795864195945960017D864 /* CoreBusiness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreBusiness.m; sourceTree = "<group>"; };
+		6979586B195945960017D864 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6979586E195945960017D864 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		69A42FE2195B409A00670DD1 /* libCoreNetWork.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCoreNetWork.a; path = "../CoreNetWork/build/Debug-iphoneos/libCoreNetWork.a"; sourceTree = "<group>"; };
+		69B77BA7195FCBF600EB8D0D /* FBServiceResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBServiceResultModel.h; sourceTree = "<group>"; };
+		69B77BA8195FCBF600EB8D0D /* FBServiceResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBServiceResultModel.m; sourceTree = "<group>"; };
+		69B77BAA195FCC1A00EB8D0D /* FBServiceCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBServiceCallBack.h; sourceTree = "<group>"; };
+		69B77BAB195FCC1A00EB8D0D /* FBServiceCallBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBServiceCallBack.m; sourceTree = "<group>"; };
+		69B77BAD195FCC8300EB8D0D /* FBHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBHomeModel.h; sourceTree = "<group>"; };
+		69B77BAE195FCC8300EB8D0D /* FBHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBHomeModel.m; sourceTree = "<group>"; };
+		69B77BB5195FCEBA00EB8D0D /* FBServiceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBServiceUtil.h; sourceTree = "<group>"; };
+		69B77BB6195FCEBA00EB8D0D /* FBServiceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBServiceUtil.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69795857195945960017D864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A42FE3195B409A00670DD1 /* libCoreNetWork.a in Frameworks */,
+				6979585E195945960017D864 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		693CAFDA195D0C3500518DAC /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				69B77BB3195FCEA600EB8D0D /* Extern */,
+				693CAFE3195D0DB100518DAC /* Base */,
+				693CB004195D5C1800518DAC /* Model */,
+				693CAFDB195D0C3500518DAC /* Sender */,
+				693CAFED195D118D00518DAC /* Request */,
+				693CAFEE195D118D00518DAC /* Response */,
+				693CB003195D5C1800518DAC /* CacheBean */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		693CAFDB195D0C3500518DAC /* Sender */ = {
+			isa = PBXGroup;
+			children = (
+				693CAFE0195D0D9800518DAC /* FBExaminationSender.h */,
+				693CAFE1195D0D9800518DAC /* FBExaminationSender.m */,
+			);
+			path = Sender;
+			sourceTree = "<group>";
+		};
+		693CAFE3195D0DB100518DAC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				693CAFE4195D0DB100518DAC /* FBSender.h */,
+				693CAFE5195D0DB100518DAC /* FBSender.m */,
+				693CAFFD195D5BE500518DAC /* FBModel.h */,
+				693CAFFE195D5BE500518DAC /* FBModel.m */,
+				693CB000195D5BF900518DAC /* FBCacheBean.h */,
+				693CB001195D5BF900518DAC /* FBCacheBean.m */,
+				693CB00F195D60D600518DAC /* FBServiceStatusModel.h */,
+				693CB010195D60D600518DAC /* FBServiceStatusModel.m */,
+				69B77BA7195FCBF600EB8D0D /* FBServiceResultModel.h */,
+				69B77BA8195FCBF600EB8D0D /* FBServiceResultModel.m */,
+				69B77BAA195FCC1A00EB8D0D /* FBServiceCallBack.h */,
+				69B77BAB195FCC1A00EB8D0D /* FBServiceCallBack.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		693CAFED195D118D00518DAC /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				693CAFF2195D11F700518DAC /* FBExaminationRequest.h */,
+				693CAFF3195D11F700518DAC /* FBExaminationRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		693CAFEE195D118D00518DAC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				693CB012195D63AD00518DAC /* FBBaseResponse.h */,
+				693CB013195D63AD00518DAC /* FBBaseResponse.m */,
+				693CAFF5195D121100518DAC /* FBExaminationResponse.h */,
+				693CAFF6195D121100518DAC /* FBExaminationResponse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		693CB003195D5C1800518DAC /* CacheBean */ = {
+			isa = PBXGroup;
+			children = (
+				693CB005195D5C6B00518DAC /* FBViewCacheBean.h */,
+				693CB006195D5C6B00518DAC /* FBViewCacheBean.m */,
+			);
+			path = CacheBean;
+			sourceTree = "<group>";
+		};
+		693CB004195D5C1800518DAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				69B77BAD195FCC8300EB8D0D /* FBHomeModel.h */,
+				69B77BAE195FCC8300EB8D0D /* FBHomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		69795851195945960017D864 = {
+			isa = PBXGroup;
+			children = (
+				6979585F195945960017D864 /* CoreBusiness */,
+				6979585C195945960017D864 /* Frameworks */,
+				6979585B195945960017D864 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6979585B195945960017D864 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6979585A195945960017D864 /* libCoreBusiness.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6979585C195945960017D864 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69A42FE2195B409A00670DD1 /* libCoreNetWork.a */,
+				6979585D195945960017D864 /* Foundation.framework */,
+				6979586B195945960017D864 /* XCTest.framework */,
+				6979586E195945960017D864 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6979585F195945960017D864 /* CoreBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				693CAFDA195D0C3500518DAC /* Class */,
+				69795862195945960017D864 /* CoreBusiness.h */,
+				69795864195945960017D864 /* CoreBusiness.m */,
+				69795860195945960017D864 /* Supporting Files */,
+			);
+			path = CoreBusiness;
+			sourceTree = "<group>";
+		};
+		69795860195945960017D864 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69795861195945960017D864 /* CoreBusiness-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69B77BB3195FCEA600EB8D0D /* Extern */ = {
+			isa = PBXGroup;
+			children = (
+				69B77BB4195FCEA600EB8D0D /* Utils */,
+			);
+			path = Extern;
+			sourceTree = "<group>";
+		};
+		69B77BB4195FCEA600EB8D0D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				69B77BB5195FCEBA00EB8D0D /* FBServiceUtil.h */,
+				69B77BB6195FCEBA00EB8D0D /* FBServiceUtil.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69795859195945960017D864 /* CoreBusiness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6979587D195945960017D864 /* Build configuration list for PBXNativeTarget "CoreBusiness" */;
+			buildPhases = (
+				69795856195945960017D864 /* Sources */,
+				69795857195945960017D864 /* Frameworks */,
+				69795858195945960017D864 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreBusiness;
+			productName = CoreBusiness;
+			productReference = 6979585A195945960017D864 /* libCoreBusiness.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69795852195945960017D864 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "";
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = NeoWork;
+			};
+			buildConfigurationList = 69795855195945960017D864 /* Build configuration list for PBXProject "CoreBusiness" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 69795851195945960017D864;
+			productRefGroup = 6979585B195945960017D864 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69795859195945960017D864 /* CoreBusiness */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69795856195945960017D864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B77BAC195FCC1A00EB8D0D /* FBServiceCallBack.m in Sources */,
+				693CB002195D5BF900518DAC /* FBCacheBean.m in Sources */,
+				693CAFF7195D121100518DAC /* FBExaminationResponse.m in Sources */,
+				693CAFE6195D0DB100518DAC /* FBSender.m in Sources */,
+				693CAFFF195D5BE500518DAC /* FBModel.m in Sources */,
+				693CB014195D63AD00518DAC /* FBBaseResponse.m in Sources */,
+				693CB011195D60D600518DAC /* FBServiceStatusModel.m in Sources */,
+				69B77BAF195FCC8300EB8D0D /* FBHomeModel.m in Sources */,
+				693CAFE2195D0D9800518DAC /* FBExaminationSender.m in Sources */,
+				69795865195945960017D864 /* CoreBusiness.m in Sources */,
+				693CB007195D5C6B00518DAC /* FBViewCacheBean.m in Sources */,
+				69B77BB7195FCEBA00EB8D0D /* FBServiceUtil.m in Sources */,
+				69B77BA9195FCBF600EB8D0D /* FBServiceResultModel.m in Sources */,
+				693CAFF4195D11F700518DAC /* FBExaminationRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6979587B195945960017D864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6979587C195945960017D864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6979587E195945960017D864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/CoreBusiness.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoreBusiness/CoreBusiness-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Anselz/Documents/Github/FootBook/iOS/trunk/CoreNetWork/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "../CoreNetWork/CoreNetWork/**";
+			};
+			name = Debug;
+		};
+		6979587F195945960017D864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/CoreBusiness.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoreBusiness/CoreBusiness-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Anselz/Documents/Github/FootBook/iOS/trunk/CoreNetWork/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "../CoreNetWork/CoreNetWork/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69795855195945960017D864 /* Build configuration list for PBXProject "CoreBusiness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6979587B195945960017D864 /* Debug */,
+				6979587C195945960017D864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6979587D195945960017D864 /* Build configuration list for PBXNativeTarget "CoreBusiness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6979587E195945960017D864 /* Debug */,
+				6979587F195945960017D864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69795852195945960017D864 /* Project object */;
+}
