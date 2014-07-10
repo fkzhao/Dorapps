@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  APPVV
+
+  Created by Anselz on 14-7-8.
+  Copyright (c) 2014年 NeoWork. All rights reserved.
+*/
+
+Navigation_Title = "首页";
+
+Navigation_Title_Hot = "热门";
+Navigation_Title_Manager = "管理";
+Navigation_Title_Search = "搜索";
+Navigation_Title_More = "设置";
+
+
+UIViewController_More_Share = "分享给好友";
+UIViewController_More_Language = "语言";
+UIViewController_More_Setting = "设置";
+UIViewController_More_About = "关于我们";
+UIViewController_More_Feedback = "意见反馈";
+UIViewController_More_Footer = "哆啦 V1.0";
+
+
+UIViewController_Manager_Downloaded = "已下载";
+UIViewController_Manager_Installed = "已安装";
+UIViewController_Manager_Downloading = "正在下载";
+UIViewController_Manager_Update = "需要更新";

@@ -1,0 +1,105 @@
+//
+//  NWDownloadingView.m
+//  APPVV
+//
+//  Created by Anselz on 14-7-8.
+//  Copyright (c) 2014年 NeoWork. All rights reserved.
+//
+
+#import "NWDownloadingView.h"
+#import "NWDownloadTableViewCell.h"
+#import "NWTableViewCellUtil.h"
+
+@interface NWDownloadingView ()<UITableViewDataSource,UITableViewDelegate>
+{
+    NSMutableArray *_dataSources;
+}
+
+@property (nonatomic,strong)UITableView *mainTableView;
+
+@end
+
+@implementation NWDownloadingView
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        [self initData];
+    }
+    return self;
+}
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+        [self initView];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self initData];
+    }
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self initView];
+}
+
+-(void)initView
+{
+    if (!_mainTableView) {
+        CGRect frame = self.bounds;
+        frame.size.height = frame.size.height - 110;
+        _mainTableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStylePlain];
+        _mainTableView.dataSource = self;
+        _mainTableView.delegate = self;
+        [self addSubview:_mainTableView];
+    }
+}
+
+-(void)initData
+{
+    _dataSources = [[NSMutableArray alloc]initWithCapacity:0];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _dataSources.count+3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100.0f;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NWDownloadTableViewCell *cell = (NWDownloadTableViewCell *)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([NWDownloadTableViewCell class])];
+    if (cell == nil) {
+        cell = (NWDownloadTableViewCell *)[NWTableViewCellUtil loadCell:NSStringFromClass([NWDownloadTableViewCell class]) atIndex:0];
+    }
+    if (indexPath.row == 0) {
+        cell.appName.text = @"WeiBo";
+        cell.iconImageView.image = [UIImage imageNamed:@"4"];
+    } else {
+        cell.appName.text = @"WeChat";
+        cell.iconImageView.image = [UIImage imageNamed:@"3"];
+    }
+    [cell downloadTask:@"http://yinyueshiting.baidu.com/data2/music/121330215/12012502946800320.mp3?xcode=bc68c93bacb84595e67782b6c5192fc96aab90821b0a46c7" withIndexPath:indexPath];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+@end
