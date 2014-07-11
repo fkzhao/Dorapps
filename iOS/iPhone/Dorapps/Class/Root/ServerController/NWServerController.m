@@ -9,6 +9,7 @@
 #import "NWServerController.h"
 #import "NWRootViewController.h"
 #import "NWServiceUtil.h"
+#import "NWViewCacheBeanManager.h"
 
 @interface NWServerController (){
     
@@ -104,8 +105,7 @@
         NWRootViewController *nextVC = [[nextClass alloc]init];
         self.nextPage = nextVC;
         self.nextPage.viewCacheBean = nextPageCahceBean;
-//        CTCacheBeanResultQueue *queue = [[CTViewCacheManage shareInstance] getCacheQueueWithToken:model_queue.resultToke];
-//        [queue put:nextPageCahceBean];
+        [NWViewCacheBeanManager setViewCacheBean:nextPageCahceBean withToken:model_queue.resultToke];
         NWRootViewController *currentPage = (NWRootViewController *)self.owner;
         [currentPage pushViewController:self.nextPage animated:YES];
     }

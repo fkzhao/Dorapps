@@ -10,7 +10,7 @@
 #define CoreBusiness_NWURLDefine_h
 
 #define NWGlobalHotAppListURL       @"http://app.dorapps.com/api/iphone/home_page";
-#define NWGlobalAppDetailURL        @"http://app.dorapps.com/api/app/detail?id=";
+#define NWGlobalAppDetailURL        @"http://app.dorapps.com/api/app/detail";
 
 
 #endif

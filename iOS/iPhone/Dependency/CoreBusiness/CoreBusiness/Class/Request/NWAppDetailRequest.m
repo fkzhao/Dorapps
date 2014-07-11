@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         self.urlString = NWGlobalAppDetailURL;
+        self.appID = @"";
     }
     return self;
 }
@@ -26,6 +27,11 @@
         _appID = nil;
     }
     _appID = appID;
-    self.urlString = [NSString stringWithFormat:@"%@%@",self.urlString,_appID];
+}
+
+-(void)assemblyRequestParametersDictionary
+{
+    [self.parametersDic removeAllObjects];
+    [self.parametersDic setObject:_appID forKey:@"id"];
 }
 @end

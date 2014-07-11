@@ -52,7 +52,8 @@
     NWServiceCallBack *callBack = [[NWServiceCallBack alloc]init];
     ServiceSuccessMethod successMethod = ^(NWRequest *request,NWResponse *response)
     {
-        NSLog(@"%@",response.token);
+        NWViewCacheBean *cacheBean = [NWViewCacheBeanManager getViewCacheBean:resultModel.resultToke];
+        [cacheBean assemblyViewCacheBean:response.responseDictory];
         return YES;
     };
     ServiceFailMethod failMethod = ^(NWRequest *request,NWResponse *response)

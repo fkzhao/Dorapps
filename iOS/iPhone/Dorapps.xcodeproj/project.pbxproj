@@ -809,15 +809,15 @@
 		694BDC5A196ED80700E60CF1 /* Hot */ = {
 			isa = PBXGroup;
 			children = (
+				694BDC61196ED80700E60CF1 /* NWHotViewController.h */,
+				694BDC62196ED80700E60CF1 /* NWHotViewController.m */,
+				694BDC63196ED80700E60CF1 /* NWHotViewController.xib */,
 				694BDC5B196ED80700E60CF1 /* NWBannerTableViewCell.h */,
 				694BDC5C196ED80700E60CF1 /* NWBannerTableViewCell.m */,
 				694BDC5D196ED80700E60CF1 /* NWBannerTableViewCell.xib */,
 				694BDC5E196ED80700E60CF1 /* NWHotTableViewCell.h */,
 				694BDC5F196ED80700E60CF1 /* NWHotTableViewCell.m */,
 				694BDC60196ED80700E60CF1 /* NWHotTableViewCell.xib */,
-				694BDC61196ED80700E60CF1 /* NWHotViewController.h */,
-				694BDC62196ED80700E60CF1 /* NWHotViewController.m */,
-				694BDC63196ED80700E60CF1 /* NWHotViewController.xib */,
 				694BDC64196ED80700E60CF1 /* NWViewController.h */,
 				694BDC65196ED80700E60CF1 /* NWViewController.m */,
 				694BDC66196ED80700E60CF1 /* NWViewController.xib */,
