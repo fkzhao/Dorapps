@@ -9,7 +9,7 @@
 #import "NWToolBarView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "NWStringUtil.h"
-#import "NWDefine.h"
+#import "NWUIDefine.h"
 
 #define ICON_SIZE CGRectMake(27, 4, 25, 25)
 

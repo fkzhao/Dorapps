@@ -1,19 +1,18 @@
 //
-//  FBServiceUtil.m
+//  NWServiceUtil.m
 //  CoreBusiness
 //
-//  Created by Anselz on 14-6-29.
+//  Created by Anselz (@Janselz) on 14-7-11.
 //  Copyright (c) 2014年 NeoWork. All rights reserved.
 //
 
-#import "FBServiceUtil.h"
+#import "NWServiceUtil.h"
 
-@implementation FBServiceUtil
-
-+(FBServiceStatusModel *) fetchServiceStatusModel:(NSString *)token
+@implementation NWServiceUtil
++(NWServiceStatusModel *) fetchServiceStatusModel:(NSString *)token
 {
     NWServiceResultBlock *block = [[NWRequestQueue ShareQueue] getServiceReslutBlock:token];
-    FBServiceStatusModel *mainServiceModel = [block getServiceResultModel];
+    NWServiceStatusModel *mainServiceModel = [block getServiceResultModel];
     return mainServiceModel;
 }
 

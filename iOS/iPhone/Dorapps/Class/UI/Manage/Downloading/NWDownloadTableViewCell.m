@@ -162,7 +162,7 @@
 -(void)downloadTask:(NSString *)url withIndexPath:(NSIndexPath *)indexPath;
 {
     
-    NSString *key = [NSString stringWithFormat:@"Section%iRow%i",indexPath.section,indexPath.row];
+    NSString *key = [NSString stringWithFormat:@"Section%liRow%li",(long)indexPath.section,(long)indexPath.row];
     if ([[NWCellDownloadModelManager shareObjc]hasDownloadeModel:key]) {
         self.currentModel = [[NWCellDownloadModelManager shareObjc] getDownloadModel:key];
     } else {

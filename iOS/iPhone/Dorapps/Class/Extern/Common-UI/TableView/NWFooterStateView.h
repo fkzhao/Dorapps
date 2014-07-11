@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NWDefine.h"
+#import "NWUIDefine.h"
 
 #define kXHLoadMoreViewHeight 50
 

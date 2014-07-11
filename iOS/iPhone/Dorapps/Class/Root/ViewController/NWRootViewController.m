@@ -39,7 +39,7 @@
 }
 
 -(void)initBaseData{
-    serviceController_ = [[CTServerController alloc]init];
+    serviceController_ = [[NWServerController alloc]init];
     serviceController_.owner = self;
     self.mutexServicetoken = @"";
 }
@@ -91,15 +91,16 @@
  @param sBlocks                服务成功回调模块
  @param fBlocks                服务失败回调模块
  */
-//- (void)goToNextPageWithModel:(CTSenderResultModel *)model_queue
-//                    cacheBean:(CTViewCacheBean *)cacheBean
-//                    saveParam:(NSString *)saveParam
-//                nextPageClass:(Class)nextClass
-//                successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
-//                 failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
-//{
-//    [self goToNextPageWithModel:model_queue withMutaxArray:nil cacheBean:cacheBean saveParam:saveParam nextPageClass:nextClass successBlocks:sBlocks failedBlocks:fBlocks];
-//}
+- (void)goToNextPageWithModel:(NWSenderResultModel *)model_queue
+                    cacheBean:(NWViewCacheBean *)cacheBean
+                    saveParam:(NSString *)saveParam
+                nextPageClass:(Class)nextClass
+                successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
+                 failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
+{
+    [self goToNextPageWithModel:model_queue withMutaxArray:nil cacheBean:cacheBean saveParam:saveParam nextPageClass:nextClass successBlocks:sBlocks failedBlocks:fBlocks];
+}
+
 /**
  进入下一级页面 带互斥 接口二
  
@@ -111,18 +112,18 @@
  @param sBlocks                服务成功回调模块
  @param fBlocks                服务失败回调模块
  */
-//- (void)goToNextPageWithModel:(CTSenderResultModel *)model_queue
-//               withMutaxArray:(NSArray *)mutaxTokenArray
-//                    cacheBean:(CTViewCacheBean *)cacheBean
-//                    saveParam:(NSString *)saveParam
-//                nextPageClass:(Class)nextClass
-//                successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
-//                 failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
-//{
-//    [self goToNextPageWithModel:model_queue withMutaxArray:mutaxTokenArray cacheBean:cacheBean saveParam:saveParam nextPageClass:nextClass createNextPageCache:^CTViewCacheBean *{
-//        return nil;
-//    } successBlocks:sBlocks failedBlocks:fBlocks];
-//}
+- (void)goToNextPageWithModel:(NWSenderResultModel *)model_queue
+               withMutaxArray:(NSArray *)mutaxTokenArray
+                    cacheBean:(NWViewCacheBean *)cacheBean
+                    saveParam:(NSString *)saveParam
+                nextPageClass:(Class)nextClass
+                successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
+                 failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
+{
+    [self goToNextPageWithModel:model_queue withMutaxArray:mutaxTokenArray cacheBean:cacheBean saveParam:saveParam nextPageClass:nextClass createNextPageCache:^NWViewCacheBean *{
+        return nil;
+    } successBlocks:sBlocks failedBlocks:fBlocks];
+}
 
 /**
  进入下一级页面 接口三
@@ -137,17 +138,16 @@
  @param sBlocks                服务成功回调模块
  @param fBlocks                服务失败回调模块
  */
-#warning ---------ERROR----
-//- (void)goToNextPageWithModel:(CTSenderResultModel *)model_queue
-//                    cacheBean:(CTViewCacheBean *)cacheBean
-//                    saveParam:(NSString *)saveParam
-//                nextPageClass:(Class)nextClass
-//          createNextPageCache:(CTViewCacheBean *(^)(void))createBlock
-//                successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
-//                 failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
-//{
-//    [self goToNextPageWithModel:model_queue withMutaxArray:nil cacheBean:cacheBean saveParam:saveParam nextPageClass:nextClass createNextPageCache:createBlock successBlocks:sBlocks failedBlocks:fBlocks];
-//}
+- (void)goToNextPageWithModel:(NWSenderResultModel *)model_queue
+                    cacheBean:(NWViewCacheBean *)cacheBean
+                    saveParam:(NSString *)saveParam
+                nextPageClass:(Class)nextClass
+          createNextPageCache:(NWViewCacheBean *(^)(void))createBlock
+                successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
+                 failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
+{
+    [self goToNextPageWithModel:model_queue withMutaxArray:nil cacheBean:cacheBean saveParam:saveParam nextPageClass:nextClass createNextPageCache:createBlock successBlocks:sBlocks failedBlocks:fBlocks];
+}
 /**
  进入下一级页面 原始接口（也可以做互斥接口）
  mutextTokenArray = nil;isShowLoading = YES;isShowCancel = YES;isShowErrorInfo = YES;animateType = eAnimateTypeControllerPush;
@@ -161,17 +161,16 @@
  @param sBlocks                服务成功回调模块
  @param fBlocks                服务失败回调模块
  */
-#warning ---------ERROR----
-//- (void)goToNextPageWithModel:(CTSenderResultModel *)model_queue
-//               withMutaxArray:(NSArray *)mutaxTokenArray
-//                    cacheBean:(CTViewCacheBean *)cacheBean
-//                    saveParam:(NSString *)saveParam
-//                nextPageClass:(Class)nextClass
-//          createNextPageCache:(CTViewCacheBean *(^)(void))createBlock
-//                successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
-//                 failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks{
-//    [self.serviceController goTargetWithModel:model_queue withMutaxArray:mutaxTokenArray cacheBean:cacheBean saveParam:saveParam nextPageCahceBean:createBlock() nextPageClass:nextClass successBlocks:sBlocks failedBlocks:fBlocks];
-//}
+- (void)goToNextPageWithModel:(NWSenderResultModel *)model_queue
+               withMutaxArray:(NSArray *)mutaxTokenArray
+                    cacheBean:(NWViewCacheBean *)cacheBean
+                    saveParam:(NSString *)saveParam
+                nextPageClass:(Class)nextClass
+          createNextPageCache:(NWViewCacheBean *(^)(void))createBlock
+                successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
+                 failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks{
+    [self.serviceController goTargetWithModel:model_queue withMutaxArray:mutaxTokenArray cacheBean:cacheBean saveParam:saveParam nextPageCahceBean:createBlock() nextPageClass:nextClass successBlocks:sBlocks failedBlocks:fBlocks];
+}
 
 
 
@@ -184,13 +183,12 @@
  @param sBlocks                服务成功回调模块
  @param fBlocks                服务失败回调模块
  */
-#warning ---------ERROR----
-//- (void)goToInsidePageWithModel:(CTSenderResultModel *)model_queue
-//                  successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
-//                   failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
-//{
-//    [self goToInsidePageWithModel:model_queue cacheBean:self.viewCacheBean successBlocks:sBlocks failedBlocks:fBlocks];
-//}
+- (void)goToInsidePageWithModel:(NWSenderResultModel *)model_queue
+                  successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
+                   failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
+{
+    [self goToInsidePageWithModel:model_queue cacheBean:self.viewCacheBean successBlocks:sBlocks failedBlocks:fBlocks];
+}
 /**
  当前页面发送服服务 接口二
  
@@ -199,14 +197,13 @@
  @param sBlocks                服务成功回调模块
  @param fBlocks                服务失败回调模块
  */
-#warning ---------ERROR----
-//- (void)goToInsidePageWithModel:(CTSenderResultModel *)model_queue
-//                      cacheBean:(CTViewCacheBean *)cacheBean
-//                  successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
-//                   failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
-//{
-//    [self goToInsidePageWithModel:model_queue withMutaxArray:nil cacheBean:cacheBean successBlocks:sBlocks failedBlocks:fBlocks];
-//}
+- (void)goToInsidePageWithModel:(NWSenderResultModel *)model_queue
+                      cacheBean:(NWViewCacheBean *)cacheBean
+                  successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
+                   failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
+{
+    [self goToInsidePageWithModel:model_queue withMutaxArray:nil cacheBean:cacheBean successBlocks:sBlocks failedBlocks:fBlocks];
+}
 
 /**
  当前页面发送服服务 原始
@@ -216,18 +213,18 @@
  @param sBlocks                服务成功回调模块
  @param fBlocks                服务失败回调模块
  */
-#warning ---------ERROR----
-//- (void)goToInsidePageWithModel:(CTSenderResultModel *)model_queue
-//                 withMutaxArray:(NSArray *)mutaxTokenArray
-//                      cacheBean:(CTViewCacheBean *)cacheBean
-//                  successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
-//                   failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
-//{
-//    self.viewCacheBean = cacheBean;
+- (void)goToInsidePageWithModel:(NWSenderResultModel *)model_queue
+                 withMutaxArray:(NSArray *)mutaxTokenArray
+                      cacheBean:(NWViewCacheBean *)cacheBean
+                  successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
+                   failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
+{
+    self.viewCacheBean = cacheBean;
+#warning -------取CacheBean地方是否需要阻塞------
 //    CTCacheBeanResultQueue *queue = [[CTViewCacheManage shareInstance] getCacheQueueWithToken:model_queue.resultToke];
 //    [queue put:self.viewCacheBean];
-//    [self.serviceController goToInsidePageWithModel:model_queue withMutaxArray:mutaxTokenArray successBlocks:sBlocks failedBlocks:fBlocks];
-//}
+    [self.serviceController goToInsidePageWithModel:model_queue withMutaxArray:mutaxTokenArray successBlocks:sBlocks failedBlocks:fBlocks];
+}
 
 
 

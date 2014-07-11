@@ -6,14 +6,13 @@
 //  Copyright (c) 2014年 NeoWork. All rights reserved.
 //
 
-#warning ---------ERROR----
-//#import "CTViewCacheBean.h"
+#import "NWViewCacheBean.h"
 #import "NWDetailInfoModel.h"
 #import "NWDetailIntroductModel.h"
 #import "NWDtailInterestModel.h"
 #import "NWAppHistoryModel.h"
 
-@interface NWDetailViewCacheBean :NSObject
+@interface NWDetailViewCacheBean :NWViewCacheBean
 
 @property (nonatomic,strong) NSString *appID;
 

@@ -1,17 +1,17 @@
 //
-//  FBServiceUtil.h
+//  NWServiceUtil.h
 //  CoreBusiness
 //
-//  Created by Anselz on 14-6-29.
+//  Created by Anselz (@Janselz) on 14-7-11.
 //  Copyright (c) 2014年 NeoWork. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "FBServiceStatusModel.h"
+#import "NWServiceStatusModel.h"
 #import "NWServiceResultBlock.h"
 #import "NWRequestQueue.h"
 
-@interface FBServiceUtil : NSObject
-+(FBServiceStatusModel *) fetchServiceStatusModel:(NSString *)token ;
+@interface NWServiceUtil : NSObject
++(NWServiceStatusModel *) fetchServiceStatusModel:(NSString *)token ;
 +(void)cancelServiceWith:(NSString *)token;
 @end

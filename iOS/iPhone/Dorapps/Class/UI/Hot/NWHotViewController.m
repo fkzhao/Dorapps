@@ -48,17 +48,16 @@
 }
 
 -(void)initView {
-#warning ---------ERROR----
-//    NWHotSender *sender = [[NWHotSender alloc]init];
-//    [self registerLoadingView];
-//    NWHotViewCacheBean *cache = [[NWHotViewCacheBean alloc]init];
-//    CTSenderResultModel *reslutModel = [sender sendGetHotAppList];
-//    [self goToInsidePageWithModel:reslutModel cacheBean:cache successBlocks:^(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject) {
-//        cacheBean = (NWHotViewCacheBean *)self.viewCacheBean;
-//        [self.mainTableView reloadData];
-//    } failedBlocks:^(NSString *businessCode, NSString *errorInformation, id goToPageObject) {
-//        NSLog(@"failed");
-//    }];
+    NWHotSender *sender = [[NWHotSender alloc]init];
+    [self registerLoadingView];
+    NWHotViewCacheBean *cache = [[NWHotViewCacheBean alloc]init];
+    NWSenderResultModel *reslutModel = [sender sendGetHotAppList];
+    [self goToInsidePageWithModel:reslutModel cacheBean:cache successBlocks:^(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject) {
+        cacheBean = (NWHotViewCacheBean *)self.viewCacheBean;
+        [self.mainTableView reloadData];
+    } failedBlocks:^(NSString *businessCode, NSString *errorInformation, id goToPageObject) {
+        NSLog(@"failed");
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,18 +103,17 @@
         return;
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-#warning ---------ERROR----
-//    NWHotAppModel *model = (NWHotAppModel *)[cacheBean.appListArray objectAtIndex:indexPath.row-1];
-//    NWHotSender *sender = [[NWHotSender alloc]init];
-//    CTSenderResultModel *resultModel = [sender sendGetAppDetail:model.appID];
-//    [self goToNextPageWithModel:resultModel cacheBean:nil saveParam:nil nextPageClass:[NWDetailViewController class] createNextPageCache:^CTViewCacheBean *{
-//        return [[NWDetailViewCacheBean alloc]init];
-//    } successBlocks:^(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject) {
-//        NWDetailViewController *detail = (NWDetailViewController *)goToPageObject;
-//        [detail reloadView];
-//    } failedBlocks:^(NSString *businessCode, NSString *errorInformation, id goToPageObject) {
-//        
-//    }];
+    NWHotAppModel *model = (NWHotAppModel *)[cacheBean.appListArray objectAtIndex:indexPath.row-1];
+    NWHotSender *sender = [[NWHotSender alloc]init];
+    NWSenderResultModel *resultModel = [sender sendGetAppDetail:model.appID];
+    [self goToNextPageWithModel:resultModel cacheBean:nil saveParam:nil nextPageClass:[NWDetailViewController class] createNextPageCache:^NWViewCacheBean *{
+        return [[NWDetailViewCacheBean alloc]init];
+    } successBlocks:^(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject) {
+        NWDetailViewController *detail = (NWDetailViewController *)goToPageObject;
+        [detail reloadView];
+    } failedBlocks:^(NSString *businessCode, NSString *errorInformation, id goToPageObject) {
+        
+    }];
 }
 
 - (void)pullDownToRefreshData:(NWTableView *)tableView

@@ -1,6 +1,6 @@
 //
-//  CTServerController.h
-//  STAYREAL
+//  NWServerController.h
+//  Dorapps
 //
 //  Created by Ansel on 13-7-20.
 //  Copyright (c) 2013年 Ansel. All rights reserved.
@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "NWNavigationController.h"
-
+#import "NWServiceStatusModel.h"
+#import "NWSenderResultModel.h"
+#import "NWViewCacheBean.h"
 
 #define SUCCESSBLOCKKEY     @"sBlocks"
 #define FAILEDBLOCKKEY      @"fBlocks"
 @class NWRootViewController;
 /* 服务控制器**/
-@interface CTServerController : NSObject<UIAlertViewDelegate>{
+@interface NWServerController : NSObject<UIAlertViewDelegate>{
     NSMutableDictionary *blockDictionary;
 }
 /* 服务控制器的拥有者**/
@@ -35,14 +37,14 @@
  @param sBlocks                服务成功回调模块
  @param fBlocks                服务失败回调模块
  */
-//- (void)goTargetWithModel:(CTSenderResultModel *)model_queue
-//           withMutaxArray:(NSArray *)mutaxTokenArray
-//                cacheBean:(CTViewCacheBean *)cacheBean
-//                saveParam:(NSString *)saveParam
-//        nextPageCahceBean:(CTViewCacheBean *)nextPageCahceBean
-//            nextPageClass:(Class)nextClass
-//            successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
-//             failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks;
+- (void)goTargetWithModel:(NWSenderResultModel *)model_queue
+           withMutaxArray:(NSArray *)mutaxTokenArray
+                cacheBean:(NWViewCacheBean *)cacheBean
+                saveParam:(NSString *)saveParam
+        nextPageCahceBean:(NWViewCacheBean *)nextPageCahceBean
+            nextPageClass:(Class)nextClass
+            successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
+             failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks;
 
 
 
@@ -53,10 +55,10 @@
  @param sBlocks                服务成功回调模块
  @param fBlocks                服务失败回调模块
  */
-//- (void)goToInsidePageWithModel:(CTSenderResultModel *)model_queue
-//                 withMutaxArray:(NSArray *)mutaxTokenArray
-//                  successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
-//                   failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks;
+- (void)goToInsidePageWithModel:(NWSenderResultModel *)model_queue
+                 withMutaxArray:(NSArray *)mutaxTokenArray
+                  successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
+                   failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks;
 
 
 /**

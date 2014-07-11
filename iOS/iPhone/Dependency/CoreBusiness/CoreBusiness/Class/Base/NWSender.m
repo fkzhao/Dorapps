@@ -1,19 +1,18 @@
 //
-//  FBSender.m
+//  NWSender.m
 //  CoreBusiness
 //
-//  Created by Anselz (@Janselz) on 14-6-27.
+//  Created by Anselz (@Janselz) on 14-7-11.
 //  Copyright (c) 2014年 NeoWork. All rights reserved.
 //
 
-#import "FBSender.h"
+#import "NWSender.h"
 #import "NWTokenUtil.h"
 
-@implementation FBSender
+@implementation NWSender
 
-
--(NWServiceResultModel *) createSenderResult:(NSString *)className methodName:(NSString *)methodName{
-    NWServiceResultModel * model = [[NWServiceResultModel alloc] init];
+-(NWSenderResultModel *) createSenderResult:(NSString *)className methodName:(NSString *)methodName{
+    NWSenderResultModel * model = [[NWSenderResultModel alloc] init];
     NSString * tokenStr = [[NSString alloc] initWithFormat:@"%@.%@",className,methodName];
     model.resultToke = [NWTokenUtil createServiceToken:tokenStr];
     return model;

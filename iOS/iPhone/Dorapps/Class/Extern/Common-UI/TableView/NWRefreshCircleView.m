@@ -7,7 +7,7 @@
 //
 
 #import "NWRefreshCircleView.h"
-#import "NWDefine.h"
+#import "NWUIDefine.h"
 
 @implementation NWRefreshCircleView
 

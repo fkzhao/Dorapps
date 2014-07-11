@@ -34,14 +34,6 @@
 		694BDBA2196ED7B100E60CF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDB8A196ED7B100E60CF1 /* UIKit.framework */; };
 		694BDBAA196ED7B100E60CF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 694BDBA8196ED7B100E60CF1 /* InfoPlist.strings */; };
 		694BDBAC196ED7B100E60CF1 /* DorappsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBAB196ED7B100E60CF1 /* DorappsTests.m */; };
-		694BDC9B196ED80700E60CF1 /* NWDetailViewCacheBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBC1196ED80700E60CF1 /* NWDetailViewCacheBean.m */; };
-		694BDC9C196ED80700E60CF1 /* NWHotViewCacheBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBC4196ED80700E60CF1 /* NWHotViewCacheBean.m */; };
-		694BDC9D196ED80700E60CF1 /* NWAppHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBC8196ED80700E60CF1 /* NWAppHistoryModel.m */; };
-		694BDC9E196ED80700E60CF1 /* NWDetailInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBCA196ED80700E60CF1 /* NWDetailInfoModel.m */; };
-		694BDC9F196ED80700E60CF1 /* NWDetailIntroductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBCC196ED80700E60CF1 /* NWDetailIntroductModel.m */; };
-		694BDCA0196ED80700E60CF1 /* NWDtailInterestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBCE196ED80700E60CF1 /* NWDtailInterestModel.m */; };
-		694BDCA1196ED80700E60CF1 /* NWHotAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBD1196ED80700E60CF1 /* NWHotAppModel.m */; };
-		694BDCA2196ED80700E60CF1 /* NWHotSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBD5196ED80700E60CF1 /* NWHotSender.m */; };
 		694BDCA3196ED80700E60CF1 /* NWActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBD9196ED80700E60CF1 /* NWActivityIndicatorView.m */; };
 		694BDCA4196ED80700E60CF1 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDBDB196ED80700E60CF1 /* banner.png */; };
 		694BDCA5196ED80700E60CF1 /* NWBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBDD196ED80700E60CF1 /* NWBannerView.m */; };
@@ -64,7 +56,6 @@
 		694BDCB6196ED80700E60CF1 /* NWRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC02196ED80700E60CF1 /* NWRefreshControl.m */; };
 		694BDCB7196ED80700E60CF1 /* NWTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC04196ED80700E60CF1 /* NWTableView.m */; };
 		694BDCB8196ED80700E60CF1 /* NWHasApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC09196ED80700E60CF1 /* NWHasApp.m */; };
-		694BDCB9196ED80700E60CF1 /* NWTokenUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC0B196ED80700E60CF1 /* NWTokenUtil.m */; };
 		694BDCBA196ED80700E60CF1 /* NWDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC0E196ED80700E60CF1 /* NWDownloader.m */; };
 		694BDCBB196ED80700E60CF1 /* NWDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC10196ED80700E60CF1 /* NWDownloadModel.m */; };
 		694BDCBC196ED80700E60CF1 /* NWDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC12196ED80700E60CF1 /* NWDownloadOperation.m */; };
@@ -75,7 +66,7 @@
 		694BDCC1196ED80700E60CF1 /* NWRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC1F196ED80700E60CF1 /* NWRuntime.m */; };
 		694BDCC2196ED80700E60CF1 /* NWStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC22196ED80700E60CF1 /* NWStringUtil.m */; };
 		694BDCC3196ED80700E60CF1 /* NWTableViewCellUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC25196ED80700E60CF1 /* NWTableViewCellUtil.m */; };
-		694BDCC4196ED80700E60CF1 /* CTServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC2C196ED80700E60CF1 /* CTServerController.m */; };
+		694BDCC4196ED80700E60CF1 /* NWServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC2C196ED80700E60CF1 /* NWServerController.m */; };
 		694BDCC5196ED80700E60CF1 /* NWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC2F196ED80700E60CF1 /* NWNavigationController.m */; };
 		694BDCC6196ED80700E60CF1 /* NWNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC30196ED80700E60CF1 /* NWNavigationController.xib */; };
 		694BDCC7196ED80700E60CF1 /* NWNavigationControllerWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC32196ED80700E60CF1 /* NWNavigationControllerWrapper.m */; };
@@ -161,6 +152,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6916EB48196F801D005705B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 694BDB7B196ED7B100E60CF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 694BDD44196EDCF000E60CF1;
+			remoteInfo = CoreFrameWork;
+		};
 		694BDBA3196ED7B100E60CF1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 694BDB7B196ED7B100E60CF1 /* Project object */;
@@ -215,22 +213,6 @@
 		694BDBA7196ED7B100E60CF1 /* DorappsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DorappsTests-Info.plist"; sourceTree = "<group>"; };
 		694BDBA9196ED7B100E60CF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		694BDBAB196ED7B100E60CF1 /* DorappsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DorappsTests.m; sourceTree = "<group>"; };
-		694BDBC0196ED80700E60CF1 /* NWDetailViewCacheBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDetailViewCacheBean.h; sourceTree = "<group>"; };
-		694BDBC1196ED80700E60CF1 /* NWDetailViewCacheBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDetailViewCacheBean.m; sourceTree = "<group>"; };
-		694BDBC3196ED80700E60CF1 /* NWHotViewCacheBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWHotViewCacheBean.h; sourceTree = "<group>"; };
-		694BDBC4196ED80700E60CF1 /* NWHotViewCacheBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHotViewCacheBean.m; sourceTree = "<group>"; };
-		694BDBC7196ED80700E60CF1 /* NWAppHistoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWAppHistoryModel.h; sourceTree = "<group>"; };
-		694BDBC8196ED80700E60CF1 /* NWAppHistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWAppHistoryModel.m; sourceTree = "<group>"; };
-		694BDBC9196ED80700E60CF1 /* NWDetailInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDetailInfoModel.h; sourceTree = "<group>"; };
-		694BDBCA196ED80700E60CF1 /* NWDetailInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDetailInfoModel.m; sourceTree = "<group>"; };
-		694BDBCB196ED80700E60CF1 /* NWDetailIntroductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDetailIntroductModel.h; sourceTree = "<group>"; };
-		694BDBCC196ED80700E60CF1 /* NWDetailIntroductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDetailIntroductModel.m; sourceTree = "<group>"; };
-		694BDBCD196ED80700E60CF1 /* NWDtailInterestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDtailInterestModel.h; sourceTree = "<group>"; };
-		694BDBCE196ED80700E60CF1 /* NWDtailInterestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDtailInterestModel.m; sourceTree = "<group>"; };
-		694BDBD0196ED80700E60CF1 /* NWHotAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWHotAppModel.h; sourceTree = "<group>"; };
-		694BDBD1196ED80700E60CF1 /* NWHotAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHotAppModel.m; sourceTree = "<group>"; };
-		694BDBD4196ED80700E60CF1 /* NWHotSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWHotSender.h; sourceTree = "<group>"; };
-		694BDBD5196ED80700E60CF1 /* NWHotSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHotSender.m; sourceTree = "<group>"; };
 		694BDBD8196ED80700E60CF1 /* NWActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWActivityIndicatorView.h; sourceTree = "<group>"; };
 		694BDBD9196ED80700E60CF1 /* NWActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWActivityIndicatorView.m; sourceTree = "<group>"; };
 		694BDBDB196ED80700E60CF1 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner.png; sourceTree = "<group>"; };
@@ -274,8 +256,6 @@
 		694BDC05196ED80700E60CF1 /* NWTableViewDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWTableViewDefine.h; sourceTree = "<group>"; };
 		694BDC08196ED80700E60CF1 /* NWHasApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWHasApp.h; sourceTree = "<group>"; };
 		694BDC09196ED80700E60CF1 /* NWHasApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHasApp.m; sourceTree = "<group>"; };
-		694BDC0A196ED80700E60CF1 /* NWTokenUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWTokenUtil.h; sourceTree = "<group>"; };
-		694BDC0B196ED80700E60CF1 /* NWTokenUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWTokenUtil.m; sourceTree = "<group>"; };
 		694BDC0D196ED80700E60CF1 /* NWDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloader.h; sourceTree = "<group>"; };
 		694BDC0E196ED80700E60CF1 /* NWDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloader.m; sourceTree = "<group>"; };
 		694BDC0F196ED80700E60CF1 /* NWDownloadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadModel.h; sourceTree = "<group>"; };
@@ -297,10 +277,10 @@
 		694BDC22196ED80700E60CF1 /* NWStringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWStringUtil.m; sourceTree = "<group>"; };
 		694BDC24196ED80700E60CF1 /* NWTableViewCellUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWTableViewCellUtil.h; sourceTree = "<group>"; };
 		694BDC25196ED80700E60CF1 /* NWTableViewCellUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWTableViewCellUtil.m; sourceTree = "<group>"; };
-		694BDC27196ED80700E60CF1 /* NWConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWConfig.h; sourceTree = "<group>"; };
-		694BDC28196ED80700E60CF1 /* NWDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDefine.h; sourceTree = "<group>"; };
-		694BDC2B196ED80700E60CF1 /* CTServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTServerController.h; sourceTree = "<group>"; };
-		694BDC2C196ED80700E60CF1 /* CTServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTServerController.m; sourceTree = "<group>"; };
+		694BDC27196ED80700E60CF1 /* NWUIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWUIConfig.h; sourceTree = "<group>"; };
+		694BDC28196ED80700E60CF1 /* NWUIDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWUIDefine.h; sourceTree = "<group>"; };
+		694BDC2B196ED80700E60CF1 /* NWServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWServerController.h; sourceTree = "<group>"; };
+		694BDC2C196ED80700E60CF1 /* NWServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWServerController.m; sourceTree = "<group>"; };
 		694BDC2E196ED80700E60CF1 /* NWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWNavigationController.h; sourceTree = "<group>"; };
 		694BDC2F196ED80700E60CF1 /* NWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWNavigationController.m; sourceTree = "<group>"; };
 		694BDC30196ED80700E60CF1 /* NWNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWNavigationController.xib; sourceTree = "<group>"; };
@@ -536,7 +516,6 @@
 			isa = PBXGroup;
 			children = (
 				694BDBB7196ED80700E60CF1 /* 3rdParty */,
-				694BDBBD196ED80700E60CF1 /* Common-Sender */,
 				694BDBD6196ED80700E60CF1 /* Common-UI */,
 				694BDC06196ED80700E60CF1 /* Common-Utils */,
 				694BDC26196ED80700E60CF1 /* Global */,
@@ -549,93 +528,6 @@
 			children = (
 			);
 			path = 3rdParty;
-			sourceTree = "<group>";
-		};
-		694BDBBD196ED80700E60CF1 /* Common-Sender */ = {
-			isa = PBXGroup;
-			children = (
-				694BDBBE196ED80700E60CF1 /* CacheBean */,
-				694BDBC5196ED80700E60CF1 /* model */,
-				694BDBD2196ED80700E60CF1 /* sender */,
-			);
-			path = "Common-Sender";
-			sourceTree = "<group>";
-		};
-		694BDBBE196ED80700E60CF1 /* CacheBean */ = {
-			isa = PBXGroup;
-			children = (
-				694BDBBF196ED80700E60CF1 /* Detail */,
-				694BDBC2196ED80700E60CF1 /* Hot */,
-			);
-			path = CacheBean;
-			sourceTree = "<group>";
-		};
-		694BDBBF196ED80700E60CF1 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				694BDBC0196ED80700E60CF1 /* NWDetailViewCacheBean.h */,
-				694BDBC1196ED80700E60CF1 /* NWDetailViewCacheBean.m */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		694BDBC2196ED80700E60CF1 /* Hot */ = {
-			isa = PBXGroup;
-			children = (
-				694BDBC3196ED80700E60CF1 /* NWHotViewCacheBean.h */,
-				694BDBC4196ED80700E60CF1 /* NWHotViewCacheBean.m */,
-			);
-			path = Hot;
-			sourceTree = "<group>";
-		};
-		694BDBC5196ED80700E60CF1 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				694BDBC6196ED80700E60CF1 /* Detail */,
-				694BDBCF196ED80700E60CF1 /* hot */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		694BDBC6196ED80700E60CF1 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				694BDBC7196ED80700E60CF1 /* NWAppHistoryModel.h */,
-				694BDBC8196ED80700E60CF1 /* NWAppHistoryModel.m */,
-				694BDBC9196ED80700E60CF1 /* NWDetailInfoModel.h */,
-				694BDBCA196ED80700E60CF1 /* NWDetailInfoModel.m */,
-				694BDBCB196ED80700E60CF1 /* NWDetailIntroductModel.h */,
-				694BDBCC196ED80700E60CF1 /* NWDetailIntroductModel.m */,
-				694BDBCD196ED80700E60CF1 /* NWDtailInterestModel.h */,
-				694BDBCE196ED80700E60CF1 /* NWDtailInterestModel.m */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		694BDBCF196ED80700E60CF1 /* hot */ = {
-			isa = PBXGroup;
-			children = (
-				694BDBD0196ED80700E60CF1 /* NWHotAppModel.h */,
-				694BDBD1196ED80700E60CF1 /* NWHotAppModel.m */,
-			);
-			path = hot;
-			sourceTree = "<group>";
-		};
-		694BDBD2196ED80700E60CF1 /* sender */ = {
-			isa = PBXGroup;
-			children = (
-				694BDBD3196ED80700E60CF1 /* hot */,
-			);
-			path = sender;
-			sourceTree = "<group>";
-		};
-		694BDBD3196ED80700E60CF1 /* hot */ = {
-			isa = PBXGroup;
-			children = (
-				694BDBD4196ED80700E60CF1 /* NWHotSender.h */,
-				694BDBD5196ED80700E60CF1 /* NWHotSender.m */,
-			);
-			path = hot;
 			sourceTree = "<group>";
 		};
 		694BDBD6196ED80700E60CF1 /* Common-UI */ = {
@@ -752,8 +644,6 @@
 			children = (
 				694BDC08196ED80700E60CF1 /* NWHasApp.h */,
 				694BDC09196ED80700E60CF1 /* NWHasApp.m */,
-				694BDC0A196ED80700E60CF1 /* NWTokenUtil.h */,
-				694BDC0B196ED80700E60CF1 /* NWTokenUtil.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -817,8 +707,8 @@
 		694BDC26196ED80700E60CF1 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				694BDC27196ED80700E60CF1 /* NWConfig.h */,
-				694BDC28196ED80700E60CF1 /* NWDefine.h */,
+				694BDC27196ED80700E60CF1 /* NWUIConfig.h */,
+				694BDC28196ED80700E60CF1 /* NWUIDefine.h */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -836,8 +726,8 @@
 		694BDC2A196ED80700E60CF1 /* ServerController */ = {
 			isa = PBXGroup;
 			children = (
-				694BDC2B196ED80700E60CF1 /* CTServerController.h */,
-				694BDC2C196ED80700E60CF1 /* CTServerController.m */,
+				694BDC2B196ED80700E60CF1 /* NWServerController.h */,
+				694BDC2C196ED80700E60CF1 /* NWServerController.m */,
 			);
 			path = ServerController;
 			sourceTree = "<group>";
@@ -1118,6 +1008,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6916EB49196F801D005705B5 /* PBXTargetDependency */,
 			);
 			name = Dorapps;
 			productName = Dorapps;
@@ -1282,14 +1173,11 @@
 			files = (
 				694BDCC0196ED80700E60CF1 /* NWFileManagerUtil.m in Sources */,
 				694BDCC9196ED80700E60CF1 /* NWTabBarViewController.m in Sources */,
-				694BDC9C196ED80700E60CF1 /* NWHotViewCacheBean.m in Sources */,
 				694BDCDB196ED80700E60CF1 /* NWInterestTableViewCell.m in Sources */,
-				694BDC9F196ED80700E60CF1 /* NWDetailIntroductModel.m in Sources */,
 				694BDD03196ED80700E60CF1 /* NWSearchViewController.m in Sources */,
 				694BDCC2196ED80700E60CF1 /* NWStringUtil.m in Sources */,
 				694BDCDD196ED80700E60CF1 /* NWIntroductionTableViewCell.m in Sources */,
 				694BDCB2196ED80700E60CF1 /* UIImageView+WebCache.m in Sources */,
-				694BDC9E196ED80700E60CF1 /* NWDetailInfoModel.m in Sources */,
 				694BDCB1196ED80700E60CF1 /* SDWebImagePrefetcher.m in Sources */,
 				694BDCB5196ED80700E60CF1 /* NWRefreshCircleView.m in Sources */,
 				694BDCCE196ED80700E60CF1 /* NWToolBarView.m in Sources */,
@@ -1297,7 +1185,7 @@
 				694BDCBC196ED80700E60CF1 /* NWDownloadOperation.m in Sources */,
 				694BDCFD196ED80700E60CF1 /* NWMoreViewController.m in Sources */,
 				694BDCEC196ED80700E60CF1 /* NWDownloadingView.m in Sources */,
-				694BDCC4196ED80700E60CF1 /* CTServerController.m in Sources */,
+				694BDCC4196ED80700E60CF1 /* NWServerController.m in Sources */,
 				694BDCB0196ED80700E60CF1 /* SDWebImageManager.m in Sources */,
 				694BDCD5196ED80700E60CF1 /* NWHistoryTableViewCell.m in Sources */,
 				694BDCB8196ED80700E60CF1 /* NWHasApp.m in Sources */,
@@ -1312,7 +1200,6 @@
 				694BDCE2196ED80700E60CF1 /* NWHotTableViewCell.m in Sources */,
 				694BDCC1196ED80700E60CF1 /* NWRuntime.m in Sources */,
 				694BDCCB196ED80700E60CF1 /* NWNavigationBar.m in Sources */,
-				694BDCA0196ED80700E60CF1 /* NWDtailInterestModel.m in Sources */,
 				694BDCF7196ED80700E60CF1 /* NWAboutViewController.m in Sources */,
 				694BDCEF196ED80700E60CF1 /* NWInstalledCell.m in Sources */,
 				694BDCC7196ED80700E60CF1 /* NWNavigationControllerWrapper.m in Sources */,
@@ -1323,11 +1210,8 @@
 				694BDCE6196ED80700E60CF1 /* NWViewController.m in Sources */,
 				694BDCED196ED80700E60CF1 /* NWDownloadTableViewCell.m in Sources */,
 				694BDCF2196ED80700E60CF1 /* NWManageViewController.m in Sources */,
-				694BDC9B196ED80700E60CF1 /* NWDetailViewCacheBean.m in Sources */,
 				694BDCE9196ED80700E60CF1 /* NWDownloadedCell.m in Sources */,
-				694BDCB9196ED80700E60CF1 /* NWTokenUtil.m in Sources */,
 				694BDCF9196ED80700E60CF1 /* NWFeedbackViewController.m in Sources */,
-				694BDCA2196ED80700E60CF1 /* NWHotSender.m in Sources */,
 				694BDCE4196ED80700E60CF1 /* NWHotViewController.m in Sources */,
 				694BDCD3196ED80700E60CF1 /* NWDetailViewController.m in Sources */,
 				694BDCB3196ED80700E60CF1 /* NWFooterStateView.m in Sources */,
@@ -1335,7 +1219,6 @@
 				694BDCB7196ED80700E60CF1 /* NWTableView.m in Sources */,
 				694BDCC5196ED80700E60CF1 /* NWNavigationController.m in Sources */,
 				694BDCF4196ED80700E60CF1 /* NWUpdateCell.m in Sources */,
-				694BDC9D196ED80700E60CF1 /* NWAppHistoryModel.m in Sources */,
 				694BDCE0196ED80700E60CF1 /* NWBannerTableViewCell.m in Sources */,
 				694BDCF1196ED80700E60CF1 /* NWInstalledView.m in Sources */,
 				694BDB93196ED7B100E60CF1 /* main.m in Sources */,
@@ -1350,7 +1233,6 @@
 				694BDCA3196ED80700E60CF1 /* NWActivityIndicatorView.m in Sources */,
 				694BDCC8196ED80700E60CF1 /* NWRootViewController.m in Sources */,
 				694BDD01196ED80700E60CF1 /* NWShareViewController.m in Sources */,
-				694BDCA1196ED80700E60CF1 /* NWHotAppModel.m in Sources */,
 				694BDCCD196ED80700E60CF1 /* NWToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1366,6 +1248,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6916EB49196F801D005705B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 694BDD44196EDCF000E60CF1 /* CoreFrameWork */;
+			targetProxy = 6916EB48196F801D005705B5 /* PBXContainerItemProxy */;
+		};
 		694BDBA4196ED7B100E60CF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 694BDB82196ED7B100E60CF1 /* Dorapps */;
@@ -1501,7 +1388,7 @@
 				GCC_PREFIX_HEADER = "Dorapps/Dorapps-Prefix.pch";
 				INFOPLIST_FILE = "Dorapps/Dorapps-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "./Dependeny/CoreBusiness/CoreBusiness ./Dependeny/CoreNetWork/CoreNetWork";
+				USER_HEADER_SEARCH_PATHS = "./Dependency/CoreBusiness/CoreBusiness/** ./Dependency/CoreNetWork/CoreNetWork/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1516,7 +1403,7 @@
 				GCC_PREFIX_HEADER = "Dorapps/Dorapps-Prefix.pch";
 				INFOPLIST_FILE = "Dorapps/Dorapps-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "./Dependeny/CoreBusiness/CoreBusiness ./Dependeny/CoreNetWork/CoreNetWork";
+				USER_HEADER_SEARCH_PATHS = "./Dependency/CoreBusiness/CoreBusiness/** ./Dependency/CoreNetWork/CoreNetWork/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

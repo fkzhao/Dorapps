@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 NeoWork. All rights reserved.
 //
 
-#import "FBBaseResponse.h"
+#import "NWResponse.h"
 
-@interface FBExaminationResponse : FBBaseResponse
+@interface FBExaminationResponse : NWResponse
 
 
 @end

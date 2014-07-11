@@ -8,8 +8,8 @@
 
 #import "CTLoadingView.h"
 #import "RTSpinKitView.h"
-#import "NWDefine.h"
-#import "NWConfig.h"
+#import "NWUIDefine.h"
+#import "NWUIConfig.h"
 
 /**
  判断是否是iPhone5 的屏幕

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NWDetailIntroductModel.H"
+#import "NWDetailIntroductModel.h"
 @interface NWIntroductionTableViewCell : UITableViewCell
 
 -(void)displayCellWith:(NWDetailIntroductModel *)model;

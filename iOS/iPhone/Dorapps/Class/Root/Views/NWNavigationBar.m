@@ -7,7 +7,7 @@
 //
 
 #import "NWNavigationBar.h"
-#import "NWDefine.h"
+#import "NWUIDefine.h"
 
 @implementation NWNavigationBar
 

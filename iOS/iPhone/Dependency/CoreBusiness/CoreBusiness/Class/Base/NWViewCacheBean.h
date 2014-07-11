@@ -1,13 +1,13 @@
 //
-//  FBModel.h
+//  NWViewCacheBean.h
 //  CoreBusiness
 //
-//  Created by Anselz (@Janselz) on 14-6-27.
+//  Created by Anselz (@Janselz) on 14-7-11.
 //  Copyright (c) 2014年 NeoWork. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface FBModel : NSObject
+@interface NWViewCacheBean : NSObject
 
 @end
