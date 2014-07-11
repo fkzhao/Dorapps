@@ -51,17 +51,12 @@
         void (^sBlocks)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject);
         sBlocks = [blockDictionary objectForKey:[NSString stringWithFormat:@"%@-%@",token,SUCCESSBLOCKKEY]];
         sBlocks(model.token,0,self.nextPage);
-
     } else { //服务失败
-
         void (^fBlocks)(NSString *businessCode, NSString *errorInformation, id goToPageObject);
         fBlocks = [blockDictionary objectForKey:[NSString stringWithFormat:@"%@-%@",token,FAILEDBLOCKKEY]];
         fBlocks(model.errorCode,model.errorInfo,self.nextPage);
     }
-#warning ---------这个地方需要注意下新框架----
-    //清除这次服务的所有数据
-//    [CTSenderManager clearAllWithToken:token];
-    //清楚BLOCKS
+    //清除BLOCKS
     [self removeBlocks:token];
     [self removeLoadingView];
 }
@@ -174,11 +169,6 @@
         [NWServiceUtil cancelServiceWith:token];
     }
 }
-
-//-(eTaskStatus)checkServiceStatus:(NSString *)token
-//{
-//    return [CTSenderManager getTaskStatus:token];
-//}
 
 -(void)removeBlocks:(NSString *)token{
     [blockDictionary removeObjectForKey:[NSString stringWithFormat:@"%@-%@",token,SUCCESSBLOCKKEY]];
