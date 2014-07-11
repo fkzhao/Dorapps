@@ -7,19 +7,22 @@
 //
 
 #import "NWHotSender.h"
+#import "NWViewCacheBean.h"
+#import "NWHotAppRequest.h"
+#import "NWHotAppResponse.h"
+#import "NWAppDetailRequest.h"
 
 @implementation NWHotSender
 
 -(NWSenderResultModel *)sendGetHotAppList {
     NWSenderResultModel *resultModel = [self createSenderResult:NSStringFromClass ([self class]) methodName:NSStringFromSelector(@selector(sendGetHotAppList))];
-    NWRequest *request = [[NWRequest alloc]init];
-    request.urlString = @"http://61.155.215.53/api/iphone/home_page";
-    request.httpMethod = NWNetworkHttpMethod_GET;
+    NWHotAppRequest *request = [[NWHotAppRequest alloc]init];
     request.token = resultModel.resultToke;
     NWServiceCallBack *callBack = [[NWServiceCallBack alloc]init];
     ServiceSuccessMethod successMethod = ^(NWRequest *request,NWResponse *response)
     {
-        NSLog(@"%@",response.token);
+        NWViewCacheBean *cacheBean = [NWViewCacheBeanManager getViewCacheBean:resultModel.resultToke];
+        [cacheBean assemblyViewCacheBean:response.responseDictory];
         return YES;
     };
     ServiceFailMethod failMethod = ^(NWRequest *request,NWResponse *response)
@@ -28,7 +31,7 @@
     };
     callBack.serviceSuccess = successMethod;
     callBack.serviceFail = failMethod;
-    NWResponse *response = [[NWResponse alloc]init];
+    NWHotAppResponse *response = [[NWHotAppResponse alloc]init];
     response.token = resultModel.resultToke;
     [[NWRequestQueue ShareQueue] submitNetWorkTask:resultModel.resultToke withRequest:request withResponse:response withCallBack:callBack];
     return resultModel;}
@@ -43,9 +46,8 @@
 
 -(NWSenderResultModel *)sendGetAppDetail:(NSString *)appID {
     NWSenderResultModel *resultModel = [self createSenderResult:NSStringFromClass ([self class]) methodName:NSStringFromSelector(@selector(sendGetHotAppList))];
-    NWRequest *request = [[NWRequest alloc]init];
-    request.urlString =[NSString stringWithFormat:@"%@%@",@"http://app.dorapps.com/api/app/detail?id=",appID];
-    request.httpMethod = NWNetworkHttpMethod_GET;
+    NWAppDetailRequest *request = [[NWAppDetailRequest alloc]init];
+    request.appID = appID;
     request.token = resultModel.resultToke;
     NWServiceCallBack *callBack = [[NWServiceCallBack alloc]init];
     ServiceSuccessMethod successMethod = ^(NWRequest *request,NWResponse *response)

@@ -10,4 +10,6 @@
 
 @interface NWViewCacheBean : NSObject
 
+-(void)assemblyViewCacheBean:(NSDictionary *)dic;
+
 @end

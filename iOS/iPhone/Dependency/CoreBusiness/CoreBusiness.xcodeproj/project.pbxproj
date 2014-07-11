@@ -19,8 +19,12 @@
 		6916EB40196F7C40005705B5 /* NWHotAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB3B196F7C40005705B5 /* NWHotAppModel.m */; };
 		6916EB44196F7C65005705B5 /* NWHotSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB43196F7C65005705B5 /* NWHotSender.m */; };
 		6916EB47196F7C86005705B5 /* NWServiceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB46196F7C86005705B5 /* NWServiceUtil.m */; };
-		693CAFF4195D11F700518DAC /* FBExaminationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CAFF3195D11F700518DAC /* FBExaminationRequest.m */; };
-		693CAFF7195D121100518DAC /* FBExaminationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 693CAFF6195D121100518DAC /* FBExaminationResponse.m */; };
+		6916EB4E196FA443005705B5 /* NWViewCacheBeanPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB4D196FA443005705B5 /* NWViewCacheBeanPool.m */; };
+		6916EB51196FA45D005705B5 /* NWViewCacheBeanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB50196FA45D005705B5 /* NWViewCacheBeanManager.m */; };
+		6916EB54196FA6F7005705B5 /* NWViewCacheBeanBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB53196FA6F7005705B5 /* NWViewCacheBeanBlock.m */; };
+		6916EB57196FBDA3005705B5 /* NWHotAppRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB56196FBDA3005705B5 /* NWHotAppRequest.m */; };
+		6916EB5A196FBEAE005705B5 /* NWHotAppResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB59196FBEAE005705B5 /* NWHotAppResponse.m */; };
+		6916EB5D196FBF2E005705B5 /* NWAppDetailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB5C196FBF2E005705B5 /* NWAppDetailRequest.m */; };
 		6979585E195945960017D864 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6979585D195945960017D864 /* Foundation.framework */; };
 		69795863195945960017D864 /* CoreBusiness.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69795862195945960017D864 /* CoreBusiness.h */; };
 		69795865195945960017D864 /* CoreBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 69795864195945960017D864 /* CoreBusiness.m */; };
@@ -65,10 +69,19 @@
 		6916EB43196F7C65005705B5 /* NWHotSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHotSender.m; sourceTree = "<group>"; };
 		6916EB45196F7C86005705B5 /* NWServiceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWServiceUtil.h; sourceTree = "<group>"; };
 		6916EB46196F7C86005705B5 /* NWServiceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWServiceUtil.m; sourceTree = "<group>"; };
-		693CAFF2195D11F700518DAC /* FBExaminationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBExaminationRequest.h; sourceTree = "<group>"; };
-		693CAFF3195D11F700518DAC /* FBExaminationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBExaminationRequest.m; sourceTree = "<group>"; };
-		693CAFF5195D121100518DAC /* FBExaminationResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBExaminationResponse.h; sourceTree = "<group>"; };
-		693CAFF6195D121100518DAC /* FBExaminationResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBExaminationResponse.m; sourceTree = "<group>"; };
+		6916EB4C196FA443005705B5 /* NWViewCacheBeanPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWViewCacheBeanPool.h; sourceTree = "<group>"; };
+		6916EB4D196FA443005705B5 /* NWViewCacheBeanPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWViewCacheBeanPool.m; sourceTree = "<group>"; };
+		6916EB4F196FA45D005705B5 /* NWViewCacheBeanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWViewCacheBeanManager.h; sourceTree = "<group>"; };
+		6916EB50196FA45D005705B5 /* NWViewCacheBeanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWViewCacheBeanManager.m; sourceTree = "<group>"; };
+		6916EB52196FA6F7005705B5 /* NWViewCacheBeanBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWViewCacheBeanBlock.h; sourceTree = "<group>"; };
+		6916EB53196FA6F7005705B5 /* NWViewCacheBeanBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWViewCacheBeanBlock.m; sourceTree = "<group>"; };
+		6916EB55196FBDA3005705B5 /* NWHotAppRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWHotAppRequest.h; sourceTree = "<group>"; };
+		6916EB56196FBDA3005705B5 /* NWHotAppRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHotAppRequest.m; sourceTree = "<group>"; };
+		6916EB58196FBEAE005705B5 /* NWHotAppResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWHotAppResponse.h; sourceTree = "<group>"; };
+		6916EB59196FBEAE005705B5 /* NWHotAppResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHotAppResponse.m; sourceTree = "<group>"; };
+		6916EB5B196FBF2E005705B5 /* NWAppDetailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWAppDetailRequest.h; sourceTree = "<group>"; };
+		6916EB5C196FBF2E005705B5 /* NWAppDetailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWAppDetailRequest.m; sourceTree = "<group>"; };
+		6916EB5F196FC23D005705B5 /* NWURLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NWURLDefine.h; sourceTree = "<group>"; };
 		6979585A195945960017D864 /* libCoreBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreBusiness.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6979585D195945960017D864 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		69795861195945960017D864 /* CoreBusiness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreBusiness-Prefix.pch"; sourceTree = "<group>"; };
@@ -143,9 +156,18 @@
 			path = hot;
 			sourceTree = "<group>";
 		};
+		6916EB5E196FC22A005705B5 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				6916EB5F196FC23D005705B5 /* NWURLDefine.h */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		693CAFDA195D0C3500518DAC /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				6916EB5E196FC22A005705B5 /* Global */,
 				69B77BB3195FCEA600EB8D0D /* Extern */,
 				693CAFE3195D0DB100518DAC /* Base */,
 				693CB004195D5C1800518DAC /* Model */,
@@ -174,6 +196,12 @@
 				6916EB20196F7A4C005705B5 /* NWSenderResultModel.m */,
 				6916EB25196F7B86005705B5 /* NWViewCacheBean.h */,
 				6916EB26196F7B86005705B5 /* NWViewCacheBean.m */,
+				6916EB4C196FA443005705B5 /* NWViewCacheBeanPool.h */,
+				6916EB4D196FA443005705B5 /* NWViewCacheBeanPool.m */,
+				6916EB52196FA6F7005705B5 /* NWViewCacheBeanBlock.h */,
+				6916EB53196FA6F7005705B5 /* NWViewCacheBeanBlock.m */,
+				6916EB4F196FA45D005705B5 /* NWViewCacheBeanManager.h */,
+				6916EB50196FA45D005705B5 /* NWViewCacheBeanManager.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -181,8 +209,10 @@
 		693CAFED195D118D00518DAC /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				693CAFF2195D11F700518DAC /* FBExaminationRequest.h */,
-				693CAFF3195D11F700518DAC /* FBExaminationRequest.m */,
+				6916EB55196FBDA3005705B5 /* NWHotAppRequest.h */,
+				6916EB56196FBDA3005705B5 /* NWHotAppRequest.m */,
+				6916EB5B196FBF2E005705B5 /* NWAppDetailRequest.h */,
+				6916EB5C196FBF2E005705B5 /* NWAppDetailRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -190,8 +220,8 @@
 		693CAFEE195D118D00518DAC /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				693CAFF5195D121100518DAC /* FBExaminationResponse.h */,
-				693CAFF6195D121100518DAC /* FBExaminationResponse.m */,
+				6916EB58196FBEAE005705B5 /* NWHotAppResponse.h */,
+				6916EB59196FBEAE005705B5 /* NWHotAppResponse.m */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -330,18 +360,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				693CAFF7195D121100518DAC /* FBExaminationResponse.m in Sources */,
 				6916EB3D196F7C40005705B5 /* NWDetailInfoModel.m in Sources */,
+				6916EB5D196FBF2E005705B5 /* NWAppDetailRequest.m in Sources */,
 				6916EB47196F7C86005705B5 /* NWServiceUtil.m in Sources */,
 				6916EB3F196F7C40005705B5 /* NWDtailInterestModel.m in Sources */,
+				6916EB54196FA6F7005705B5 /* NWViewCacheBeanBlock.m in Sources */,
+				6916EB4E196FA443005705B5 /* NWViewCacheBeanPool.m in Sources */,
 				6916EB3E196F7C40005705B5 /* NWDetailIntroductModel.m in Sources */,
+				6916EB5A196FBEAE005705B5 /* NWHotAppResponse.m in Sources */,
 				6916EB2E196F7C22005705B5 /* NWDetailViewCacheBean.m in Sources */,
 				6916EB2F196F7C22005705B5 /* NWHotViewCacheBean.m in Sources */,
 				69795865195945960017D864 /* CoreBusiness.m in Sources */,
 				6916EB24196F7B14005705B5 /* NWSender.m in Sources */,
+				6916EB57196FBDA3005705B5 /* NWHotAppRequest.m in Sources */,
+				6916EB51196FA45D005705B5 /* NWViewCacheBeanManager.m in Sources */,
 				6916EB44196F7C65005705B5 /* NWHotSender.m in Sources */,
 				6916EB40196F7C40005705B5 /* NWHotAppModel.m in Sources */,
-				693CAFF4195D11F700518DAC /* FBExaminationRequest.m in Sources */,
 				6916EB27196F7B86005705B5 /* NWViewCacheBean.m in Sources */,
 				6916EB21196F7A4C005705B5 /* NWSenderResultModel.m in Sources */,
 				6916EB3C196F7C40005705B5 /* NWAppHistoryModel.m in Sources */,

@@ -11,6 +11,7 @@
 #import "NWDetailViewController.h"
 #import "CTLoadingView.h"
 #import "NWTabBarViewController.h"
+#import "NWViewCacheBeanManager.h"
 
 @interface NWRootViewController ()
 
@@ -220,9 +221,7 @@
                    failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
 {
     self.viewCacheBean = cacheBean;
-#warning -------取CacheBean地方是否需要阻塞------
-//    CTCacheBeanResultQueue *queue = [[CTViewCacheManage shareInstance] getCacheQueueWithToken:model_queue.resultToke];
-//    [queue put:self.viewCacheBean];
+    [NWViewCacheBeanManager setViewCacheBean:self.viewCacheBean withToken:model_queue.resultToke];
     [self.serviceController goToInsidePageWithModel:model_queue withMutaxArray:mutaxTokenArray successBlocks:sBlocks failedBlocks:fBlocks];
 }
 

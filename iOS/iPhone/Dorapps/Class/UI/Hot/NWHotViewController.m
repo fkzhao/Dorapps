@@ -44,7 +44,7 @@
 }
 
 -(void)initDate {
-    self.viewCacheBean = [[NWHotViewCacheBean alloc]init];
+//    self.viewCacheBean = [[NWHotViewCacheBean alloc]init];
 }
 
 -(void)initView {

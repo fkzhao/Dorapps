@@ -10,4 +10,8 @@
 
 @implementation NWViewCacheBean
 
+-(void)assemblyViewCacheBean:(NSDictionary *)dic
+{
+    
+}
 @end
