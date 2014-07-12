@@ -20,38 +20,62 @@
 +(void)insertDownloadAppItem:(NWDownloadApps *)item
 {
     NWCoreData *coreData = [NWCoreData shareObject];
-    [coreData insertDataWith:item];
+    __weak NWCoreData *weakObj = coreData;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [weakObj insertDataWith:item];
+    });
 }
 
-+(NSArray *)fetchAllDownloadAppItem;
++(void)fetchAllDownloadAppItem:(void(^)(NSArray *downloadApps))block
 {
     NWCoreData *coreData = [NWCoreData shareObject];
-    return [coreData fetchAllDataWith:[NWDownloadApps class]];
+    __weak NWCoreData *weakObj = coreData;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSArray *apps = [weakObj fetchAllDataWith:[NWDownloadApps class]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            block(apps);
+        });
+    });
 }
-+(NWDownloadApps *)fetchDownloadAppItem:(NSString *)key withValue:(NSString *)value
-{
+
++(void)fetchDownloadAppItem:(NSString *)key withValue:(NSString *)value withBlock:(void(^)(NWDownloadApps *downloadApp))block{
     NWCoreData *coreData = [NWCoreData shareObject];
-    NSDictionary *condition = [NSDictionary dictionaryWithObjectsAndKeys:value,key, nil];
-    return [coreData fetchDataWith:[NWDownloadApps class] withCondition:condition];
+    __weak NWCoreData *weakObj = coreData;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSDictionary *condition = [NSDictionary dictionaryWithObjectsAndKeys:value,key, nil];
+        NWDownloadApps *app = [weakObj fetchDataWith:[NWDownloadApps class] withCondition:condition];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            block(app);
+        });
+    });
 }
 
 +(void)deleteDownloadItem:(NSString *)key withValue:(NSString *)value
 {
     NWCoreData *coreData = [NWCoreData shareObject];
-    NSDictionary *condition = [NSDictionary dictionaryWithObjectsAndKeys:value,key, nil];
-    [coreData deleteDataWith:[NWDownloadApps class] withCondition:condition];
+    __weak NWCoreData *weakObj = coreData;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSDictionary *condition = [NSDictionary dictionaryWithObjectsAndKeys:value,key, nil];
+        [weakObj deleteDataWith:[NWDownloadApps class] withCondition:condition];
+    });
 }
 
 +(void)deleteDownloadAllItem
 {
     NWCoreData *coreData = [NWCoreData shareObject];
-    [coreData deleteAllDataWith:[NWDownloadApps class]];
+    __weak NWCoreData *weakObj = coreData;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [weakObj deleteAllDataWith:[NWDownloadApps class]];
+    });
 }
 
 +(void)updateDownloadItem:(NWDownloadApps *)item withKey:(NSString *)key withValue:(NSString *)value
 {
     NWCoreData *coreData = [NWCoreData shareObject];
-    NSDictionary *condition = [NSDictionary dictionaryWithObjectsAndKeys:value,key, nil];
-    [coreData updateDataWith:item withCondition:condition];
+    __weak NWCoreData *weakObj = coreData;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSDictionary *condition = [NSDictionary dictionaryWithObjectsAndKeys:value,key, nil];
+        [weakObj updateDataWith:item withCondition:condition];
+    });
 }
 @end

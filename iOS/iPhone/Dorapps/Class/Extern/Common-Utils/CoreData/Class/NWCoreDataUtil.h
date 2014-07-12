@@ -15,8 +15,8 @@
 +(void)saveContext;
 
 +(void)insertDownloadAppItem:(NWDownloadApps *)item;
-+(NSArray *)fetchAllDownloadAppItem;
-+(NWDownloadApps *)fetchDownloadAppItem:(NSString *)key withValue:(NSString *)value;
++(void)fetchAllDownloadAppItem:(void(^)(NSArray *downloadApps))block;
++(void)fetchDownloadAppItem:(NSString *)key withValue:(NSString *)value withBlock:(void(^)(NWDownloadApps *downloadApp))block;
 +(void)deleteDownloadItem:(NSString *)key withValue:(NSString *)value;
 +(void)deleteDownloadAllItem;
 +(void)updateDownloadItem:(NWDownloadApps *)item withKey:(NSString *)key withValue:(NSString *)value;

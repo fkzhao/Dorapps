@@ -658,14 +658,14 @@
 		694BDC06196ED80700E60CF1 /* Common-Utils */ = {
 			isa = PBXGroup;
 			children = (
-				69B4758E19716EF3002FCD82 /* DownloadCenter */,
-				69B474F719715585002FCD82 /* CoreData */,
 				694BDC07196ED80700E60CF1 /* App */,
-				694BDC0C196ED80700E60CF1 /* Downloader */,
 				694BDC1A196ED80700E60CF1 /* Files */,
-				694BDC1D196ED80700E60CF1 /* Runtime */,
 				694BDC20196ED80700E60CF1 /* String */,
+				69B474F719715585002FCD82 /* CoreData */,
+				694BDC1D196ED80700E60CF1 /* Runtime */,
 				694BDC23196ED80700E60CF1 /* TableView */,
+				694BDC0C196ED80700E60CF1 /* Downloader */,
+				69B4758E19716EF3002FCD82 /* DownloadCenter */,
 			);
 			path = "Common-Utils";
 			sourceTree = "<group>";
