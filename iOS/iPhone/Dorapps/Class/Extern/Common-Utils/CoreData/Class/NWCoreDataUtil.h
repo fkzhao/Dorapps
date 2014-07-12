@@ -15,10 +15,10 @@
 +(void)saveContext;
 
 +(void)insertDownloadAppItem:(NWDownloadApps *)item;
-
 +(NSArray *)fetchAllDownloadAppItem;
 +(NWDownloadApps *)fetchDownloadAppItem:(NSString *)key withValue:(NSString *)value;
 +(void)deleteDownloadItem:(NSString *)key withValue:(NSString *)value;
 +(void)deleteDownloadAllItem;
 +(void)updateDownloadItem:(NWDownloadApps *)item withKey:(NSString *)key withValue:(NSString *)value;
+
 @end
