@@ -560,11 +560,11 @@
 		694BDBD6196ED80700E60CF1 /* Common-UI */ = {
 			isa = PBXGroup;
 			children = (
-				694BDBD7196ED80700E60CF1 /* ActivityIndicatorView */,
+				694BDBFA196ED80700E60CF1 /* TableView */,
 				694BDBDA196ED80700E60CF1 /* BannerView */,
 				694BDBDE196ED80700E60CF1 /* LoadingView */,
 				694BDBE8196ED80700E60CF1 /* SDWebImage */,
-				694BDBFA196ED80700E60CF1 /* TableView */,
+				694BDBD7196ED80700E60CF1 /* ActivityIndicatorView */,
 			);
 			path = "Common-UI";
 			sourceTree = "<group>";
