@@ -15,7 +15,7 @@
     
 }
 @property (strong,nonatomic) NSMutableArray *serviceTokenArray;
-@property (strong,nonatomic) NSMutableDictionary *serviceThreadArray;
+
 @end
 /** 服务控制器*/
 @implementation NWServerController
@@ -28,7 +28,6 @@
     if (self) {
         blockDictionary = [[NSMutableDictionary alloc]initWithCapacity:0];
         self.owner = nil;
-        self.nextPage = nil;
         self.serviceTokenArray = [[NSMutableArray alloc]initWithCapacity:0];
         self.serviceThreadArray = [[NSMutableDictionary alloc]initWithCapacity:0];
     }
@@ -50,11 +49,16 @@
     if (isSuccess) {
         void (^sBlocks)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject);
         sBlocks = [blockDictionary objectForKey:[NSString stringWithFormat:@"%@-%@",token,SUCCESSBLOCKKEY]];
-        sBlocks(model.token,0,self.nextPage);
+        if (sBlocks) {
+            sBlocks(model.token,0,self.owner);
+        }
+        
     } else { //服务失败
         void (^fBlocks)(NSString *businessCode, NSString *errorInformation, id goToPageObject);
         fBlocks = [blockDictionary objectForKey:[NSString stringWithFormat:@"%@-%@",token,FAILEDBLOCKKEY]];
-        fBlocks(model.errorCode,model.errorInfo,self.nextPage);
+        if (fBlocks) {
+            fBlocks(model.errorCode,model.errorInfo,self.owner);
+        }
     }
     //清除BLOCKS
     [self removeBlocks:token];
@@ -77,7 +81,7 @@
 #pragma mark - UIAlertView代理
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    NWRootViewController *nextVC = (NWRootViewController *)self.nextPage;
+    NWRootViewController *nextVC = self.owner;
     [nextVC.navigationController popViewControllerAnimated:YES];
 }
 
@@ -93,19 +97,17 @@
                 successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
                  failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
 {
-
     NWRootViewController *target = nil;
-    target = self.owner;
     if ([nextClass isSubclassOfClass:[NWRootViewController class]]) {
         NWRootViewController *nextVC = [[nextClass alloc]init];
-        self.nextPage = nextVC;
-        self.nextPage.viewCacheBean = nextPageCahceBean;
+        target = nextVC;
+        nextVC.viewCacheBean = nextPageCahceBean;
         [NWViewCacheBeanManager setViewCacheBean:nextPageCahceBean withToken:model_queue.resultToke];
         NWRootViewController *currentPage = (NWRootViewController *)self.owner;
-        [currentPage pushViewController:self.nextPage animated:YES];
+        [currentPage pushViewController:nextVC animated:YES];
     }
     
-    [self setBlocks:model_queue.resultToke successBlocks:sBlocks failedBlocks:fBlocks];
+    [target.serviceController setCallBackBlocks:model_queue.resultToke successBlocks:sBlocks failedBlocks:fBlocks];
     
     //起线程监听服务状态
     NSThread *newThread = [[NSThread alloc] initWithTarget:target.serviceController selector:@selector(listenServiceThread:) object:model_queue];
@@ -129,7 +131,7 @@
     if (mutaxTokenArray) {
         [self cancelAllService:mutaxTokenArray];
     }
-    [self setBlocks:model_queue.resultToke successBlocks:sBlocks failedBlocks:fBlocks];
+    [self setCallBackBlocks:model_queue.resultToke successBlocks:sBlocks failedBlocks:fBlocks];
     
     //起线程监听服务状态
     NSThread *newThread = [[NSThread alloc] initWithTarget:self selector:@selector(listenServiceThread:) object:model_queue];
@@ -175,7 +177,7 @@
     [blockDictionary removeObjectForKey:[NSString stringWithFormat:@"%@-%@",token,FAILEDBLOCKKEY]];
 }
 
--(void)setBlocks:(NSString *)token
+-(void)setCallBackBlocks:(NSString *)token
    successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
     failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks
 {
@@ -186,7 +188,7 @@
 
 -(void)removeLoadingView
 {
-    NWRootViewController *next = (NWRootViewController *)self.nextPage;
+    NWRootViewController *next = (NWRootViewController *)self.owner;
     if (next) {
         [next removeLoadingView:@"loading"];
     } else {

@@ -56,8 +56,15 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    if (self.navigationController.viewControllers.count > 1) {
+        [self setBackButtonWithTarget:self action:@selector(backBarButtonClicked:)];
+    }
 }
-
+- (void)backBarButtonClicked:(id)sender
+{
+    [self cancelAllService];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 -(void)pushViewController:(NWRootViewController *)viewController animated:(BOOL)animated {
     NWAppDelegate *delegate = (NWAppDelegate *)[UIApplication sharedApplication].delegate;
     NWNavigationController *navigationController = delegate.rootViewController;
@@ -252,17 +259,5 @@
     if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) {
         return;
     }
-//    if (self.navigationBar.isHidden) {
-//        return;
-//    }
-//    if ([tableView isKindOfClass:[CTTableView class]]) {
-//        return;
-//    }
-//    int defaultNavBarHeight = 20+(self.navigationBar.isHidden ? 0 : 44);
-//    
-//    CGFloat offsetTop = offsetHeight + defaultNavBarHeight;
-//    tableView.frame = CGRectMake(0, -defaultNavBarHeight, tableView.bounds.size.width, tableView.bounds.size.height + defaultNavBarHeight+offsetHeight);
-//    tableView.contentInset = UIEdgeInsetsMake(offsetTop, 0, 0, 0);
-//    [tableView setScrollIndicatorInsets:UIEdgeInsetsMake(offsetTop, 0, 0, 0)];
 }
 @end

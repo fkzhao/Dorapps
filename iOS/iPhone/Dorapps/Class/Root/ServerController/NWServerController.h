@@ -21,9 +21,7 @@
 }
 /* 服务控制器的拥有者**/
 @property (nonatomic,weak) NWRootViewController *owner;
-/** 下一个页面*/
-@property (nonatomic,weak) NWRootViewController *nextPage;
-
+@property (strong,nonatomic) NSMutableDictionary *serviceThreadArray;
 
 /**
  进入下一级页面 接口
@@ -77,4 +75,7 @@
  @return 不需要返回值
  */
 -(void)cancelService:(NSString *)token;
+
+-(void)setCallBackBlocks:(NSString *)token successBlocks:(void (^)(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject))sBlocks
+            failedBlocks:(void (^)(NSString *businessCode, NSString *errorInformation, id goToPageObject))fBlocks;
 @end

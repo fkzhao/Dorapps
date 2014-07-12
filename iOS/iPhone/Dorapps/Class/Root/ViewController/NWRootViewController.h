@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+NWNavigationBar.h"
 #import "NWRootView.h"
 #import "NWNavigationController.h"
 #import "NWServerController.h"

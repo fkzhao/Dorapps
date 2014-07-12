@@ -8,6 +8,7 @@
 
 #import "NWNavigationBar.h"
 #import "NWUIDefine.h"
+#import "NWUIConfig.h"
 
 @implementation NWNavigationBar
 
@@ -53,5 +54,43 @@
     
 }
 
++ (UIBarButtonItem *)createBarButtonItemWithCustomView:(UIView *)view
+{
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:view];
+    return item;
+}
+
++ (UIBarButtonItem *)createBarButtonItemWithTitle:(NSString *)title target:(id)target action:(SEL)action
+{
+    if (!title) {
+        return nil;
+    }
+    CGFloat barItemMargin;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0)
+    {
+        barItemMargin = 11.0f;
+    }
+    else
+    {
+        barItemMargin = 0.0f;
+    }
+    CGFloat width = 0.0f;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) {
+        width = [title sizeWithFont:kNavigationBarButtonFont].width + barItemMargin;
+    } else {
+        width = [title sizeWithAttributes:@{NSFontAttributeName :kNavigationBarButtonFont}].width;
+    }
+    UIButton *customButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [customButton setTitle:title forState:UIControlStateNormal];
+    [customButton.titleLabel setFont:kNavigationBarButtonFont];
+    [customButton setTitleColor:kNavigationBarButtonNormalColor forState:UIControlStateNormal];
+    [customButton setTitleColor:kNavigationBarButtonHighlightColor forState:UIControlStateHighlighted];
+    [customButton setTitleColor:kNavigationBarButtonDisableColor forState:UIControlStateDisabled];
+    [customButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 1)];
+    
+    [customButton setFrame:CGRectMake(0, 0, width+5, 44)];
+    [customButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [NWNavigationBar createBarButtonItemWithCustomView:customButton];
+}
 
 @end
