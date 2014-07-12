@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DownloadApps" representedClassName="DownloadApps" syncable="YES">
+        <attribute name="createtime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="endtime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="finished" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DownloadApps" positionX="-63" positionY="-18" width="128" height="135"/>
+    </elements>
+</model>

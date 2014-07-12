@@ -64,6 +64,7 @@
 -(void)setTableViewStateRefreshing
 {
     if (refreshControl_) {
+        refreshControl_.footerView.stateLabel.text = @"";
         [refreshControl_ setTableViewStatus:ePullStateTypeRefresh];
     }
 }

@@ -11,5 +11,6 @@
 @interface NWRuntime : NSObject
 
 + (void)replaceMethods;
-
++(NSArray *)fetchVarArray:(id)obj;
++(NSArray *)fetchPropertyArray:(id)obj;
 @end

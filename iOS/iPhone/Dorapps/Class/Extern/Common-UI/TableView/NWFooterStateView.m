@@ -11,7 +11,7 @@
 #import "NWActivityIndicatorView.h"
 @interface NWFooterStateView ()
 
-@property (nonatomic, strong) NWActivityIndicatorView *activityIndicatorView;
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
 
 @end
 
@@ -46,9 +46,9 @@
         self.timeLabelView.hidden = YES;
     }
     if (!_activityIndicatorView) {
-        _activityIndicatorView = [[NWActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        _activityIndicatorView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         _activityIndicatorView.frame = CGRectMake(105, 15, 20, 20);
-        _activityIndicatorView.color = NWColorRGB(70, 154, 233);
+//        _activityIndicatorView.color = NWColorRGB(70, 154, 233);
         _activityIndicatorView.hidden = YES;
         [self addSubview:_activityIndicatorView];
     }

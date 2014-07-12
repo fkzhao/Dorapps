@@ -150,9 +150,14 @@
 		69B473DD1970CF71002FCD82 /* toolBar_shade.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473CD1970CF71002FCD82 /* toolBar_shade.png */; };
 		69B473DE1970CF71002FCD82 /* toolBar_shade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473CE1970CF71002FCD82 /* toolBar_shade@2x.png */; };
 		69B473E21970D036002FCD82 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B473E11970D036002FCD82 /* NSString+FontAwesome.m */; };
-		69B473E51970D0E7002FCD82 /* btn_back_arrow_focus.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473E31970D0E7002FCD82 /* btn_back_arrow_focus.png */; };
-		69B473E61970D0E7002FCD82 /* btn_back_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473E41970D0E7002FCD82 /* btn_back_arrow.png */; };
 		69B474F319712D8D002FCD82 /* NWStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B474F219712D8D002FCD82 /* NWStateView.m */; };
+		69B47560197155C8002FCD82 /* NWCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B474FF197155C8002FCD82 /* NWCoreData.m */; };
+		69B47561197155C8002FCD82 /* NWCoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B47501197155C8002FCD82 /* NWCoreDataUtil.m */; };
+		69B47562197155C8002FCD82 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69B47503197155C8002FCD82 /* CoreData.xcdatamodeld */; };
+		69B47563197155C8002FCD82 /* NWCoreDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B47508197155C8002FCD82 /* NWCoreDataAdapter.m */; };
+		69B4759119716F31002FCD82 /* NWDownloadCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4759019716F31002FCD82 /* NWDownloadCenter.m */; };
+		69B47597197170FF002FCD82 /* DownloadApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B47596197170FF002FCD82 /* DownloadApps.m */; };
+		69B4759A1971711A002FCD82 /* NWDownloadApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B475991971711A002FCD82 /* NWDownloadApps.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -405,10 +410,21 @@
 		69B473CE1970CF71002FCD82 /* toolBar_shade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolBar_shade@2x.png"; sourceTree = "<group>"; };
 		69B473E01970D036002FCD82 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
 		69B473E11970D036002FCD82 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
-		69B473E31970D0E7002FCD82 /* btn_back_arrow_focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back_arrow_focus.png; sourceTree = "<group>"; };
-		69B473E41970D0E7002FCD82 /* btn_back_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back_arrow.png; sourceTree = "<group>"; };
 		69B474F119712D8D002FCD82 /* NWStateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWStateView.h; sourceTree = "<group>"; };
 		69B474F219712D8D002FCD82 /* NWStateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWStateView.m; sourceTree = "<group>"; };
+		69B474FE197155C8002FCD82 /* NWCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWCoreData.h; sourceTree = "<group>"; };
+		69B474FF197155C8002FCD82 /* NWCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWCoreData.m; sourceTree = "<group>"; };
+		69B47500197155C8002FCD82 /* NWCoreDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWCoreDataUtil.h; sourceTree = "<group>"; };
+		69B47501197155C8002FCD82 /* NWCoreDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWCoreDataUtil.m; sourceTree = "<group>"; };
+		69B47504197155C8002FCD82 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		69B47507197155C8002FCD82 /* NWCoreDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWCoreDataAdapter.h; sourceTree = "<group>"; };
+		69B47508197155C8002FCD82 /* NWCoreDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWCoreDataAdapter.m; sourceTree = "<group>"; };
+		69B4758F19716F31002FCD82 /* NWDownloadCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadCenter.h; sourceTree = "<group>"; };
+		69B4759019716F31002FCD82 /* NWDownloadCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadCenter.m; sourceTree = "<group>"; };
+		69B47595197170FF002FCD82 /* DownloadApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadApps.h; sourceTree = "<group>"; };
+		69B47596197170FF002FCD82 /* DownloadApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadApps.m; sourceTree = "<group>"; };
+		69B475981971711A002FCD82 /* NWDownloadApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadApps.h; sourceTree = "<group>"; };
+		69B475991971711A002FCD82 /* NWDownloadApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadApps.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -642,6 +658,8 @@
 		694BDC06196ED80700E60CF1 /* Common-Utils */ = {
 			isa = PBXGroup;
 			children = (
+				69B4758E19716EF3002FCD82 /* DownloadCenter */,
+				69B474F719715585002FCD82 /* CoreData */,
 				694BDC07196ED80700E60CF1 /* App */,
 				694BDC0C196ED80700E60CF1 /* Downloader */,
 				694BDC1A196ED80700E60CF1 /* Files */,
@@ -982,8 +1000,6 @@
 		69B473B91970CF71002FCD82 /* Icon */ = {
 			isa = PBXGroup;
 			children = (
-				69B473E31970D0E7002FCD82 /* btn_back_arrow_focus.png */,
-				69B473E41970D0E7002FCD82 /* btn_back_arrow.png */,
 				69B473BA1970CF71002FCD82 /* icon.png */,
 			);
 			path = Icon;
@@ -1024,6 +1040,81 @@
 				69B473E11970D036002FCD82 /* NSString+FontAwesome.m */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		69B474F719715585002FCD82 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				69B47502197155C8002FCD82 /* DataFile */,
+				69B474FD197155C8002FCD82 /* Class */,
+				69B47505197155C8002FCD82 /* Models */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		69B474FD197155C8002FCD82 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				69B474FE197155C8002FCD82 /* NWCoreData.h */,
+				69B474FF197155C8002FCD82 /* NWCoreData.m */,
+				69B47500197155C8002FCD82 /* NWCoreDataUtil.h */,
+				69B47501197155C8002FCD82 /* NWCoreDataUtil.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		69B47502197155C8002FCD82 /* DataFile */ = {
+			isa = PBXGroup;
+			children = (
+				69B47503197155C8002FCD82 /* CoreData.xcdatamodeld */,
+			);
+			path = DataFile;
+			sourceTree = "<group>";
+		};
+		69B47505197155C8002FCD82 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69B47506197155C8002FCD82 /* Adapter */,
+				69B4750A197155C8002FCD82 /* CommonObject */,
+				69B47535197155C8002FCD82 /* ManagedObject */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		69B47506197155C8002FCD82 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				69B47507197155C8002FCD82 /* NWCoreDataAdapter.h */,
+				69B47508197155C8002FCD82 /* NWCoreDataAdapter.m */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		69B4750A197155C8002FCD82 /* CommonObject */ = {
+			isa = PBXGroup;
+			children = (
+				69B475981971711A002FCD82 /* NWDownloadApps.h */,
+				69B475991971711A002FCD82 /* NWDownloadApps.m */,
+			);
+			path = CommonObject;
+			sourceTree = "<group>";
+		};
+		69B47535197155C8002FCD82 /* ManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				69B47595197170FF002FCD82 /* DownloadApps.h */,
+				69B47596197170FF002FCD82 /* DownloadApps.m */,
+			);
+			path = ManagedObject;
+			sourceTree = "<group>";
+		};
+		69B4758E19716EF3002FCD82 /* DownloadCenter */ = {
+			isa = PBXGroup;
+			children = (
+				69B4758F19716F31002FCD82 /* NWDownloadCenter.h */,
+				69B4759019716F31002FCD82 /* NWDownloadCenter.m */,
+			);
+			path = DownloadCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1135,11 +1226,9 @@
 				694BDCCF196ED80700E60CF1 /* 1.png in Resources */,
 				694BDCDC196ED80700E60CF1 /* NWInterestTableViewCell.xib in Resources */,
 				694BDCAC196ED80700E60CF1 /* placeholder-icon.png in Resources */,
-				69B473E61970D0E7002FCD82 /* btn_back_arrow.png in Resources */,
 				694BDCAA196ED80700E60CF1 /* success@2x.png in Resources */,
 				694BDCD8196ED80700E60CF1 /* NWHistoryViewController.xib in Resources */,
 				694BDCF0196ED80700E60CF1 /* NWInstalledCell.xib in Resources */,
-				69B473E51970D0E7002FCD82 /* btn_back_arrow_focus.png in Resources */,
 				69B473DE1970CF71002FCD82 /* toolBar_shade@2x.png in Resources */,
 				694BDCA4196ED80700E60CF1 /* banner.png in Resources */,
 				69B473D51970CF71002FCD82 /* manager.png in Resources */,
@@ -1231,6 +1320,7 @@
 				694BDCA6196ED80700E60CF1 /* CTLoadingView.m in Sources */,
 				694BDCB6196ED80700E60CF1 /* NWRefreshControl.m in Sources */,
 				694BDCAB196ED80700E60CF1 /* RTSpinKitView.m in Sources */,
+				69B47597197170FF002FCD82 /* DownloadApps.m in Sources */,
 				694BDCF6196ED80700E60CF1 /* NWUpdateView.m in Sources */,
 				694BDCCC196ED80700E60CF1 /* NWRootView.m in Sources */,
 				694BDCE2196ED80700E60CF1 /* NWHotTableViewCell.m in Sources */,
@@ -1242,6 +1332,7 @@
 				694BDCC3196ED80700E60CF1 /* NWTableViewCellUtil.m in Sources */,
 				694BDCD7196ED80700E60CF1 /* NWHistoryViewController.m in Sources */,
 				694BDCBE196ED80700E60CF1 /* NWFileMerger.m in Sources */,
+				69B47562197155C8002FCD82 /* CoreData.xcdatamodeld in Sources */,
 				694BDCBF196ED80700E60CF1 /* NWFileSlicer.m in Sources */,
 				694BDCED196ED80700E60CF1 /* NWDownloadTableViewCell.m in Sources */,
 				694BDCF2196ED80700E60CF1 /* NWManageViewController.m in Sources */,
@@ -1252,8 +1343,11 @@
 				694BDCB3196ED80700E60CF1 /* NWFooterStateView.m in Sources */,
 				69B473E21970D036002FCD82 /* NSString+FontAwesome.m in Sources */,
 				694BDCB4196ED80700E60CF1 /* NWHeaderStateView.m in Sources */,
+				69B47561197155C8002FCD82 /* NWCoreDataUtil.m in Sources */,
+				69B4759119716F31002FCD82 /* NWDownloadCenter.m in Sources */,
 				694BDCB7196ED80700E60CF1 /* NWTableView.m in Sources */,
 				694BDCC5196ED80700E60CF1 /* NWNavigationController.m in Sources */,
+				69B4759A1971711A002FCD82 /* NWDownloadApps.m in Sources */,
 				694BDCF4196ED80700E60CF1 /* NWUpdateCell.m in Sources */,
 				694BDCE0196ED80700E60CF1 /* NWBannerTableViewCell.m in Sources */,
 				694BDCF1196ED80700E60CF1 /* NWInstalledView.m in Sources */,
@@ -1266,10 +1360,12 @@
 				694BDCBB196ED80700E60CF1 /* NWDownloadModel.m in Sources */,
 				694BDCFF196ED80700E60CF1 /* NWSettingViewController.m in Sources */,
 				694BDCBA196ED80700E60CF1 /* NWDownloader.m in Sources */,
+				69B47563197155C8002FCD82 /* NWCoreDataAdapter.m in Sources */,
 				694BDCA3196ED80700E60CF1 /* NWActivityIndicatorView.m in Sources */,
 				694BDCC8196ED80700E60CF1 /* NWRootViewController.m in Sources */,
 				694BDD01196ED80700E60CF1 /* NWShareViewController.m in Sources */,
 				694BDCCD196ED80700E60CF1 /* NWToolbar.m in Sources */,
+				69B47560197155C8002FCD82 /* NWCoreData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1540,6 +1636,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		69B47503197155C8002FCD82 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				69B47504197155C8002FCD82 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 69B47504197155C8002FCD82 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 694BDB7B196ED7B100E60CF1 /* Project object */;
 }

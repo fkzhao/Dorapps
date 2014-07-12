@@ -184,7 +184,7 @@
     if (state == ePullStateTypeRefresh) {
         [self.headerView changeState:state];
         self.headerView.stateLabel.text = @"加载中";
-        [UIView animateWithDuration:0.75 animations:^(void){
+        [UIView animateWithDuration:0.5 animations:^(void){
             [self.scrollView setContentInset:UIEdgeInsetsMake(_headerView.bounds.size.height, 0, 0, 0)];
         }] ;
         

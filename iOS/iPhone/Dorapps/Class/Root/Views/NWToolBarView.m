@@ -117,11 +117,6 @@ enum barsize{
     [self addSubview:secondBtn];
     [self addSubview:thirdBtn];
     [self addSubview:fourthBtn];
-    
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 320, 1)];
-    label.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
-    [label setText:@""];
-    [self addSubview:label];
 
 }
 
@@ -131,7 +126,7 @@ enum barsize{
     [button addTarget:self action:@selector(buttonClickAction:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-    [button setTitleColor:NWColorRGB(0, 0, 0) forState:UIControlStateNormal];
+    [button setTitleColor:NWColorRGB(100, 100, 100) forState:UIControlStateNormal];
     [button setTitle:title forState:UIControlStateNormal];
     [button.titleLabel setFont:[UIFont systemFontOfSize:10]];
     [button addTarget:self action:@selector(buttonClickAction:) forControlEvents:UIControlEventTouchUpInside];

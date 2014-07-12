@@ -86,7 +86,7 @@ static NSData * (*SBSCopyIconImagePNGDataForDisplayIdentifier)(NSString *identif
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataSources.count+1;
+    return _dataSources.count+10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -99,6 +99,7 @@ static NSData * (*SBSCopyIconImagePNGDataForDisplayIdentifier)(NSString *identif
     if (cell == nil) {
         cell = (NWInstalledCell *)[NWTableViewCellUtil loadCell:NSStringFromClass([NWInstalledCell class]) atIndex:0];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

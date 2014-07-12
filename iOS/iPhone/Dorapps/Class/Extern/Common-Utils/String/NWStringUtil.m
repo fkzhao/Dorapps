@@ -69,4 +69,25 @@
     return str;
 }
 
+
++(NSString *)convertToLowercase:(NSString *)covertString
+{
+    if (covertString.length > 0) {
+        NSString *newStr = [covertString lowercaseString];
+        return newStr;
+    } else {
+        return @"";
+    }
+}
+
++(NSString *)convertToUppercase:(NSString *)covertString
+{
+    if (covertString.length > 0) {
+        NSString *newStr = [covertString uppercaseString];
+        return newStr;
+    } else {
+        return @"";
+    }
+}
+
 @end

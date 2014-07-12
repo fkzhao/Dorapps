@@ -12,6 +12,7 @@
 #import "NWSearchViewController.h"
 #import "NWMoreViewController.h"
 #import "NWTabBarViewController.h"
+#import "NWCoreDataUtil.h"
 
 @implementation NWAppDelegate
 
@@ -34,6 +35,7 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -62,6 +64,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [NWCoreDataUtil saveContext];
 }
 
 @end

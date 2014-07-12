@@ -27,19 +27,18 @@
         barItemMargin = 22.0f;
     }
     UIButton *customButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage* image = [UIImage imageNamed:@"btn_back_arrow.png"];
-    UIImage* pressedImage = [UIImage imageNamed:@"btn_back_arrow_focus.png"];
-    [customButton setImage:image forState:UIControlStateNormal];
-    [customButton setImage:pressedImage forState:UIControlStateHighlighted];
+//    UIImage* image = [UIImage imageNamed:@"btn_back_arrow.png"];
+//    UIImage* pressedImage = [UIImage imageNamed:@"btn_back_arrow_focus.png"];
+//    [customButton setImage:image forState:UIControlStateNormal];
+//    [customButton setImage:pressedImage forState:UIControlStateHighlighted];
     
-//    customButton.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:36];
-//    customButton.titleLabel.textAlignment = NSTextAlignmentLeft;
-//    [customButton setTitle:[NSString fontAwesomeIconStringForEnum:FAKIconAngleLeft] forState:UIControlStateNormal];
-//    [customButton setTitle:[NSString fontAwesomeIconStringForEnum:FAKIconAngleLeft] forState:UIControlStateHighlighted];
-//    [customButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    
-//    [customButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
-        
+    customButton.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:36];
+    customButton.titleLabel.textAlignment = NSTextAlignmentLeft;
+    [customButton setTitle:[NSString fontAwesomeIconStringForEnum:FAKIconAngleLeft] forState:UIControlStateNormal];
+    [customButton setTitle:[NSString fontAwesomeIconStringForEnum:FAKIconAngleLeft] forState:UIControlStateHighlighted];
+    [customButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [customButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+    
     [customButton setFrame:CGRectMake(0, 0, 22+barItemMargin, 44)];
     [customButton addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
     [self setBackBarButtonItem:[NWNavigationBar createBarButtonItemWithCustomView:customButton]];

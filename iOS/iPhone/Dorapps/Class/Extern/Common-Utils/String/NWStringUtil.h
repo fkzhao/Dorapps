@@ -34,4 +34,9 @@ typedef enum {
 
 +(NSString *)getLocalizationString:(eLocationFlag)locationFlag;
 
+
+
++(NSString *)convertToLowercase:(NSString *)covertString;
+
++(NSString *)convertToUppercase:(NSString *)covertString;
 @end

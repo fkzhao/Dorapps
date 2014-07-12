@@ -49,7 +49,6 @@
     
     for (NWRootViewController *vc in self.controllers) {
         vc.view.frame = self.childView.bounds;
-//        [self addChildViewController:vc];
     }
     if (self.controllers.count > 0) {
         currentViewController= (NWRootViewController *)[self.controllers objectAtIndex:0];

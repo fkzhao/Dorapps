@@ -68,6 +68,11 @@
     }
 }
 
+-(void)willMoveToSuperview:(UIView *)newSuperview
+{
+    
+}
+
 -(void)initData
 {
     _dataSources = [[NSMutableArray alloc]initWithCapacity:0];
@@ -88,6 +93,7 @@
     if (cell == nil) {
         cell = (NWUpdateCell *)[NWTableViewCellUtil loadCell:NSStringFromClass([NWUpdateCell class]) atIndex:0];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

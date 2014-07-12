@@ -86,6 +86,7 @@
     if (cell == nil) {
         cell = (NWDownloadedCell *)[NWTableViewCellUtil loadCell:NSStringFromClass([NWDownloadedCell class]) atIndex:0];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
