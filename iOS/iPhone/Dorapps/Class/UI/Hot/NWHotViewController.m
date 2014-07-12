@@ -9,7 +9,6 @@
 #import "NWHotViewController.h"
 #import "NWDetailViewController.h"
 #import "NWHotTableViewCell.h"
-#import "NWViewController.h"
 #import "NWHotSender.h"
 #import "NWHotViewCacheBean.h"
 #import "NWDetailViewCacheBean.h"
@@ -48,13 +47,13 @@
 }
 
 -(void)initView {
+    [self.mainTableView setTableViewStateRefreshing];
     NWHotSender *sender = [[NWHotSender alloc]init];
-    [self registerLoadingView];
     NWHotViewCacheBean *cache = [[NWHotViewCacheBean alloc]init];
     NWSenderResultModel *reslutModel = [sender sendGetHotAppList];
     [self goToInsidePageWithModel:reslutModel cacheBean:cache successBlocks:^(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject) {
         cacheBean = (NWHotViewCacheBean *)self.viewCacheBean;
-        [self.mainTableView reloadData];
+        [self.mainTableView reloadDataWithIsAllLoaded:NO];
     } failedBlocks:^(NSString *businessCode, NSString *errorInformation, id goToPageObject) {
         NSLog(@"failed");
     }];
@@ -121,7 +120,17 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         sleep(2);
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.mainTableView reloadDataWithRefreshingIsAllLoaded:NO];
+            [self.mainTableView reloadDataWithIsAllLoaded:NO];
+        });
+    });
+}
+
+- (void)pullUpToAddData:(NWTableView *)tableView
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        sleep(2);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.mainTableView reloadDataWithIsAllLoaded:YES];
         });
     });
 }

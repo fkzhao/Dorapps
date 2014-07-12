@@ -11,50 +11,73 @@
 @implementation NWHeaderStateView
 
 
-#pragma mark - Propertys
-
-- (NWRefreshCircleView *)refreshCircleView {
-    if (!_refreshCircleView) {
-        _refreshCircleView = [[NWRefreshCircleView alloc] initWithFrame:CGRectMake((CGRectGetWidth(self.bounds) - kXHRefreshCircleViewHeight) / 2 - 40, (CGRectGetHeight(self.bounds) - kXHRefreshCircleViewHeight) / 2 - 5, kXHRefreshCircleViewHeight, kXHRefreshCircleViewHeight)];
-    }
-    return _refreshCircleView;
-}
-
-- (UILabel *)stateLabel {
-    if (!_stateLabel) {
-        _stateLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.refreshCircleView.frame) + 5, CGRectGetMinY(self.refreshCircleView.frame), 160, 14)];
-        _stateLabel.backgroundColor = [UIColor clearColor];
-        _stateLabel.font = [UIFont systemFontOfSize:14.f];
-        _stateLabel.textColor = [UIColor blackColor];
-    }
-    return _stateLabel;
-}
-
-- (UILabel *)timeLabel {
-    if (!_timeLabel) {
-        CGRect timeLabelFrame = self.stateLabel.frame;
-        timeLabelFrame.origin.y += CGRectGetHeight(timeLabelFrame) + 6;
-        _timeLabel = [[UILabel alloc] initWithFrame:timeLabelFrame];
-        _timeLabel.backgroundColor = [UIColor clearColor];
-        _timeLabel.font = [UIFont systemFontOfSize:11.f];
-        _timeLabel.textColor = [UIColor colorWithWhite:0.659 alpha:1.000];
-    }
-    return _timeLabel;
-}
-
-#pragma mark - Life Cycle
-
-- (id)initWithFrame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame
+{
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor whiteColor];
-        [self addSubview:self.refreshCircleView];
-        [self addSubview:self.stateLabel];
-        [self addSubview:self.timeLabel];
+        [self initBaseView];
+        
     }
     return self;
 }
 
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self initBaseView];
+}
+
+
+-(void)initBaseView
+{
+    self.stateLabel.text = @"下拉刷新";
+    self.stateLabel.textColor = [UIColor blackColor];
+    [self.stateLabel setFrame:CGRectMake(140, 32, 180, 20)];
+    [self addSubview:self.refreshCircleView];
+}
+
+-(void)changeState:(ePullStateType)state
+{
+    switch (state) {
+        case ePullStateTypeNormal:
+        {
+            self.state = ePullStateTypeNormal;
+            [self.refreshCircleView.layer removeAnimationForKey:@"rotateAnimation"];
+            self.stateLabel.text = @"下拉可以刷新";
+        }
+            break;
+        case ePullStateTypeDown:
+        {
+            self.state = ePullStateTypeDown;
+            self.stateLabel.text = @"松开可以刷新";
+        }
+            break;
+            
+        case ePullStateTypeRefresh:
+        {
+            self.state = ePullStateTypeRefresh;
+            [self.refreshCircleView.layer addAnimation:[NWRefreshCircleView repeatRotateAnimation] forKey:@"rotateAnimation"];
+            self.stateLabel.text = @" 刷新中";
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+- (NWRefreshCircleView *)refreshCircleView {
+    if (!_refreshCircleView) {
+        _refreshCircleView = [[NWRefreshCircleView alloc] initWithFrame:CGRectMake(110,32, kFBRefreshCircleViewHeight, kFBRefreshCircleViewHeight)];
+    }
+    return _refreshCircleView;
+}
+
+-(void)setOffSetY:(CGFloat)offsetY
+{
+    CGFloat minY = MIN(ABS(offsetY), kFBDefaultRefreshTotalPixels);
+    CGFloat offSetY =  minY - kFBRefreshCircleViewHeight;
+    [self.refreshCircleView setOffSetY:offSetY];
+}
 
 @end

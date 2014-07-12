@@ -103,7 +103,7 @@
             break;
         case 3:
         {
-            UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(updateAllApps)];
+            UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"更新全部" style:UIBarButtonItemStylePlain target:self action:@selector(updateAllApps)];
             [self currentNavigationItem].rightBarButtonItem = rightBarButtonItem;
             tmpView = _updateView;
         }
@@ -121,7 +121,9 @@
 }
 
 -(void)updateAllApps {
-    
+    if (_updateView) {
+        [_updateView updateAllApps];
+    }
 }
 
 

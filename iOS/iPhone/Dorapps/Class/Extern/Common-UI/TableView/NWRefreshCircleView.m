@@ -55,4 +55,14 @@
     CGContextDrawPath(context, kCGPathStroke);
 }
 
+-(void)setOffSetY:(CGFloat)offsetY
+{
+    if (offsetY < 0) {
+        self.offsetY = 0;
+    } else {
+        self.offsetY = offsetY;
+    }
+    [self setNeedsDisplay];
+}
+
 @end

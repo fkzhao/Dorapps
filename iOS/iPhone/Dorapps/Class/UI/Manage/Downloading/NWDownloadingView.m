@@ -15,7 +15,7 @@
     NSMutableArray *_dataSources;
 }
 
-@property (nonatomic,strong)UITableView *mainTableView;
+@property (nonatomic,strong) UITableView *mainTableView;
 
 @end
 

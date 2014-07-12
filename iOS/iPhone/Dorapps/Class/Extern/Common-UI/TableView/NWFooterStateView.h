@@ -8,20 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "NWUIDefine.h"
-
+#import "NWStateView.h"
 #define kXHLoadMoreViewHeight 50
 
-@interface NWFooterStateView : UIView
+@interface NWFooterStateView : NWStateView
 
-@property (nonatomic, strong) UIButton *loadMoreButton;
-
-- (void)startLoading;
-
-- (void)endLoading;
-
-- (void)configuraManualState;
-
-- (void)configuraNothingMoreWithMessage:(NSString *)message;
 
 
 @end

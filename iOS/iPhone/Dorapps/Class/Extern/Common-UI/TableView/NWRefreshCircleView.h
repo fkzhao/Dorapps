@@ -31,5 +31,5 @@
  */
 + (CABasicAnimation*)repeatRotateAnimation;
 
-
+-(void)setOffSetY:(CGFloat)offsetY;
 @end

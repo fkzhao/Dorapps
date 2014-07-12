@@ -9,5 +9,5 @@
 #import "NWRootView.h"
 
 @interface NWUpdateView : NWRootView
-
+-(void)updateAllApps;
 @end

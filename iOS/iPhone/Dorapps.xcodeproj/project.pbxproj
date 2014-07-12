@@ -100,8 +100,6 @@
 		694BDCE3196ED80700E60CF1 /* NWHotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC60196ED80700E60CF1 /* NWHotTableViewCell.xib */; };
 		694BDCE4196ED80700E60CF1 /* NWHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC62196ED80700E60CF1 /* NWHotViewController.m */; };
 		694BDCE5196ED80700E60CF1 /* NWHotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC63196ED80700E60CF1 /* NWHotViewController.xib */; };
-		694BDCE6196ED80700E60CF1 /* NWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC65196ED80700E60CF1 /* NWViewController.m */; };
-		694BDCE7196ED80700E60CF1 /* NWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC66196ED80700E60CF1 /* NWViewController.xib */; };
 		694BDCE8196ED80700E60CF1 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC67196ED80700E60CF1 /* twitter.png */; };
 		694BDCE9196ED80700E60CF1 /* NWDownloadedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC6B196ED80700E60CF1 /* NWDownloadedCell.m */; };
 		694BDCEA196ED80700E60CF1 /* NWDownloadedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC6C196ED80700E60CF1 /* NWDownloadedCell.xib */; };
@@ -154,6 +152,7 @@
 		69B473E21970D036002FCD82 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B473E11970D036002FCD82 /* NSString+FontAwesome.m */; };
 		69B473E51970D0E7002FCD82 /* btn_back_arrow_focus.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473E31970D0E7002FCD82 /* btn_back_arrow_focus.png */; };
 		69B473E61970D0E7002FCD82 /* btn_back_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473E41970D0E7002FCD82 /* btn_back_arrow.png */; };
+		69B474F319712D8D002FCD82 /* NWStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B474F219712D8D002FCD82 /* NWStateView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,9 +335,6 @@
 		694BDC61196ED80700E60CF1 /* NWHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWHotViewController.h; sourceTree = "<group>"; };
 		694BDC62196ED80700E60CF1 /* NWHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHotViewController.m; sourceTree = "<group>"; };
 		694BDC63196ED80700E60CF1 /* NWHotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWHotViewController.xib; sourceTree = "<group>"; };
-		694BDC64196ED80700E60CF1 /* NWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWViewController.h; sourceTree = "<group>"; };
-		694BDC65196ED80700E60CF1 /* NWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWViewController.m; sourceTree = "<group>"; };
-		694BDC66196ED80700E60CF1 /* NWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWViewController.xib; sourceTree = "<group>"; };
 		694BDC67196ED80700E60CF1 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		694BDC6A196ED80700E60CF1 /* NWDownloadedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadedCell.h; sourceTree = "<group>"; };
 		694BDC6B196ED80700E60CF1 /* NWDownloadedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadedCell.m; sourceTree = "<group>"; };
@@ -411,6 +407,8 @@
 		69B473E11970D036002FCD82 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
 		69B473E31970D0E7002FCD82 /* btn_back_arrow_focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back_arrow_focus.png; sourceTree = "<group>"; };
 		69B473E41970D0E7002FCD82 /* btn_back_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back_arrow.png; sourceTree = "<group>"; };
+		69B474F119712D8D002FCD82 /* NWStateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWStateView.h; sourceTree = "<group>"; };
+		69B474F219712D8D002FCD82 /* NWStateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWStateView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -635,6 +633,8 @@
 				694BDC03196ED80700E60CF1 /* NWTableView.h */,
 				694BDC04196ED80700E60CF1 /* NWTableView.m */,
 				694BDC05196ED80700E60CF1 /* NWTableViewDefine.h */,
+				69B474F119712D8D002FCD82 /* NWStateView.h */,
+				69B474F219712D8D002FCD82 /* NWStateView.m */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -833,9 +833,6 @@
 				694BDC5E196ED80700E60CF1 /* NWHotTableViewCell.h */,
 				694BDC5F196ED80700E60CF1 /* NWHotTableViewCell.m */,
 				694BDC60196ED80700E60CF1 /* NWHotTableViewCell.xib */,
-				694BDC64196ED80700E60CF1 /* NWViewController.h */,
-				694BDC65196ED80700E60CF1 /* NWViewController.m */,
-				694BDC66196ED80700E60CF1 /* NWViewController.xib */,
 				694BDC67196ED80700E60CF1 /* twitter.png */,
 			);
 			path = Hot;
@@ -1166,7 +1163,6 @@
 				694BDCEE196ED80700E60CF1 /* NWDownloadTableViewCell.xib in Resources */,
 				69B473D31970CF71002FCD82 /* home.png in Resources */,
 				694BDCEA196ED80700E60CF1 /* NWDownloadedCell.xib in Resources */,
-				694BDCE7196ED80700E60CF1 /* NWViewController.xib in Resources */,
 				694BDCFC196ED80700E60CF1 /* NWLanguageViewController.xib in Resources */,
 				694BDCE8196ED80700E60CF1 /* twitter.png in Resources */,
 				69B473D81970CF71002FCD82 /* searching_hight.png in Resources */,
@@ -1220,6 +1216,7 @@
 				694BDCB5196ED80700E60CF1 /* NWRefreshCircleView.m in Sources */,
 				694BDCCE196ED80700E60CF1 /* NWToolBarView.m in Sources */,
 				694BDCEB196ED80700E60CF1 /* NWDownloadedView.m in Sources */,
+				69B474F319712D8D002FCD82 /* NWStateView.m in Sources */,
 				69B473B31970CDBA002FCD82 /* UIViewController+NWNavigationBar.m in Sources */,
 				694BDCBC196ED80700E60CF1 /* NWDownloadOperation.m in Sources */,
 				694BDCFD196ED80700E60CF1 /* NWMoreViewController.m in Sources */,
@@ -1246,7 +1243,6 @@
 				694BDCD7196ED80700E60CF1 /* NWHistoryViewController.m in Sources */,
 				694BDCBE196ED80700E60CF1 /* NWFileMerger.m in Sources */,
 				694BDCBF196ED80700E60CF1 /* NWFileSlicer.m in Sources */,
-				694BDCE6196ED80700E60CF1 /* NWViewController.m in Sources */,
 				694BDCED196ED80700E60CF1 /* NWDownloadTableViewCell.m in Sources */,
 				694BDCF2196ED80700E60CF1 /* NWManageViewController.m in Sources */,
 				694BDCE9196ED80700E60CF1 /* NWDownloadedCell.m in Sources */,

@@ -14,7 +14,7 @@
     NSMutableArray *_dataSources;
 }
 
-@property (nonatomic,strong)NWTableView *mainTableView;
+@property (nonatomic,strong)UITableView *mainTableView;
 
 
 @end
@@ -59,10 +59,9 @@
     if (!_mainTableView) {
         CGRect frame = self.bounds;
         frame.size.height = frame.size.height - 110;
-        _mainTableView = [[NWTableView alloc]initWithFrame:frame style:UITableViewStylePlain];
+        _mainTableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStylePlain];
         _mainTableView.dataSource = self;
         _mainTableView.delegate = self;
-        _mainTableView.updateDelegate = self;
         [self addSubview:_mainTableView];
     }
 }
@@ -93,15 +92,5 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-- (void)pullDownToRefreshData:(NWTableView *)tableView
-{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        sleep(2);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.mainTableView reloadDataWithRefreshingIsAllLoaded:NO];
-        });
-    });
 }
 @end

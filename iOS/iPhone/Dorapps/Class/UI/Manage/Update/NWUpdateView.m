@@ -63,6 +63,7 @@
         _mainTableView.dataSource = self;
         _mainTableView.delegate = self;
         _mainTableView.updateDelegate = self;
+        _mainTableView.tableFooterView = nil;
         [self addSubview:_mainTableView];
     }
 }
@@ -100,9 +101,18 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         sleep(2);
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.mainTableView reloadDataWithRefreshingIsAllLoaded:NO];
+            [self.mainTableView reloadDataWithIsAllLoaded:NO];
         });
     });
 }
-
+-(void)updateAllApps
+{
+    [self.mainTableView setTableViewStateRefreshing];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        sleep(2);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.mainTableView reloadDataWithIsAllLoaded:NO];
+        });
+    });
+}
 @end

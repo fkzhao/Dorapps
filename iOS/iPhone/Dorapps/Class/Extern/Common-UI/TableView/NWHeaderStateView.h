@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NWStateView.h"
 #import "NWRefreshCircleView.h"
 
-@interface NWHeaderStateView : UIView
-@property (nonatomic, strong) NWRefreshCircleView *refreshCircleView;
-@property (nonatomic, strong) UILabel *stateLabel;
+#define kFBRefreshCircleViewHeight 20
 
-@property (nonatomic, strong) UILabel *timeLabel;
+@interface NWHeaderStateView : NWStateView
+@property (nonatomic, strong) NWRefreshCircleView *refreshCircleView;
+-(void)setOffSetY:(CGFloat)offsetY;
+
 @end
