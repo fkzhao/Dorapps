@@ -134,7 +134,6 @@
 		69772F1C19725E4400118BBB /* NWManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69772F1A19725E4400118BBB /* NWManageViewController.xib */; };
 		69772F1F19725F2F00118BBB /* DownloadApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F1E19725F2F00118BBB /* DownloadApps.m */; };
 		69772F221972689C00118BBB /* NWDownloadInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F211972689C00118BBB /* NWDownloadInstance.m */; };
-		69772F2519726E5800118BBB /* NWDateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2419726E5800118BBB /* NWDateUtil.m */; };
 		69B473B31970CDBA002FCD82 /* UIViewController+NWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */; };
 		69B473CF1970CF71002FCD82 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */; };
 		69B473D01970CF71002FCD82 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473BA1970CF71002FCD82 /* icon.png */; };
@@ -394,8 +393,6 @@
 		69772F1E19725F2F00118BBB /* DownloadApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadApps.m; sourceTree = "<group>"; };
 		69772F201972689C00118BBB /* NWDownloadInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadInstance.h; sourceTree = "<group>"; };
 		69772F211972689C00118BBB /* NWDownloadInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadInstance.m; sourceTree = "<group>"; };
-		69772F2319726E5800118BBB /* NWDateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDateUtil.h; sourceTree = "<group>"; };
-		69772F2419726E5800118BBB /* NWDateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDateUtil.m; sourceTree = "<group>"; };
 		69B473B11970CDBA002FCD82 /* UIViewController+NWNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NWNavigationBar.h"; sourceTree = "<group>"; };
 		69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NWNavigationBar.m"; sourceTree = "<group>"; };
 		69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
@@ -672,8 +669,6 @@
 				694BDC23196ED80700E60CF1 /* TableView */,
 				694BDC0C196ED80700E60CF1 /* Downloader */,
 				69B4758E19716EF3002FCD82 /* DownloadCenter */,
-				69772F2319726E5800118BBB /* NWDateUtil.h */,
-				69772F2419726E5800118BBB /* NWDateUtil.m */,
 			);
 			path = "Common-Utils";
 			sourceTree = "<group>";
@@ -1314,7 +1309,6 @@
 			files = (
 				694BDCC0196ED80700E60CF1 /* NWFileManagerUtil.m in Sources */,
 				694BDCC9196ED80700E60CF1 /* NWTabBarViewController.m in Sources */,
-				69772F2519726E5800118BBB /* NWDateUtil.m in Sources */,
 				694BDCDB196ED80700E60CF1 /* NWInterestTableViewCell.m in Sources */,
 				694BDD03196ED80700E60CF1 /* NWSearchViewController.m in Sources */,
 				694BDCC2196ED80700E60CF1 /* NWStringUtil.m in Sources */,
