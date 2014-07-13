@@ -91,7 +91,7 @@
         if (cell == nil) {
             cell = (NWHotTableViewCell *)[[[NSBundle mainBundle]loadNibNamed:NSStringFromClass([NWHotTableViewCell class]) owner:nil options:nil]objectAtIndex:0];
         }
-        NWHotAppModel *model = (NWHotAppModel *)[cacheBean.appListArray objectAtIndex:indexPath.row-1];
+        NWListAppModel *model = (NWListAppModel *)[cacheBean.appListArray objectAtIndex:indexPath.row-1];
         [cell displayCellWith:model];
         return cell;
     }
@@ -102,7 +102,7 @@
         return;
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NWHotAppModel *model = (NWHotAppModel *)[cacheBean.appListArray objectAtIndex:indexPath.row-1];
+    NWListAppModel *model = (NWListAppModel *)[cacheBean.appListArray objectAtIndex:indexPath.row-1];
     NWHotSender *sender = [[NWHotSender alloc]init];
     NWSenderResultModel *resultModel = [sender sendGetAppDetail:model.appID];
     [self goToNextPageWithModel:resultModel cacheBean:nil saveParam:nil nextPageClass:[NWDetailViewController class] createNextPageCache:^NWViewCacheBean *{

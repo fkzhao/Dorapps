@@ -15,6 +15,9 @@
 @protocol NWDownloaderDelegate <NSObject>
 
 @optional
+
+-(void)downloadWillStart:(CGFloat)totalSize withToken:(NSString *)token;
+
 -(void)downloadProgress:(CGFloat)progressValue withToken:(NSString *)token;
 
 -(void)downloadCancel:(NSString *)token;

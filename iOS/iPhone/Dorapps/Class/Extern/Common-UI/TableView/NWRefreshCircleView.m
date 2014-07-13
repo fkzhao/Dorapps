@@ -16,6 +16,7 @@
     if (self) {
         _heightBeginToRefresh = 50;
         _offsetY = 0;
+        isAnimationing = NO;
         
         self.backgroundColor = [UIColor clearColor];
     }
@@ -62,7 +63,21 @@
     } else {
         self.offsetY = offsetY;
     }
-    [self setNeedsDisplay];
+    if (!isAnimationing) {
+        [self setNeedsDisplay];
+    }
+}
+
+-(void)startAnimation
+{
+    [self.layer addAnimation:[NWRefreshCircleView repeatRotateAnimation] forKey:@"rotateAnimation"];
+    isAnimationing = YES;
+}
+
+-(void)stopAnimation
+{
+    [self.layer removeAnimationForKey:@"rotateAnimation"];
+    isAnimationing = NO;
 }
 
 @end

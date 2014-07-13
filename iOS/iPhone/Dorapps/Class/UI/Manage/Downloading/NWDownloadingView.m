@@ -93,7 +93,7 @@
         cell.appName.text = @"WeChat";
         cell.iconImageView.image = [UIImage imageNamed:@"3"];
     }
-    [cell downloadTask:@"http://yinyueshiting.baidu.com/data2/music/121330215/12012502946800320.mp3?xcode=bc68c93bacb84595e67782b6c5192fc96aab90821b0a46c7" withIndexPath:indexPath];
+    [cell downloadTask:@"" withIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

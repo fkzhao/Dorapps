@@ -25,7 +25,7 @@
         NSArray *apps = (NSArray *)[[[dic objectForKey:@"data"] objectForKey:@"apps"] objectForKey:@"data"];
         for (id obj in apps) {
             NSDictionary *app = (NSDictionary *)obj;
-            NWHotAppModel *model = [[NWHotAppModel alloc]init];
+            NWListAppModel *model = [[NWListAppModel alloc]init];
             model.appTrackName = [NSString stringWithFormat:@"%@",[app objectForKey:@"trackName"]];
             model.appIcon = [NSString stringWithFormat:@"%@",[app objectForKey:@"icon"]];
             model.appID = [NSString stringWithFormat:@"%@",[app objectForKey:@"ID"]];

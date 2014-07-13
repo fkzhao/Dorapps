@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NWHotAppModel.h"
+#import "NWListAppModel.h"
 
 @interface NWHotTableViewCell : UITableViewCell
 
--(void)displayCellWith:(NWHotAppModel *)model;
+-(void)displayCellWith:(NWListAppModel *)model;
 
 @end

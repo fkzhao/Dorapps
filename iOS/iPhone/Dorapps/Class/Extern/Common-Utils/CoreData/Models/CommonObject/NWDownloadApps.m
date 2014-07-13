@@ -19,7 +19,16 @@
         self.data = nil;
         self.createtime = nil;
         self.endtime = nil;
-        self.finished = [NSNumber numberWithBool:NO];
+        self.isFinished = [NSNumber numberWithBool:NO];
+        self.isCanceled = [NSNumber numberWithBool:NO];
+        self.totalsize = [NSNumber numberWithFloat:0.0];
+        self.downloadedsize = [NSNumber numberWithFloat:0.0];
+        self.finishtime = nil;
+        self.icon = @"";
+        self.name = @"";
+        self.apptime = @"";
+        self.version = @"";
+        self.appsize = @"";
     }
     return self;
 }

@@ -29,7 +29,7 @@
     // Configure the view for the selected state
 }
 
--(void)displayCellWith:(NWHotAppModel *)model {
+-(void)displayCellWith:(NWListAppModel *)model {
     [self.appIcon setImageWithURL:[NSURL URLWithString:model.appIcon] placeholderImage:nil];
     self.appInfo.text = [NSString stringWithFormat:@"版本%@ | 大小%@",model.appVersion,model.appSize];
     self.appName.text = model.appTrackName;

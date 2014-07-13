@@ -44,8 +44,6 @@
     return self;
 }
 
-
-
 +(NWCellDownloadModelManager *)shareObjc
 {
     static NWCellDownloadModelManager *shareObj = nil;
@@ -162,18 +160,18 @@
 -(void)downloadTask:(NSString *)url withIndexPath:(NSIndexPath *)indexPath;
 {
     
-    NSString *key = [NSString stringWithFormat:@"Section%liRow%li",(long)indexPath.section,(long)indexPath.row];
-    if ([[NWCellDownloadModelManager shareObjc]hasDownloadeModel:key]) {
-        self.currentModel = [[NWCellDownloadModelManager shareObjc] getDownloadModel:key];
-    } else {
-        NSString *token = [NWDownloader addDownloader:url withDelegate:self];
-        NWCellDownloadModel *model = [[NWCellDownloadModel alloc]init];
-        model.progressValue = 0.0;
-        model.token = token;
-        [[NWCellDownloadModelManager shareObjc] setDownloadModel:key withModel:model];
-        self.currentModel = model;
-    }
-    [self updateViewWith:self.currentModel];
+//    NSString *key = [NSString stringWithFormat:@"Section%liRow%li",(long)indexPath.section,(long)indexPath.row];
+//    if ([[NWCellDownloadModelManager shareObjc]hasDownloadeModel:key]) {
+//        self.currentModel = [[NWCellDownloadModelManager shareObjc] getDownloadModel:key];
+//    } else {
+//        NSString *token = [NWDownloader addDownloader:url withDelegate:self];
+//        NWCellDownloadModel *model = [[NWCellDownloadModel alloc]init];
+//        model.progressValue = 0.0;
+//        model.token = token;
+//        [[NWCellDownloadModelManager shareObjc] setDownloadModel:key withModel:model];
+//        self.currentModel = model;
+//    }
+//    [self updateViewWith:self.currentModel];
 }
 -(void)downloadProgress:(CGFloat)progressValue withToken:(NSString *)token
 {

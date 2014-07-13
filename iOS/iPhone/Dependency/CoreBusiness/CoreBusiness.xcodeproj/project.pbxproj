@@ -16,7 +16,7 @@
 		6916EB3D196F7C40005705B5 /* NWDetailInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB34196F7C40005705B5 /* NWDetailInfoModel.m */; };
 		6916EB3E196F7C40005705B5 /* NWDetailIntroductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB36196F7C40005705B5 /* NWDetailIntroductModel.m */; };
 		6916EB3F196F7C40005705B5 /* NWDtailInterestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB38196F7C40005705B5 /* NWDtailInterestModel.m */; };
-		6916EB40196F7C40005705B5 /* NWHotAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB3B196F7C40005705B5 /* NWHotAppModel.m */; };
+		6916EB40196F7C40005705B5 /* NWListAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB3B196F7C40005705B5 /* NWListAppModel.m */; };
 		6916EB44196F7C65005705B5 /* NWHotSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB43196F7C65005705B5 /* NWHotSender.m */; };
 		6916EB47196F7C86005705B5 /* NWServiceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB46196F7C86005705B5 /* NWServiceUtil.m */; };
 		6916EB4E196FA443005705B5 /* NWViewCacheBeanPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916EB4D196FA443005705B5 /* NWViewCacheBeanPool.m */; };
@@ -63,8 +63,8 @@
 		6916EB36196F7C40005705B5 /* NWDetailIntroductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDetailIntroductModel.m; sourceTree = "<group>"; };
 		6916EB37196F7C40005705B5 /* NWDtailInterestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDtailInterestModel.h; sourceTree = "<group>"; };
 		6916EB38196F7C40005705B5 /* NWDtailInterestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDtailInterestModel.m; sourceTree = "<group>"; };
-		6916EB3A196F7C40005705B5 /* NWHotAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWHotAppModel.h; sourceTree = "<group>"; };
-		6916EB3B196F7C40005705B5 /* NWHotAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHotAppModel.m; sourceTree = "<group>"; };
+		6916EB3A196F7C40005705B5 /* NWListAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWListAppModel.h; sourceTree = "<group>"; };
+		6916EB3B196F7C40005705B5 /* NWListAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWListAppModel.m; sourceTree = "<group>"; };
 		6916EB42196F7C65005705B5 /* NWHotSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWHotSender.h; sourceTree = "<group>"; };
 		6916EB43196F7C65005705B5 /* NWHotSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHotSender.m; sourceTree = "<group>"; };
 		6916EB45196F7C86005705B5 /* NWServiceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWServiceUtil.h; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 		6916EB39196F7C40005705B5 /* hot */ = {
 			isa = PBXGroup;
 			children = (
-				6916EB3A196F7C40005705B5 /* NWHotAppModel.h */,
-				6916EB3B196F7C40005705B5 /* NWHotAppModel.m */,
+				6916EB3A196F7C40005705B5 /* NWListAppModel.h */,
+				6916EB3B196F7C40005705B5 /* NWListAppModel.m */,
 			);
 			path = hot;
 			sourceTree = "<group>";
@@ -375,7 +375,7 @@
 				6916EB57196FBDA3005705B5 /* NWHotAppRequest.m in Sources */,
 				6916EB51196FA45D005705B5 /* NWViewCacheBeanManager.m in Sources */,
 				6916EB44196F7C65005705B5 /* NWHotSender.m in Sources */,
-				6916EB40196F7C40005705B5 /* NWHotAppModel.m in Sources */,
+				6916EB40196F7C40005705B5 /* NWListAppModel.m in Sources */,
 				6916EB27196F7B86005705B5 /* NWViewCacheBean.m in Sources */,
 				6916EB21196F7A4C005705B5 /* NWSenderResultModel.m in Sources */,
 				6916EB3C196F7C40005705B5 /* NWAppHistoryModel.m in Sources */,

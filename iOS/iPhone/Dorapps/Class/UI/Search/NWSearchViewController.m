@@ -91,7 +91,7 @@
     if (cell == nil) {
         cell = (NWHotTableViewCell *)[[[NSBundle mainBundle]loadNibNamed:NSStringFromClass([NWHotTableViewCell class]) owner:nil options:nil]objectAtIndex:0];
     }
-    NWHotAppModel *model = [[NWHotAppModel alloc]init];
+    NWListAppModel *model = [[NWListAppModel alloc]init];
     model.appTrackName = @"WeChat";
     model.appIcon = @"http://a291.phobos.apple.com/us/r30/Purple/v4/e8/38/c4/e838c443-06e6-af21-5533-b6ab103d7cfe/mzl.oighyogu.114x114-75.png";
     model.appSize = @"34.00MB";

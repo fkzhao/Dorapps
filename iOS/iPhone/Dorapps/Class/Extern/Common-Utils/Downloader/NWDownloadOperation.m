@@ -63,7 +63,6 @@
 
 - (void)operationDidStart
 {
-//    responseData = [[NSMutableData alloc] initWithLength:0];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:self.downloadURL]];
     NSURLConnection *urlConnection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
     [urlConnection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
@@ -105,6 +104,9 @@
     }
     CGFloat totalSize = (CGFloat)aResponse.expectedContentLength;
     downloadModel.totalSize = totalSize;
+    if (self.downloadDelegate && [self.downloadDelegate respondsToSelector:@selector(downloadWillStart:withToken:)]) {
+        [self.downloadDelegate downloadWillStart:totalSize withToken:self.token];
+    }
 }
 
 - (void)connection:(NSURLConnection *)aConn didReceiveData:(NSData *)data{

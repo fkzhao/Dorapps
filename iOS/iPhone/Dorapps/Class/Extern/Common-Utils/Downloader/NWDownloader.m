@@ -19,6 +19,21 @@
     return token;
 }
 
+/*!
+ *  断点下载
+ *
+ *  @param str         下载URL
+ *  @param currentSize 当前已下载大小
+ *  @param delegate    代理
+ *
+ *  @return token
+ */
++(NSString *)addDownloader:(NSString *)str withSize:(CGFloat)currentSize withDelegate:(id<NWDownloaderDelegate>) delegate
+{
+    NSLog(@"No implementation function.");
+    return @"";
+}
+
 +(void)cancelDownloadingTask:(NSString *)token
 {
     NWDownloadPool *obj = [NWDownloadPool defaultDownloader];

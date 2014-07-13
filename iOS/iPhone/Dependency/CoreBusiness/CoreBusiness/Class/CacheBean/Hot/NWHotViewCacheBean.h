@@ -7,7 +7,7 @@
 //
 
 #import "NWViewCacheBean.h"
-#import "NWHotAppModel.h"
+#import "NWListAppModel.h"
 
 @interface NWHotViewCacheBean : NWViewCacheBean
 

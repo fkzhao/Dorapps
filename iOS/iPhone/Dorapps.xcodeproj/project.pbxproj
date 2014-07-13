@@ -110,8 +110,6 @@
 		694BDCEF196ED80700E60CF1 /* NWInstalledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC77196ED80700E60CF1 /* NWInstalledCell.m */; };
 		694BDCF0196ED80700E60CF1 /* NWInstalledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC78196ED80700E60CF1 /* NWInstalledCell.xib */; };
 		694BDCF1196ED80700E60CF1 /* NWInstalledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC7A196ED80700E60CF1 /* NWInstalledView.m */; };
-		694BDCF2196ED80700E60CF1 /* NWManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC7C196ED80700E60CF1 /* NWManageViewController.m */; };
-		694BDCF3196ED80700E60CF1 /* NWManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC7D196ED80700E60CF1 /* NWManageViewController.xib */; };
 		694BDCF4196ED80700E60CF1 /* NWUpdateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC80196ED80700E60CF1 /* NWUpdateCell.m */; };
 		694BDCF5196ED80700E60CF1 /* NWUpdateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC81196ED80700E60CF1 /* NWUpdateCell.xib */; };
 		694BDCF6196ED80700E60CF1 /* NWUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC83196ED80700E60CF1 /* NWUpdateView.m */; };
@@ -132,6 +130,11 @@
 		694BDD3D196EDBD100E60CF1 /* libCoreNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDD3C196EDADD00E60CF1 /* libCoreNetWork.a */; };
 		694BDD3E196EDBD400E60CF1 /* libCoreBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDD36196EDAD500E60CF1 /* libCoreBusiness.a */; };
 		694BDD41196EDBF600E60CF1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDD40196EDBF600E60CF1 /* QuartzCore.framework */; };
+		69772F1B19725E4400118BBB /* NWManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F1919725E4400118BBB /* NWManageViewController.m */; };
+		69772F1C19725E4400118BBB /* NWManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69772F1A19725E4400118BBB /* NWManageViewController.xib */; };
+		69772F1F19725F2F00118BBB /* DownloadApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F1E19725F2F00118BBB /* DownloadApps.m */; };
+		69772F221972689C00118BBB /* NWDownloadInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F211972689C00118BBB /* NWDownloadInstance.m */; };
+		69772F2519726E5800118BBB /* NWDateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2419726E5800118BBB /* NWDateUtil.m */; };
 		69B473B31970CDBA002FCD82 /* UIViewController+NWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */; };
 		69B473CF1970CF71002FCD82 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */; };
 		69B473D01970CF71002FCD82 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473BA1970CF71002FCD82 /* icon.png */; };
@@ -156,7 +159,6 @@
 		69B47562197155C8002FCD82 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69B47503197155C8002FCD82 /* CoreData.xcdatamodeld */; };
 		69B47563197155C8002FCD82 /* NWCoreDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B47508197155C8002FCD82 /* NWCoreDataAdapter.m */; };
 		69B4759119716F31002FCD82 /* NWDownloadCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4759019716F31002FCD82 /* NWDownloadCenter.m */; };
-		69B47597197170FF002FCD82 /* DownloadApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B47596197170FF002FCD82 /* DownloadApps.m */; };
 		69B4759A1971711A002FCD82 /* NWDownloadApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B475991971711A002FCD82 /* NWDownloadApps.m */; };
 /* End PBXBuildFile section */
 
@@ -356,9 +358,6 @@
 		694BDC78196ED80700E60CF1 /* NWInstalledCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWInstalledCell.xib; sourceTree = "<group>"; };
 		694BDC79196ED80700E60CF1 /* NWInstalledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWInstalledView.h; sourceTree = "<group>"; };
 		694BDC7A196ED80700E60CF1 /* NWInstalledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWInstalledView.m; sourceTree = "<group>"; };
-		694BDC7B196ED80700E60CF1 /* NWManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWManageViewController.h; sourceTree = "<group>"; };
-		694BDC7C196ED80700E60CF1 /* NWManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWManageViewController.m; sourceTree = "<group>"; };
-		694BDC7D196ED80700E60CF1 /* NWManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWManageViewController.xib; sourceTree = "<group>"; };
 		694BDC7F196ED80700E60CF1 /* NWUpdateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWUpdateCell.h; sourceTree = "<group>"; };
 		694BDC80196ED80700E60CF1 /* NWUpdateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWUpdateCell.m; sourceTree = "<group>"; };
 		694BDC81196ED80700E60CF1 /* NWUpdateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWUpdateCell.xib; sourceTree = "<group>"; };
@@ -388,6 +387,15 @@
 		694BDD31196EDAD500E60CF1 /* CoreBusiness.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreBusiness.xcodeproj; path = Dependency/CoreBusiness/CoreBusiness.xcodeproj; sourceTree = "<group>"; };
 		694BDD37196EDADD00E60CF1 /* CoreNetWork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreNetWork.xcodeproj; path = Dependency/CoreNetWork/CoreNetWork.xcodeproj; sourceTree = "<group>"; };
 		694BDD40196EDBF600E60CF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		69772F1819725E4400118BBB /* NWManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWManageViewController.h; sourceTree = "<group>"; };
+		69772F1919725E4400118BBB /* NWManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWManageViewController.m; sourceTree = "<group>"; };
+		69772F1A19725E4400118BBB /* NWManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWManageViewController.xib; sourceTree = "<group>"; };
+		69772F1D19725F2F00118BBB /* DownloadApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadApps.h; sourceTree = "<group>"; };
+		69772F1E19725F2F00118BBB /* DownloadApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadApps.m; sourceTree = "<group>"; };
+		69772F201972689C00118BBB /* NWDownloadInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadInstance.h; sourceTree = "<group>"; };
+		69772F211972689C00118BBB /* NWDownloadInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadInstance.m; sourceTree = "<group>"; };
+		69772F2319726E5800118BBB /* NWDateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDateUtil.h; sourceTree = "<group>"; };
+		69772F2419726E5800118BBB /* NWDateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDateUtil.m; sourceTree = "<group>"; };
 		69B473B11970CDBA002FCD82 /* UIViewController+NWNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NWNavigationBar.h"; sourceTree = "<group>"; };
 		69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NWNavigationBar.m"; sourceTree = "<group>"; };
 		69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
@@ -421,8 +429,6 @@
 		69B47508197155C8002FCD82 /* NWCoreDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWCoreDataAdapter.m; sourceTree = "<group>"; };
 		69B4758F19716F31002FCD82 /* NWDownloadCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadCenter.h; sourceTree = "<group>"; };
 		69B4759019716F31002FCD82 /* NWDownloadCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadCenter.m; sourceTree = "<group>"; };
-		69B47595197170FF002FCD82 /* DownloadApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadApps.h; sourceTree = "<group>"; };
-		69B47596197170FF002FCD82 /* DownloadApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadApps.m; sourceTree = "<group>"; };
 		69B475981971711A002FCD82 /* NWDownloadApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadApps.h; sourceTree = "<group>"; };
 		69B475991971711A002FCD82 /* NWDownloadApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadApps.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -666,6 +672,8 @@
 				694BDC23196ED80700E60CF1 /* TableView */,
 				694BDC0C196ED80700E60CF1 /* Downloader */,
 				69B4758E19716EF3002FCD82 /* DownloadCenter */,
+				69772F2319726E5800118BBB /* NWDateUtil.h */,
+				69772F2419726E5800118BBB /* NWDateUtil.m */,
 			);
 			path = "Common-Utils";
 			sourceTree = "<group>";
@@ -859,13 +867,11 @@
 		694BDC68196ED80700E60CF1 /* Manage */ = {
 			isa = PBXGroup;
 			children = (
+				69772F1719725E4400118BBB /* main */,
+				694BDC7E196ED80700E60CF1 /* Update */,
+				694BDC75196ED80700E60CF1 /* Installed */,
 				694BDC69196ED80700E60CF1 /* Downloaded */,
 				694BDC6F196ED80700E60CF1 /* Downloading */,
-				694BDC75196ED80700E60CF1 /* Installed */,
-				694BDC7B196ED80700E60CF1 /* NWManageViewController.h */,
-				694BDC7C196ED80700E60CF1 /* NWManageViewController.m */,
-				694BDC7D196ED80700E60CF1 /* NWManageViewController.xib */,
-				694BDC7E196ED80700E60CF1 /* Update */,
 			);
 			path = Manage;
 			sourceTree = "<group>";
@@ -978,6 +984,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		69772F1719725E4400118BBB /* main */ = {
+			isa = PBXGroup;
+			children = (
+				69772F1819725E4400118BBB /* NWManageViewController.h */,
+				69772F1919725E4400118BBB /* NWManageViewController.m */,
+				69772F1A19725E4400118BBB /* NWManageViewController.xib */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
 		69B473B61970CF71002FCD82 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1045,9 +1061,9 @@
 		69B474F719715585002FCD82 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				69B47502197155C8002FCD82 /* DataFile */,
 				69B474FD197155C8002FCD82 /* Class */,
 				69B47505197155C8002FCD82 /* Models */,
+				69B47502197155C8002FCD82 /* DataFile */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1102,8 +1118,8 @@
 		69B47535197155C8002FCD82 /* ManagedObject */ = {
 			isa = PBXGroup;
 			children = (
-				69B47595197170FF002FCD82 /* DownloadApps.h */,
-				69B47596197170FF002FCD82 /* DownloadApps.m */,
+				69772F1D19725F2F00118BBB /* DownloadApps.h */,
+				69772F1E19725F2F00118BBB /* DownloadApps.m */,
 			);
 			path = ManagedObject;
 			sourceTree = "<group>";
@@ -1113,6 +1129,8 @@
 			children = (
 				69B4758F19716F31002FCD82 /* NWDownloadCenter.h */,
 				69B4759019716F31002FCD82 /* NWDownloadCenter.m */,
+				69772F201972689C00118BBB /* NWDownloadInstance.h */,
+				69772F211972689C00118BBB /* NWDownloadInstance.m */,
 			);
 			path = DownloadCenter;
 			sourceTree = "<group>";
@@ -1246,7 +1264,6 @@
 				69B473DC1970CF71002FCD82 /* tabBar_back@2x.png in Resources */,
 				69B473D71970CF71002FCD82 /* searching.png in Resources */,
 				694BDCD2196ED80700E60CF1 /* 4.png in Resources */,
-				694BDCF3196ED80700E60CF1 /* NWManageViewController.xib in Resources */,
 				694BDCE5196ED80700E60CF1 /* NWHotViewController.xib in Resources */,
 				694BDCFA196ED80700E60CF1 /* NWFeedbackViewController.xib in Resources */,
 				694BDCEE196ED80700E60CF1 /* NWDownloadTableViewCell.xib in Resources */,
@@ -1271,6 +1288,7 @@
 				694BDCDE196ED80700E60CF1 /* NWIntroductionTableViewCell.xib in Resources */,
 				69B473D01970CF71002FCD82 /* icon.png in Resources */,
 				69B473DD1970CF71002FCD82 /* toolBar_shade.png in Resources */,
+				69772F1C19725E4400118BBB /* NWManageViewController.xib in Resources */,
 				694BDB99196ED7B100E60CF1 /* Images.xcassets in Resources */,
 				69B473D91970CF71002FCD82 /* setting.png in Resources */,
 				69B473D41970CF71002FCD82 /* home_hight.png in Resources */,
@@ -1296,6 +1314,7 @@
 			files = (
 				694BDCC0196ED80700E60CF1 /* NWFileManagerUtil.m in Sources */,
 				694BDCC9196ED80700E60CF1 /* NWTabBarViewController.m in Sources */,
+				69772F2519726E5800118BBB /* NWDateUtil.m in Sources */,
 				694BDCDB196ED80700E60CF1 /* NWInterestTableViewCell.m in Sources */,
 				694BDD03196ED80700E60CF1 /* NWSearchViewController.m in Sources */,
 				694BDCC2196ED80700E60CF1 /* NWStringUtil.m in Sources */,
@@ -1320,7 +1339,6 @@
 				694BDCA6196ED80700E60CF1 /* CTLoadingView.m in Sources */,
 				694BDCB6196ED80700E60CF1 /* NWRefreshControl.m in Sources */,
 				694BDCAB196ED80700E60CF1 /* RTSpinKitView.m in Sources */,
-				69B47597197170FF002FCD82 /* DownloadApps.m in Sources */,
 				694BDCF6196ED80700E60CF1 /* NWUpdateView.m in Sources */,
 				694BDCCC196ED80700E60CF1 /* NWRootView.m in Sources */,
 				694BDCE2196ED80700E60CF1 /* NWHotTableViewCell.m in Sources */,
@@ -1335,12 +1353,12 @@
 				69B47562197155C8002FCD82 /* CoreData.xcdatamodeld in Sources */,
 				694BDCBF196ED80700E60CF1 /* NWFileSlicer.m in Sources */,
 				694BDCED196ED80700E60CF1 /* NWDownloadTableViewCell.m in Sources */,
-				694BDCF2196ED80700E60CF1 /* NWManageViewController.m in Sources */,
 				694BDCE9196ED80700E60CF1 /* NWDownloadedCell.m in Sources */,
 				694BDCF9196ED80700E60CF1 /* NWFeedbackViewController.m in Sources */,
 				694BDCE4196ED80700E60CF1 /* NWHotViewController.m in Sources */,
 				694BDCD3196ED80700E60CF1 /* NWDetailViewController.m in Sources */,
 				694BDCB3196ED80700E60CF1 /* NWFooterStateView.m in Sources */,
+				69772F221972689C00118BBB /* NWDownloadInstance.m in Sources */,
 				69B473E21970D036002FCD82 /* NSString+FontAwesome.m in Sources */,
 				694BDCB4196ED80700E60CF1 /* NWHeaderStateView.m in Sources */,
 				69B47561197155C8002FCD82 /* NWCoreDataUtil.m in Sources */,
@@ -1352,10 +1370,12 @@
 				694BDCE0196ED80700E60CF1 /* NWBannerTableViewCell.m in Sources */,
 				694BDCF1196ED80700E60CF1 /* NWInstalledView.m in Sources */,
 				694BDB93196ED7B100E60CF1 /* main.m in Sources */,
+				69772F1B19725E4400118BBB /* NWManageViewController.m in Sources */,
 				694BDCFB196ED80700E60CF1 /* NWLanguageViewController.m in Sources */,
 				694BDCD9196ED80700E60CF1 /* NWInfoTableViewCell.m in Sources */,
 				694BDCAF196ED80700E60CF1 /* SDWebImageDownloader.m in Sources */,
 				694BDCAE196ED80700E60CF1 /* SDWebImageDecoder.m in Sources */,
+				69772F1F19725F2F00118BBB /* DownloadApps.m in Sources */,
 				694BDB97196ED7B100E60CF1 /* NWAppDelegate.m in Sources */,
 				694BDCBB196ED80700E60CF1 /* NWDownloadModel.m in Sources */,
 				694BDCFF196ED80700E60CF1 /* NWSettingViewController.m in Sources */,
@@ -1516,11 +1536,13 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Ctrip International Travel Service Co., Ltd.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dorapps/Dorapps-Prefix.pch";
 				INFOPLIST_FILE = "Dorapps/Dorapps-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4A04ABA3-7099-4B5F-B51E-A2DB4A094007";
 				USER_HEADER_SEARCH_PATHS = "./Dependency/CoreBusiness/CoreBusiness/** ./Dependency/CoreNetWork/CoreNetWork/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1532,11 +1554,13 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Ctrip International Travel Service Co., Ltd.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dorapps/Dorapps-Prefix.pch";
 				INFOPLIST_FILE = "Dorapps/Dorapps-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4A04ABA3-7099-4B5F-B51E-A2DB4A094007";
 				USER_HEADER_SEARCH_PATHS = "./Dependency/CoreBusiness/CoreBusiness/** ./Dependency/CoreNetWork/CoreNetWork/**";
 				WRAPPER_EXTENSION = app;
 			};

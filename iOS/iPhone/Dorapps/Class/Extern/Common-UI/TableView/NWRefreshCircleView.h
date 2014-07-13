@@ -10,6 +10,9 @@
 #define kXHRefreshCircleViewHeight 20
 
 @interface NWRefreshCircleView : UIView
+{
+    BOOL isAnimationing;
+}
 
 //圆圈开始旋转时的offset （即开始刷新数据时）
 @property (nonatomic, assign) CGFloat heightBeginToRefresh;
@@ -32,4 +35,8 @@
 + (CABasicAnimation*)repeatRotateAnimation;
 
 -(void)setOffSetY:(CGFloat)offsetY;
+
+-(void)startAnimation;
+
+-(void)stopAnimation;
 @end

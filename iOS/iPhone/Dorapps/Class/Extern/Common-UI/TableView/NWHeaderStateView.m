@@ -43,7 +43,7 @@
         case ePullStateTypeNormal:
         {
             self.state = ePullStateTypeNormal;
-            [self.refreshCircleView.layer removeAnimationForKey:@"rotateAnimation"];
+            [self.refreshCircleView stopAnimation];
             self.stateLabel.text = @"下拉可以刷新";
         }
             break;
@@ -57,7 +57,7 @@
         case ePullStateTypeRefresh:
         {
             self.state = ePullStateTypeRefresh;
-            [self.refreshCircleView.layer addAnimation:[NWRefreshCircleView repeatRotateAnimation] forKey:@"rotateAnimation"];
+            [self.refreshCircleView startAnimation];
             self.stateLabel.text = @" 刷新中";
         }
             break;

@@ -1,18 +1,19 @@
 //
-//  NWHotAppModel.m
-//  APPVV
+//  NWListAppModel.m
+//  Dorapps
 //
 //  Created by Anselz (@Janselz) on 14-6-25.
 //  Copyright (c) 2014年 NeoWork. All rights reserved.
 //
 
-#import "NWHotAppModel.h"
+#import "NWListAppModel.h"
 
-@implementation NWHotAppModel
+@implementation NWListAppModel
 
 -(id)init {
     self = [super init];
     if (self) {
+        self.downloadUrl = @"";
         self.appTrackName = @"";
         self.appIcon = @"";
         self.appID = @"";
