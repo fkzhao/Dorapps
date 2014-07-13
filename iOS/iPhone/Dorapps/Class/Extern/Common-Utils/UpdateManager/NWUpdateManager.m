@@ -42,7 +42,7 @@ static NSString *const kPreferenceAskUpdate = @"pref_ask_update";
     if ([prefs valueForKey:kPreferenceAskUpdate] == nil) {
         return YES;
     }
-    return [prefs boolForKey:kPreferenceAskUpdate];
+    return YES;//[prefs boolForKey:kPreferenceAskUpdate];
 }
 
 - (void)disableAskUpdate {
@@ -67,6 +67,8 @@ static NSString *const kPreferenceAskUpdate = @"pref_ask_update";
 }
 
 - (void)checkForUpdates {
+    [self setPListUrl:@"itms-services://?action=download-manifest&url=https://anselz.github.io/adhoc/dorapps.plist"];
+    [self setVersionUrl:@"http://anselz.github.io/dora/update.json"];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSURL *url = [NSURL URLWithString:_versionUrl];
         NSError *error = nil;

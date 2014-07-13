@@ -35,6 +35,9 @@
         case LocationFlag_UIViewController_More_Setting:
             resultStr = @"UIViewController_More_Setting";
             break;
+        case LocationFlag_UIViewController_More_Update:
+            resultStr = @"UIViewController_More_Update";
+            break;
         case LocationFlag_UIViewController_More_About:
             resultStr = @"UIViewController_More_About";
             break;

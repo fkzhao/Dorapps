@@ -17,6 +17,7 @@ typedef enum {
     LocationFlag_UIViewController_More_Share,
     LocationFlag_UIViewController_More_Language,
     LocationFlag_UIViewController_More_Setting,
+    LocationFlag_UIViewController_More_Update,
     LocationFlag_UIViewController_More_About,
     LocationFlag_UIViewController_More_Feedback,
     LocationFlag_UIViewController_More_Footer,

@@ -12,6 +12,7 @@
 #import "NWLanguageViewController.h"
 #import "NWAboutViewController.h"
 #import "NWFeedbackViewController.h"
+#import "NWUpdateManager.h"
 
 @interface NWMoreViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -51,7 +52,7 @@
             return 2;
             break;
         case 1:
-            return 1;
+            return 2;
             break;
         case 2:
             return 2;
@@ -84,7 +85,12 @@
         }
         
     } else if(indexPath.section == 1) {
-        title = [NWStringUtil getLocalizationString:LocationFlag_UIViewController_More_Setting];
+        if (indexPath.row == 0) {
+            title = [NWStringUtil getLocalizationString:LocationFlag_UIViewController_More_Setting];
+        } else {
+            title = [NWStringUtil getLocalizationString:LocationFlag_UIViewController_More_Update];
+        }
+        
     } else {
         if (indexPath.row == 0) {
             title = [NWStringUtil getLocalizationString:LocationFlag_UIViewController_More_About];
@@ -107,7 +113,14 @@
         }
         
     } else if(indexPath.section == 1) {
-        next = [[NWSettingViewController alloc]init];
+        if (indexPath.row == 0) {
+            next = [[NWSettingViewController alloc]init];
+        } else {
+            NWUpdateManager *mgr = [NWUpdateManager sharedManager];
+            [mgr checkForUpdates];
+            return;
+        }
+        
     } else {
         if (indexPath.row == 0) {
             next = [[NWAboutViewController alloc]init];

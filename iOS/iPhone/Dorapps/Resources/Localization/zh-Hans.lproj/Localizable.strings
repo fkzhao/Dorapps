@@ -17,6 +17,7 @@ Navigation_Title_More = "设置";
 UIViewController_More_Share = "分享给好友";
 UIViewController_More_Language = "语言";
 UIViewController_More_Setting = "设置";
+UIViewController_More_Update = "检查更新";
 UIViewController_More_About = "关于我们";
 UIViewController_More_Feedback = "意见反馈";
 UIViewController_More_Footer = "哆啦 V1.0";

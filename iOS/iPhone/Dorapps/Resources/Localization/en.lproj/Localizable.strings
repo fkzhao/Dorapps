@@ -15,6 +15,7 @@ Navigation_Title_More = "More";
 UIViewController_More_Share = "Share Friends";
 UIViewController_More_Language = "Language";
 UIViewController_More_Setting = "Setting";
+UIViewController_More_Update = "Check Update";
 UIViewController_More_About = "About";
 UIViewController_More_Feedback = "Feedback";
 UIViewController_More_Footer = "Dorapps V1.0";

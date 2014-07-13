@@ -39,8 +39,6 @@
     [self.window makeKeyAndVisible];
     
     NWUpdateManager *mgr = [NWUpdateManager sharedManager];
-    [mgr setPListUrl:@"itms-services://?action=download-manifest&url=https://anselz.github.io/adhoc/dorapps.plist"];
-    [mgr setVersionUrl:@"http://anselz.github.io/dora/update.json"];
     [mgr checkForUpdates];
     return YES;
 }
