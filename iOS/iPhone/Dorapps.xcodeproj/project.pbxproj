@@ -134,6 +134,9 @@
 		69772F1C19725E4400118BBB /* NWManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69772F1A19725E4400118BBB /* NWManageViewController.xib */; };
 		69772F1F19725F2F00118BBB /* DownloadApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F1E19725F2F00118BBB /* DownloadApps.m */; };
 		69772F221972689C00118BBB /* NWDownloadInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F211972689C00118BBB /* NWDownloadInstance.m */; };
+		69772F2919727EA800118BBB /* NWUpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2819727EA800118BBB /* NWUpdateManager.m */; };
+		69772F2C19727F1900118BBB /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2B19727F1900118BBB /* UIAlertView+Blocks.m */; };
+		69772F2F19727F5900118BBB /* NWButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2E19727F5900118BBB /* NWButtonItem.m */; };
 		69B473B31970CDBA002FCD82 /* UIViewController+NWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */; };
 		69B473CF1970CF71002FCD82 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */; };
 		69B473D01970CF71002FCD82 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473BA1970CF71002FCD82 /* icon.png */; };
@@ -393,6 +396,12 @@
 		69772F1E19725F2F00118BBB /* DownloadApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadApps.m; sourceTree = "<group>"; };
 		69772F201972689C00118BBB /* NWDownloadInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadInstance.h; sourceTree = "<group>"; };
 		69772F211972689C00118BBB /* NWDownloadInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadInstance.m; sourceTree = "<group>"; };
+		69772F2719727EA800118BBB /* NWUpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWUpdateManager.h; sourceTree = "<group>"; };
+		69772F2819727EA800118BBB /* NWUpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWUpdateManager.m; sourceTree = "<group>"; };
+		69772F2A19727F1900118BBB /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		69772F2B19727F1900118BBB /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		69772F2D19727F5900118BBB /* NWButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWButtonItem.h; sourceTree = "<group>"; };
+		69772F2E19727F5900118BBB /* NWButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWButtonItem.m; sourceTree = "<group>"; };
 		69B473B11970CDBA002FCD82 /* UIViewController+NWNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NWNavigationBar.h"; sourceTree = "<group>"; };
 		69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NWNavigationBar.m"; sourceTree = "<group>"; };
 		69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
@@ -668,6 +677,7 @@
 				694BDC1D196ED80700E60CF1 /* Runtime */,
 				694BDC23196ED80700E60CF1 /* TableView */,
 				694BDC0C196ED80700E60CF1 /* Downloader */,
+				69772F2619727E8C00118BBB /* UpdateManager */,
 				69B4758E19716EF3002FCD82 /* DownloadCenter */,
 			);
 			path = "Common-Utils";
@@ -989,6 +999,15 @@
 			path = main;
 			sourceTree = "<group>";
 		};
+		69772F2619727E8C00118BBB /* UpdateManager */ = {
+			isa = PBXGroup;
+			children = (
+				69772F2719727EA800118BBB /* NWUpdateManager.h */,
+				69772F2819727EA800118BBB /* NWUpdateManager.m */,
+			);
+			path = UpdateManager;
+			sourceTree = "<group>";
+		};
 		69B473B61970CF71002FCD82 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1049,6 +1068,10 @@
 			children = (
 				69B473E01970D036002FCD82 /* NSString+FontAwesome.h */,
 				69B473E11970D036002FCD82 /* NSString+FontAwesome.m */,
+				69772F2A19727F1900118BBB /* UIAlertView+Blocks.h */,
+				69772F2B19727F1900118BBB /* UIAlertView+Blocks.m */,
+				69772F2D19727F5900118BBB /* NWButtonItem.h */,
+				69772F2E19727F5900118BBB /* NWButtonItem.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1314,10 +1337,12 @@
 				694BDCC2196ED80700E60CF1 /* NWStringUtil.m in Sources */,
 				694BDCDD196ED80700E60CF1 /* NWIntroductionTableViewCell.m in Sources */,
 				694BDCB2196ED80700E60CF1 /* UIImageView+WebCache.m in Sources */,
+				69772F2919727EA800118BBB /* NWUpdateManager.m in Sources */,
 				694BDCB1196ED80700E60CF1 /* SDWebImagePrefetcher.m in Sources */,
 				694BDCB5196ED80700E60CF1 /* NWRefreshCircleView.m in Sources */,
 				694BDCCE196ED80700E60CF1 /* NWToolBarView.m in Sources */,
 				694BDCEB196ED80700E60CF1 /* NWDownloadedView.m in Sources */,
+				69772F2C19727F1900118BBB /* UIAlertView+Blocks.m in Sources */,
 				69B474F319712D8D002FCD82 /* NWStateView.m in Sources */,
 				69B473B31970CDBA002FCD82 /* UIViewController+NWNavigationBar.m in Sources */,
 				694BDCBC196ED80700E60CF1 /* NWDownloadOperation.m in Sources */,
@@ -1378,6 +1403,7 @@
 				694BDCA3196ED80700E60CF1 /* NWActivityIndicatorView.m in Sources */,
 				694BDCC8196ED80700E60CF1 /* NWRootViewController.m in Sources */,
 				694BDD01196ED80700E60CF1 /* NWShareViewController.m in Sources */,
+				69772F2F19727F5900118BBB /* NWButtonItem.m in Sources */,
 				694BDCCD196ED80700E60CF1 /* NWToolbar.m in Sources */,
 				69B47560197155C8002FCD82 /* NWCoreData.m in Sources */,
 			);

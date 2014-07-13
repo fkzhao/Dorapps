@@ -13,11 +13,13 @@
 #import "NWMoreViewController.h"
 #import "NWTabBarViewController.h"
 #import "NWCoreDataUtil.h"
+#import "NWUpdateManager.h"
 
 @implementation NWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
@@ -36,6 +38,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    NWUpdateManager *mgr = [NWUpdateManager sharedManager];
+    [mgr setPListUrl:@"itms-services://?action=download-manifest&url=https://anselz.github.io/adhoc/dorapps.plist"];
+    [mgr setVersionUrl:@"http://anselz.github.io/dora/update.json"];
+    [mgr checkForUpdates];
     return YES;
 }
 
