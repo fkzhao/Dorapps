@@ -95,9 +95,11 @@ static NSString *const kPreferenceAskUpdate = @"pref_ask_update";
         }
         [thisApp setApplicationIconBadgeNumber:1];
         _currentServerVersion = serverVersion;
-        if ([self shouldAskForUpdate]) {
+        if (![self shouldAskForUpdate]) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                complete(NO,NO,YES,@"There is a new version, but the user has opted to update manually later.");
+                if (complete) {
+                    complete(NO,NO,YES,@"There is a new version, but the user has opted to update manually later.");
+                }
             });
             return;
         }

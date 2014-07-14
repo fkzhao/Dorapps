@@ -170,6 +170,149 @@
 		69B47563197155C8002FCD82 /* NWCoreDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B47508197155C8002FCD82 /* NWCoreDataAdapter.m */; };
 		69B4759119716F31002FCD82 /* NWDownloadCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4759019716F31002FCD82 /* NWDownloadCenter.m */; };
 		69B4759A1971711A002FCD82 /* NWDownloadApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B475991971711A002FCD82 /* NWDownloadApps.m */; };
+		69D3E2AF1974351D00172FEF /* NWFileManagerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC1C196ED80700E60CF1 /* NWFileManagerUtil.m */; };
+		69D3E2B01974351D00172FEF /* NWTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC36196ED80700E60CF1 /* NWTabBarViewController.m */; };
+		69D3E2B11974351D00172FEF /* NWInterestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC54196ED80700E60CF1 /* NWInterestTableViewCell.m */; };
+		69D3E2B21974351D00172FEF /* NWSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC99196ED80700E60CF1 /* NWSearchViewController.m */; };
+		69D3E2B31974351D00172FEF /* NWCategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AC91973B8740068EC8D /* NWCategoriesTableViewCell.m */; };
+		69D3E2B41974351D00172FEF /* NWStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC22196ED80700E60CF1 /* NWStringUtil.m */; };
+		69D3E2B51974351D00172FEF /* NWIntroductionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC57196ED80700E60CF1 /* NWIntroductionTableViewCell.m */; };
+		69D3E2B61974351D00172FEF /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBF9196ED80700E60CF1 /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		69D3E2B71974351D00172FEF /* NWUpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2819727EA800118BBB /* NWUpdateManager.m */; };
+		69D3E2B81974351D00172FEF /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBF7196ED80700E60CF1 /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		69D3E2B91974351D00172FEF /* NWRefreshCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC00196ED80700E60CF1 /* NWRefreshCircleView.m */; };
+		69D3E2BA1974351D00172FEF /* NWToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC40196ED80700E60CF1 /* NWToolBarView.m */; };
+		69D3E2BB1974351D00172FEF /* NWDownloadedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC6E196ED80700E60CF1 /* NWDownloadedView.m */; };
+		69D3E2BC1974351D00172FEF /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2B19727F1900118BBB /* UIAlertView+Blocks.m */; };
+		69D3E2BD1974351D00172FEF /* NWStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B474F219712D8D002FCD82 /* NWStateView.m */; };
+		69D3E2BE1974351D00172FEF /* UIViewController+NWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */; };
+		69D3E2BF1974351D00172FEF /* NWDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC12196ED80700E60CF1 /* NWDownloadOperation.m */; };
+		69D3E2C01974351D00172FEF /* NWMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC8F196ED80700E60CF1 /* NWMoreViewController.m */; };
+		69D3E2C11974351D00172FEF /* NWDownloadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC71196ED80700E60CF1 /* NWDownloadingView.m */; };
+		69D3E2C21974351D00172FEF /* NWServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC2C196ED80700E60CF1 /* NWServerController.m */; };
+		69D3E2C31974351D00172FEF /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBF4196ED80700E60CF1 /* SDWebImageManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		69D3E2C41974351D00172FEF /* NWHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC4B196ED80700E60CF1 /* NWHistoryTableViewCell.m */; };
+		69D3E2C51974351D00172FEF /* NWHasApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC09196ED80700E60CF1 /* NWHasApp.m */; };
+		69D3E2C61974351D00172FEF /* NWBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBDD196ED80700E60CF1 /* NWBannerView.m */; };
+		69D3E2C71974351D00172FEF /* NWDownloadPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC14196ED80700E60CF1 /* NWDownloadPool.m */; };
+		69D3E2C81974351D00172FEF /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBEB196ED80700E60CF1 /* SDImageCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		69D3E2C91974351D00172FEF /* CTLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBE0196ED80700E60CF1 /* CTLoadingView.m */; };
+		69D3E2CA1974351D00172FEF /* NWRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC02196ED80700E60CF1 /* NWRefreshControl.m */; };
+		69D3E2CB1974351D00172FEF /* RTSpinKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBE7196ED80700E60CF1 /* RTSpinKitView.m */; };
+		69D3E2CC1974351D00172FEF /* NWUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC83196ED80700E60CF1 /* NWUpdateView.m */; };
+		69D3E2CD1974351D00172FEF /* NWRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC3C196ED80700E60CF1 /* NWRootView.m */; };
+		69D3E2CE1974351D00172FEF /* NWHotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC5F196ED80700E60CF1 /* NWHotTableViewCell.m */; };
+		69D3E2CF1974351D00172FEF /* NWRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC1F196ED80700E60CF1 /* NWRuntime.m */; };
+		69D3E2D01974351D00172FEF /* NWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC3A196ED80700E60CF1 /* NWNavigationBar.m */; };
+		69D3E2D11974351D00172FEF /* NWAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC86196ED80700E60CF1 /* NWAboutViewController.m */; };
+		69D3E2D21974351D00172FEF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AB319739D740068EC8D /* SVProgressHUD.m */; };
+		69D3E2D31974351D00172FEF /* NWInstalledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC77196ED80700E60CF1 /* NWInstalledCell.m */; };
+		69D3E2D41974351D00172FEF /* NWNavigationControllerWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC32196ED80700E60CF1 /* NWNavigationControllerWrapper.m */; };
+		69D3E2D51974351D00172FEF /* NWTableViewCellUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC25196ED80700E60CF1 /* NWTableViewCellUtil.m */; };
+		69D3E2D61974351D00172FEF /* NWHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC4E196ED80700E60CF1 /* NWHistoryViewController.m */; };
+		69D3E2D71974351D00172FEF /* NWFileMerger.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC17196ED80700E60CF1 /* NWFileMerger.m */; };
+		69D3E2D81974351D00172FEF /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69B47503197155C8002FCD82 /* CoreData.xcdatamodeld */; };
+		69D3E2D91974351D00172FEF /* NWFileSlicer.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC19196ED80700E60CF1 /* NWFileSlicer.m */; };
+		69D3E2DA1974351D00172FEF /* NWDownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC73196ED80700E60CF1 /* NWDownloadTableViewCell.m */; };
+		69D3E2DB1974351D00172FEF /* NWDownloadedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC6B196ED80700E60CF1 /* NWDownloadedCell.m */; };
+		69D3E2DC1974351D00172FEF /* NWFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC89196ED80700E60CF1 /* NWFeedbackViewController.m */; };
+		69D3E2DD1974351D00172FEF /* NWHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC62196ED80700E60CF1 /* NWHotViewController.m */; };
+		69D3E2DE1974351D00172FEF /* NWDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC48196ED80700E60CF1 /* NWDetailViewController.m */; };
+		69D3E2DF1974351D00172FEF /* NWFooterStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBFC196ED80700E60CF1 /* NWFooterStateView.m */; };
+		69D3E2E01974351D00172FEF /* NWDownloadInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F211972689C00118BBB /* NWDownloadInstance.m */; };
+		69D3E2E11974351D00172FEF /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B473E11970D036002FCD82 /* NSString+FontAwesome.m */; };
+		69D3E2E21974351D00172FEF /* NWHeaderStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBFE196ED80700E60CF1 /* NWHeaderStateView.m */; };
+		69D3E2E31974351D00172FEF /* NWCoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B47501197155C8002FCD82 /* NWCoreDataUtil.m */; };
+		69D3E2E41974351D00172FEF /* NWDownloadCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4759019716F31002FCD82 /* NWDownloadCenter.m */; };
+		69D3E2E51974351D00172FEF /* NWTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC04196ED80700E60CF1 /* NWTableView.m */; };
+		69D3E2E61974351D00172FEF /* NWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC2F196ED80700E60CF1 /* NWNavigationController.m */; };
+		69D3E2E71974351D00172FEF /* NWDownloadApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B475991971711A002FCD82 /* NWDownloadApps.m */; };
+		69D3E2E81974351D00172FEF /* NWUpdateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC80196ED80700E60CF1 /* NWUpdateCell.m */; };
+		69D3E2E91974351D00172FEF /* NWBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC5C196ED80700E60CF1 /* NWBannerTableViewCell.m */; };
+		69D3E2EA1974351D00172FEF /* NWInstalledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC7A196ED80700E60CF1 /* NWInstalledView.m */; };
+		69D3E2EB1974351D00172FEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDB92196ED7B100E60CF1 /* main.m */; };
+		69D3E2EC1974351D00172FEF /* NWManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F1919725E4400118BBB /* NWManageViewController.m */; };
+		69D3E2ED1974351D00172FEF /* NWMenuListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AC61973B3CE0068EC8D /* NWMenuListView.m */; };
+		69D3E2EE1974351D00172FEF /* NWLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC8C196ED80700E60CF1 /* NWLanguageViewController.m */; };
+		69D3E2EF1974351D00172FEF /* NWInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC51196ED80700E60CF1 /* NWInfoTableViewCell.m */; };
+		69D3E2F01974351D00172FEF /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBF1196ED80700E60CF1 /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		69D3E2F11974351D00172FEF /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBEF196ED80700E60CF1 /* SDWebImageDecoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		69D3E2F21974351D00172FEF /* DownloadApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F1E19725F2F00118BBB /* DownloadApps.m */; };
+		69D3E2F31974351D00172FEF /* NWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDB96196ED7B100E60CF1 /* NWAppDelegate.m */; };
+		69D3E2F41974351D00172FEF /* NWDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC10196ED80700E60CF1 /* NWDownloadModel.m */; };
+		69D3E2F51974351D00172FEF /* NWCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AB71973A18D0068EC8D /* NWCircleLoadingView.m */; };
+		69D3E2F61974351D00172FEF /* NWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC92196ED80700E60CF1 /* NWSettingViewController.m */; };
+		69D3E2F71974351D00172FEF /* NWDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC0E196ED80700E60CF1 /* NWDownloader.m */; };
+		69D3E2F81974351D00172FEF /* NWCoreDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B47508197155C8002FCD82 /* NWCoreDataAdapter.m */; };
+		69D3E2F91974351D00172FEF /* NWActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDBD9196ED80700E60CF1 /* NWActivityIndicatorView.m */; };
+		69D3E2FA1974351D00172FEF /* NWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC34196ED80700E60CF1 /* NWRootViewController.m */; };
+		69D3E2FB1974351D00172FEF /* NWShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC95196ED80700E60CF1 /* NWShareViewController.m */; };
+		69D3E2FC1974351D00172FEF /* NWButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2E19727F5900118BBB /* NWButtonItem.m */; };
+		69D3E2FD1974351D00172FEF /* NWToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 694BDC3E196ED80700E60CF1 /* NWToolbar.m */; };
+		69D3E2FE1974351D00172FEF /* NWCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B474FF197155C8002FCD82 /* NWCoreData.m */; };
+		69D3E3001974351D00172FEF /* libCoreBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDD36196EDAD500E60CF1 /* libCoreBusiness.a */; };
+		69D3E3011974351D00172FEF /* libCoreNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDD3C196EDADD00E60CF1 /* libCoreNetWork.a */; };
+		69D3E3021974351D00172FEF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDB88196ED7B100E60CF1 /* CoreGraphics.framework */; };
+		69D3E3031974351D00172FEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDB8A196ED7B100E60CF1 /* UIKit.framework */; };
+		69D3E3041974351D00172FEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDB86196ED7B100E60CF1 /* Foundation.framework */; };
+		69D3E3051974351D00172FEF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDD40196EDBF600E60CF1 /* QuartzCore.framework */; };
+		69D3E3071974351D00172FEF /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC43196ED80700E60CF1 /* 1.png */; };
+		69D3E3081974351D00172FEF /* NWInterestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC55196ED80700E60CF1 /* NWInterestTableViewCell.xib */; };
+		69D3E3091974351D00172FEF /* NWCategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694B8ACA1973B8740068EC8D /* NWCategoriesTableViewCell.xib */; };
+		69D3E30A1974351D00172FEF /* placeholder-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDBE9196ED80700E60CF1 /* placeholder-icon.png */; };
+		69D3E30B1974351D00172FEF /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDBE5196ED80700E60CF1 /* success@2x.png */; };
+		69D3E30C1974351D00172FEF /* NWHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC4F196ED80700E60CF1 /* NWHistoryViewController.xib */; };
+		69D3E30D1974351D00172FEF /* NWInstalledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC78196ED80700E60CF1 /* NWInstalledCell.xib */; };
+		69D3E30E1974351D00172FEF /* toolBar_shade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473CE1970CF71002FCD82 /* toolBar_shade@2x.png */; };
+		69D3E30F1974351D00172FEF /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDBDB196ED80700E60CF1 /* banner.png */; };
+		69D3E3101974351D00172FEF /* manager.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473C51970CF71002FCD82 /* manager.png */; };
+		69D3E3111974351D00172FEF /* NWDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC49196ED80700E60CF1 /* NWDetailViewController.xib */; };
+		69D3E3121974351D00172FEF /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 694B8AB119739D740068EC8D /* SVProgressHUD.bundle */; };
+		69D3E3131974351D00172FEF /* NWHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC4C196ED80700E60CF1 /* NWHistoryTableViewCell.xib */; };
+		69D3E3141974351D00172FEF /* NWAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC87196ED80700E60CF1 /* NWAboutViewController.xib */; };
+		69D3E3151974351D00172FEF /* NWNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC30196ED80700E60CF1 /* NWNavigationController.xib */; };
+		69D3E3161974351D00172FEF /* NWHotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC60196ED80700E60CF1 /* NWHotTableViewCell.xib */; };
+		69D3E3171974351D00172FEF /* NWInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC52196ED80700E60CF1 /* NWInfoTableViewCell.xib */; };
+		69D3E3181974351D00172FEF /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 694B8ABC1973AEBD0068EC8D /* burger.png */; };
+		69D3E3191974351D00172FEF /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 694B8ABD1973AEBD0068EC8D /* burger@2x.png */; };
+		69D3E31A1974351D00172FEF /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDBE4196ED80700E60CF1 /* success.png */; };
+		69D3E31B1974351D00172FEF /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC44196ED80700E60CF1 /* 2.png */; };
+		69D3E31C1974351D00172FEF /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */; };
+		69D3E31D1974351D00172FEF /* tabBar_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473CB1970CF71002FCD82 /* tabBar_back.png */; };
+		69D3E31E1974351D00172FEF /* NWTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC37196ED80700E60CF1 /* NWTabBarViewController.xib */; };
+		69D3E31F1974351D00172FEF /* tabBar_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473CC1970CF71002FCD82 /* tabBar_back@2x.png */; };
+		69D3E3201974351D00172FEF /* searching.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473C71970CF71002FCD82 /* searching.png */; };
+		69D3E3211974351D00172FEF /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC46196ED80700E60CF1 /* 4.png */; };
+		69D3E3221974351D00172FEF /* NWHotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC63196ED80700E60CF1 /* NWHotViewController.xib */; };
+		69D3E3231974351D00172FEF /* NWFeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC8A196ED80700E60CF1 /* NWFeedbackViewController.xib */; };
+		69D3E3241974351D00172FEF /* NWDownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC74196ED80700E60CF1 /* NWDownloadTableViewCell.xib */; };
+		69D3E3251974351D00172FEF /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473C31970CF71002FCD82 /* home.png */; };
+		69D3E3261974351D00172FEF /* NWDownloadedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC6C196ED80700E60CF1 /* NWDownloadedCell.xib */; };
+		69D3E3271974351D00172FEF /* NWLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC8D196ED80700E60CF1 /* NWLanguageViewController.xib */; };
+		69D3E3281974351D00172FEF /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC67196ED80700E60CF1 /* twitter.png */; };
+		69D3E3291974351D00172FEF /* searching_hight.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473C81970CF71002FCD82 /* searching_hight.png */; };
+		69D3E32A1974351D00172FEF /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC45196ED80700E60CF1 /* 3.png */; };
+		69D3E32B1974351D00172FEF /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDBE3196ED80700E60CF1 /* error@2x.png */; };
+		69D3E32C1974351D00172FEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 694BDB8F196ED7B100E60CF1 /* InfoPlist.strings */; };
+		69D3E32D1974351D00172FEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69B473BC1970CF71002FCD82 /* InfoPlist.strings */; };
+		69D3E32E1974351D00172FEF /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDBE2196ED80700E60CF1 /* error.png */; };
+		69D3E32F1974351D00172FEF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69B473BE1970CF71002FCD82 /* Localizable.strings */; };
+		69D3E3301974351D00172FEF /* NWShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC96196ED80700E60CF1 /* NWShareViewController.xib */; };
+		69D3E3311974351D00172FEF /* setting_hight.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473CA1970CF71002FCD82 /* setting_hight.png */; };
+		69D3E3321974351D00172FEF /* NWUpdateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC81196ED80700E60CF1 /* NWUpdateCell.xib */; };
+		69D3E3331974351D00172FEF /* NWSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC9A196ED80700E60CF1 /* NWSearchViewController.xib */; };
+		69D3E3341974351D00172FEF /* NWSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC93196ED80700E60CF1 /* NWSettingViewController.xib */; };
+		69D3E3351974351D00172FEF /* manager_hight.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473C61970CF71002FCD82 /* manager_hight.png */; };
+		69D3E3361974351D00172FEF /* NWBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC5D196ED80700E60CF1 /* NWBannerTableViewCell.xib */; };
+		69D3E3371974351D00172FEF /* NWIntroductionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC58196ED80700E60CF1 /* NWIntroductionTableViewCell.xib */; };
+		69D3E3381974351D00172FEF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473BA1970CF71002FCD82 /* icon.png */; };
+		69D3E3391974351D00172FEF /* toolBar_shade.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473CD1970CF71002FCD82 /* toolBar_shade.png */; };
+		69D3E33A1974351D00172FEF /* NWManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69772F1A19725E4400118BBB /* NWManageViewController.xib */; };
+		69D3E33B1974351D00172FEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 694BDB98196ED7B100E60CF1 /* Images.xcassets */; };
+		69D3E33C1974351D00172FEF /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473C91970CF71002FCD82 /* setting.png */; };
+		69D3E33D1974351D00172FEF /* home_hight.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473C41970CF71002FCD82 /* home_hight.png */; };
+		69D3E33E1974351D00172FEF /* screen568x568.png in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC59196ED80700E60CF1 /* screen568x568.png */; };
+		69D3E33F1974351D00172FEF /* NWMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694BDC90196ED80700E60CF1 /* NWMoreViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +357,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 69795859195945960017D864;
 			remoteInfo = CoreBusiness;
+		};
+		69D3E2AD1974351D00172FEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 694BDB7B196ED7B100E60CF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 694BDD44196EDCF000E60CF1;
+			remoteInfo = CoreFrameWork;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -457,6 +607,8 @@
 		69B4759019716F31002FCD82 /* NWDownloadCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadCenter.m; sourceTree = "<group>"; };
 		69B475981971711A002FCD82 /* NWDownloadApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadApps.h; sourceTree = "<group>"; };
 		69B475991971711A002FCD82 /* NWDownloadApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadApps.m; sourceTree = "<group>"; };
+		69D3E3431974351D00172FEF /* Dorapps copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dorapps copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D3E3441974351E00172FEF /* Dorapps copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dorapps copy-Info.plist"; path = "/Users/Anselz/Documents/Github/Dorapps/iOS/iPhone/Dorapps copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +632,19 @@
 				694BDBA0196ED7B100E60CF1 /* XCTest.framework in Frameworks */,
 				694BDBA2196ED7B100E60CF1 /* UIKit.framework in Frameworks */,
 				694BDBA1196ED7B100E60CF1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D3E2FF1974351D00172FEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D3E3001974351D00172FEF /* libCoreBusiness.a in Frameworks */,
+				69D3E3011974351D00172FEF /* libCoreNetWork.a in Frameworks */,
+				69D3E3021974351D00172FEF /* CoreGraphics.framework in Frameworks */,
+				69D3E3031974351D00172FEF /* UIKit.framework in Frameworks */,
+				69D3E3041974351D00172FEF /* Foundation.framework in Frameworks */,
+				69D3E3051974351D00172FEF /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +680,7 @@
 				694BDBA5196ED7B100E60CF1 /* DorappsTests */,
 				694BDB85196ED7B100E60CF1 /* Frameworks */,
 				694BDB84196ED7B100E60CF1 /* Products */,
+				69D3E3441974351E00172FEF /* Dorapps copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -523,6 +689,7 @@
 			children = (
 				694BDB83196ED7B100E60CF1 /* Dorapps.app */,
 				694BDB9E196ED7B100E60CF1 /* DorappsTests.xctest */,
+				69D3E3431974351D00172FEF /* Dorapps copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1248,6 +1415,24 @@
 			productReference = 694BDB9E196ED7B100E60CF1 /* DorappsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		69D3E2AB1974351D00172FEF /* Dorapps For ADHoc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69D3E3401974351D00172FEF /* Build configuration list for PBXNativeTarget "Dorapps For ADHoc" */;
+			buildPhases = (
+				69D3E2AE1974351D00172FEF /* Sources */,
+				69D3E2FF1974351D00172FEF /* Frameworks */,
+				69D3E3061974351D00172FEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69D3E2AC1974351D00172FEF /* PBXTargetDependency */,
+			);
+			name = "Dorapps For ADHoc";
+			productName = Dorapps;
+			productReference = 69D3E3431974351D00172FEF /* Dorapps copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1270,6 +1455,7 @@
 			knownRegions = (
 				en,
 				"zh-Hans",
+				Base,
 			);
 			mainGroup = 694BDB7A196ED7B100E60CF1;
 			productRefGroup = 694BDB84196ED7B100E60CF1 /* Products */;
@@ -1289,6 +1475,7 @@
 				694BDB82196ED7B100E60CF1 /* Dorapps */,
 				694BDB9D196ED7B100E60CF1 /* DorappsTests */,
 				694BDD44196EDCF000E60CF1 /* CoreFrameWork */,
+				69D3E2AB1974351D00172FEF /* Dorapps For ADHoc */,
 			);
 		};
 /* End PBXProject section */
@@ -1380,6 +1567,70 @@
 			buildActionMask = 2147483647;
 			files = (
 				694BDBAA196ED7B100E60CF1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D3E3061974351D00172FEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D3E3071974351D00172FEF /* 1.png in Resources */,
+				69D3E3081974351D00172FEF /* NWInterestTableViewCell.xib in Resources */,
+				69D3E3091974351D00172FEF /* NWCategoriesTableViewCell.xib in Resources */,
+				69D3E30A1974351D00172FEF /* placeholder-icon.png in Resources */,
+				69D3E30B1974351D00172FEF /* success@2x.png in Resources */,
+				69D3E30C1974351D00172FEF /* NWHistoryViewController.xib in Resources */,
+				69D3E30D1974351D00172FEF /* NWInstalledCell.xib in Resources */,
+				69D3E30E1974351D00172FEF /* toolBar_shade@2x.png in Resources */,
+				69D3E30F1974351D00172FEF /* banner.png in Resources */,
+				69D3E3101974351D00172FEF /* manager.png in Resources */,
+				69D3E3111974351D00172FEF /* NWDetailViewController.xib in Resources */,
+				69D3E3121974351D00172FEF /* SVProgressHUD.bundle in Resources */,
+				69D3E3131974351D00172FEF /* NWHistoryTableViewCell.xib in Resources */,
+				69D3E3141974351D00172FEF /* NWAboutViewController.xib in Resources */,
+				69D3E3151974351D00172FEF /* NWNavigationController.xib in Resources */,
+				69D3E3161974351D00172FEF /* NWHotTableViewCell.xib in Resources */,
+				69D3E3171974351D00172FEF /* NWInfoTableViewCell.xib in Resources */,
+				69D3E3181974351D00172FEF /* burger.png in Resources */,
+				69D3E3191974351D00172FEF /* burger@2x.png in Resources */,
+				69D3E31A1974351D00172FEF /* success.png in Resources */,
+				69D3E31B1974351D00172FEF /* 2.png in Resources */,
+				69D3E31C1974351D00172FEF /* fontawesome-webfont.ttf in Resources */,
+				69D3E31D1974351D00172FEF /* tabBar_back.png in Resources */,
+				69D3E31E1974351D00172FEF /* NWTabBarViewController.xib in Resources */,
+				69D3E31F1974351D00172FEF /* tabBar_back@2x.png in Resources */,
+				69D3E3201974351D00172FEF /* searching.png in Resources */,
+				69D3E3211974351D00172FEF /* 4.png in Resources */,
+				69D3E3221974351D00172FEF /* NWHotViewController.xib in Resources */,
+				69D3E3231974351D00172FEF /* NWFeedbackViewController.xib in Resources */,
+				69D3E3241974351D00172FEF /* NWDownloadTableViewCell.xib in Resources */,
+				69D3E3251974351D00172FEF /* home.png in Resources */,
+				69D3E3261974351D00172FEF /* NWDownloadedCell.xib in Resources */,
+				69D3E3271974351D00172FEF /* NWLanguageViewController.xib in Resources */,
+				69D3E3281974351D00172FEF /* twitter.png in Resources */,
+				69D3E3291974351D00172FEF /* searching_hight.png in Resources */,
+				69D3E32A1974351D00172FEF /* 3.png in Resources */,
+				69D3E32B1974351D00172FEF /* error@2x.png in Resources */,
+				69D3E32C1974351D00172FEF /* InfoPlist.strings in Resources */,
+				69D3E32D1974351D00172FEF /* InfoPlist.strings in Resources */,
+				69D3E32E1974351D00172FEF /* error.png in Resources */,
+				69D3E32F1974351D00172FEF /* Localizable.strings in Resources */,
+				69D3E3301974351D00172FEF /* NWShareViewController.xib in Resources */,
+				69D3E3311974351D00172FEF /* setting_hight.png in Resources */,
+				69D3E3321974351D00172FEF /* NWUpdateCell.xib in Resources */,
+				69D3E3331974351D00172FEF /* NWSearchViewController.xib in Resources */,
+				69D3E3341974351D00172FEF /* NWSettingViewController.xib in Resources */,
+				69D3E3351974351D00172FEF /* manager_hight.png in Resources */,
+				69D3E3361974351D00172FEF /* NWBannerTableViewCell.xib in Resources */,
+				69D3E3371974351D00172FEF /* NWIntroductionTableViewCell.xib in Resources */,
+				69D3E3381974351D00172FEF /* icon.png in Resources */,
+				69D3E3391974351D00172FEF /* toolBar_shade.png in Resources */,
+				69D3E33A1974351D00172FEF /* NWManageViewController.xib in Resources */,
+				69D3E33B1974351D00172FEF /* Images.xcassets in Resources */,
+				69D3E33C1974351D00172FEF /* setting.png in Resources */,
+				69D3E33D1974351D00172FEF /* home_hight.png in Resources */,
+				69D3E33E1974351D00172FEF /* screen568x568.png in Resources */,
+				69D3E33F1974351D00172FEF /* NWMoreViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1481,6 +1732,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		69D3E2AE1974351D00172FEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D3E2AF1974351D00172FEF /* NWFileManagerUtil.m in Sources */,
+				69D3E2B01974351D00172FEF /* NWTabBarViewController.m in Sources */,
+				69D3E2B11974351D00172FEF /* NWInterestTableViewCell.m in Sources */,
+				69D3E2B21974351D00172FEF /* NWSearchViewController.m in Sources */,
+				69D3E2B31974351D00172FEF /* NWCategoriesTableViewCell.m in Sources */,
+				69D3E2B41974351D00172FEF /* NWStringUtil.m in Sources */,
+				69D3E2B51974351D00172FEF /* NWIntroductionTableViewCell.m in Sources */,
+				69D3E2B61974351D00172FEF /* UIImageView+WebCache.m in Sources */,
+				69D3E2B71974351D00172FEF /* NWUpdateManager.m in Sources */,
+				69D3E2B81974351D00172FEF /* SDWebImagePrefetcher.m in Sources */,
+				69D3E2B91974351D00172FEF /* NWRefreshCircleView.m in Sources */,
+				69D3E2BA1974351D00172FEF /* NWToolBarView.m in Sources */,
+				69D3E2BB1974351D00172FEF /* NWDownloadedView.m in Sources */,
+				69D3E2BC1974351D00172FEF /* UIAlertView+Blocks.m in Sources */,
+				69D3E2BD1974351D00172FEF /* NWStateView.m in Sources */,
+				69D3E2BE1974351D00172FEF /* UIViewController+NWNavigationBar.m in Sources */,
+				69D3E2BF1974351D00172FEF /* NWDownloadOperation.m in Sources */,
+				69D3E2C01974351D00172FEF /* NWMoreViewController.m in Sources */,
+				69D3E2C11974351D00172FEF /* NWDownloadingView.m in Sources */,
+				69D3E2C21974351D00172FEF /* NWServerController.m in Sources */,
+				69D3E2C31974351D00172FEF /* SDWebImageManager.m in Sources */,
+				69D3E2C41974351D00172FEF /* NWHistoryTableViewCell.m in Sources */,
+				69D3E2C51974351D00172FEF /* NWHasApp.m in Sources */,
+				69D3E2C61974351D00172FEF /* NWBannerView.m in Sources */,
+				69D3E2C71974351D00172FEF /* NWDownloadPool.m in Sources */,
+				69D3E2C81974351D00172FEF /* SDImageCache.m in Sources */,
+				69D3E2C91974351D00172FEF /* CTLoadingView.m in Sources */,
+				69D3E2CA1974351D00172FEF /* NWRefreshControl.m in Sources */,
+				69D3E2CB1974351D00172FEF /* RTSpinKitView.m in Sources */,
+				69D3E2CC1974351D00172FEF /* NWUpdateView.m in Sources */,
+				69D3E2CD1974351D00172FEF /* NWRootView.m in Sources */,
+				69D3E2CE1974351D00172FEF /* NWHotTableViewCell.m in Sources */,
+				69D3E2CF1974351D00172FEF /* NWRuntime.m in Sources */,
+				69D3E2D01974351D00172FEF /* NWNavigationBar.m in Sources */,
+				69D3E2D11974351D00172FEF /* NWAboutViewController.m in Sources */,
+				69D3E2D21974351D00172FEF /* SVProgressHUD.m in Sources */,
+				69D3E2D31974351D00172FEF /* NWInstalledCell.m in Sources */,
+				69D3E2D41974351D00172FEF /* NWNavigationControllerWrapper.m in Sources */,
+				69D3E2D51974351D00172FEF /* NWTableViewCellUtil.m in Sources */,
+				69D3E2D61974351D00172FEF /* NWHistoryViewController.m in Sources */,
+				69D3E2D71974351D00172FEF /* NWFileMerger.m in Sources */,
+				69D3E2D81974351D00172FEF /* CoreData.xcdatamodeld in Sources */,
+				69D3E2D91974351D00172FEF /* NWFileSlicer.m in Sources */,
+				69D3E2DA1974351D00172FEF /* NWDownloadTableViewCell.m in Sources */,
+				69D3E2DB1974351D00172FEF /* NWDownloadedCell.m in Sources */,
+				69D3E2DC1974351D00172FEF /* NWFeedbackViewController.m in Sources */,
+				69D3E2DD1974351D00172FEF /* NWHotViewController.m in Sources */,
+				69D3E2DE1974351D00172FEF /* NWDetailViewController.m in Sources */,
+				69D3E2DF1974351D00172FEF /* NWFooterStateView.m in Sources */,
+				69D3E2E01974351D00172FEF /* NWDownloadInstance.m in Sources */,
+				69D3E2E11974351D00172FEF /* NSString+FontAwesome.m in Sources */,
+				69D3E2E21974351D00172FEF /* NWHeaderStateView.m in Sources */,
+				69D3E2E31974351D00172FEF /* NWCoreDataUtil.m in Sources */,
+				69D3E2E41974351D00172FEF /* NWDownloadCenter.m in Sources */,
+				69D3E2E51974351D00172FEF /* NWTableView.m in Sources */,
+				69D3E2E61974351D00172FEF /* NWNavigationController.m in Sources */,
+				69D3E2E71974351D00172FEF /* NWDownloadApps.m in Sources */,
+				69D3E2E81974351D00172FEF /* NWUpdateCell.m in Sources */,
+				69D3E2E91974351D00172FEF /* NWBannerTableViewCell.m in Sources */,
+				69D3E2EA1974351D00172FEF /* NWInstalledView.m in Sources */,
+				69D3E2EB1974351D00172FEF /* main.m in Sources */,
+				69D3E2EC1974351D00172FEF /* NWManageViewController.m in Sources */,
+				69D3E2ED1974351D00172FEF /* NWMenuListView.m in Sources */,
+				69D3E2EE1974351D00172FEF /* NWLanguageViewController.m in Sources */,
+				69D3E2EF1974351D00172FEF /* NWInfoTableViewCell.m in Sources */,
+				69D3E2F01974351D00172FEF /* SDWebImageDownloader.m in Sources */,
+				69D3E2F11974351D00172FEF /* SDWebImageDecoder.m in Sources */,
+				69D3E2F21974351D00172FEF /* DownloadApps.m in Sources */,
+				69D3E2F31974351D00172FEF /* NWAppDelegate.m in Sources */,
+				69D3E2F41974351D00172FEF /* NWDownloadModel.m in Sources */,
+				69D3E2F51974351D00172FEF /* NWCircleLoadingView.m in Sources */,
+				69D3E2F61974351D00172FEF /* NWSettingViewController.m in Sources */,
+				69D3E2F71974351D00172FEF /* NWDownloader.m in Sources */,
+				69D3E2F81974351D00172FEF /* NWCoreDataAdapter.m in Sources */,
+				69D3E2F91974351D00172FEF /* NWActivityIndicatorView.m in Sources */,
+				69D3E2FA1974351D00172FEF /* NWRootViewController.m in Sources */,
+				69D3E2FB1974351D00172FEF /* NWShareViewController.m in Sources */,
+				69D3E2FC1974351D00172FEF /* NWButtonItem.m in Sources */,
+				69D3E2FD1974351D00172FEF /* NWToolbar.m in Sources */,
+				69D3E2FE1974351D00172FEF /* NWCoreData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1503,6 +1841,11 @@
 			isa = PBXTargetDependency;
 			name = CoreBusiness;
 			targetProxy = 694BDD4A196EDCF700E60CF1 /* PBXContainerItemProxy */;
+		};
+		69D3E2AC1974351D00172FEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 694BDD44196EDCF000E60CF1 /* CoreFrameWork */;
+			targetProxy = 69D3E2AD1974351D00172FEF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1704,6 +2047,42 @@
 			};
 			name = Release;
 		};
+		69D3E3411974351D00172FEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Ctrip International Travel Service Co., Ltd.";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dorapps/Dorapps-Prefix.pch";
+				INFOPLIST_FILE = "Dorapps copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "Dorapps copy";
+				PROVISIONING_PROFILE = "4A04ABA3-7099-4B5F-B51E-A2DB4A094007";
+				USER_HEADER_SEARCH_PATHS = "./Dependency/CoreBusiness/CoreBusiness/** ./Dependency/CoreNetWork/CoreNetWork/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		69D3E3421974351D00172FEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Ctrip International Travel Service Co., Ltd.";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dorapps/Dorapps-Prefix.pch";
+				INFOPLIST_FILE = "Dorapps copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "Dorapps copy";
+				PROVISIONING_PROFILE = "4A04ABA3-7099-4B5F-B51E-A2DB4A094007";
+				USER_HEADER_SEARCH_PATHS = "./Dependency/CoreBusiness/CoreBusiness/** ./Dependency/CoreNetWork/CoreNetWork/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1739,6 +2118,15 @@
 			buildConfigurations = (
 				694BDD46196EDCF100E60CF1 /* Debug */,
 				694BDD47196EDCF100E60CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69D3E3401974351D00172FEF /* Build configuration list for PBXNativeTarget "Dorapps For ADHoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D3E3411974351D00172FEF /* Debug */,
+				69D3E3421974351D00172FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

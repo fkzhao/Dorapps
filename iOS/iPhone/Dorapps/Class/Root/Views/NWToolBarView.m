@@ -125,8 +125,9 @@ enum barsize{
     [button setFrame:frame];
     [button addTarget:self action:@selector(buttonClickAction:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [button setTitleColor:NWColorRGB(100, 100, 100) forState:UIControlStateHighlighted];
     [button setTitleColor:NWColorRGB(100, 100, 100) forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     [button setTitle:title forState:UIControlStateNormal];
     [button.titleLabel setFont:[UIFont systemFontOfSize:10]];
     [button addTarget:self action:@selector(buttonClickAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -154,10 +155,6 @@ enum barsize{
     }
     
     
-    [btn setSelected:YES];
-    [btn setUserInteractionEnabled:NO];
-    UIImageView *imageView = (UIImageView *)[btn viewWithTag:1001];
-    imageView.highlighted = YES;
     [self moveShadeBtn:btn];
 //    [self imgAnimate:btn];
     
@@ -204,6 +201,10 @@ enum barsize{
          
          
      } completion:^(BOOL finished){//do other thing
+         [btn setSelected:YES];
+         [btn setUserInteractionEnabled:NO];
+         UIImageView *imageView = (UIImageView *)[btn viewWithTag:1001];
+         imageView.highlighted = YES;
      }];
     
     

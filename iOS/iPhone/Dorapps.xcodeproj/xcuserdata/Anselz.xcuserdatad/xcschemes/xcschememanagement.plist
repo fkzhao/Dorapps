@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>Dorapps For ADHoc.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Dorapps.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,26 @@
 			<true/>
 		</dict>
 		<key>694BDD44196EDCF000E60CF1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69D3E1DD1974323400172FEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69D3E27A197433DE00172FEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69D3E296197433DF00172FEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69D3E2AB1974351D00172FEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
