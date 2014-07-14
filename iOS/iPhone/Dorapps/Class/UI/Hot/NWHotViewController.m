@@ -49,10 +49,13 @@
 }
 
 -(void)initView {
+    
     self.loadingView = [[NWCircleLoadingView alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
     self.loadingView.lineColor = NWColorRGB(255, 255, 255);
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.loadingView];
-    [self currentNavigationItem].rightBarButtonItem = rightBarButtonItem;
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.loadingView];
+    [self currentNavigationItem].leftBarButtonItem = leftBarButtonItem;
+    
+    
     [self.loadingView startAnimation];
     [self.mainTableView setTableViewStateRefreshing];
     NWHotSender *sender = [[NWHotSender alloc]init];
@@ -67,6 +70,8 @@
     }];
     
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -141,6 +146,20 @@
         sleep(2);
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.mainTableView reloadDataWithIsAllLoaded:YES];
+        });
+    });
+}
+
+
+-(void)selectCategoryAction:(NSInteger)selectIndex
+{
+    [self.loadingView startAnimation];
+    [self.mainTableView setTableViewStateRefreshing];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        sleep(2);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.loadingView stopAnimation];
+            [self.mainTableView reloadDataWithIsAllLoaded:NO];
         });
     });
 }

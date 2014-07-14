@@ -25,6 +25,11 @@
 		694B8AB419739D740068EC8D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 694B8AB119739D740068EC8D /* SVProgressHUD.bundle */; };
 		694B8AB519739D740068EC8D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AB319739D740068EC8D /* SVProgressHUD.m */; };
 		694B8AB81973A18D0068EC8D /* NWCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AB71973A18D0068EC8D /* NWCircleLoadingView.m */; };
+		694B8ABE1973AEBD0068EC8D /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 694B8ABC1973AEBD0068EC8D /* burger.png */; };
+		694B8ABF1973AEBD0068EC8D /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 694B8ABD1973AEBD0068EC8D /* burger@2x.png */; };
+		694B8AC71973B3CE0068EC8D /* NWMenuListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AC61973B3CE0068EC8D /* NWMenuListView.m */; };
+		694B8ACB1973B8740068EC8D /* NWCategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AC91973B8740068EC8D /* NWCategoriesTableViewCell.m */; };
+		694B8ACC1973B8740068EC8D /* NWCategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694B8ACA1973B8740068EC8D /* NWCategoriesTableViewCell.xib */; };
 		694BDB87196ED7B100E60CF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDB86196ED7B100E60CF1 /* Foundation.framework */; };
 		694BDB89196ED7B100E60CF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDB88196ED7B100E60CF1 /* CoreGraphics.framework */; };
 		694BDB8B196ED7B100E60CF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDB8A196ED7B100E60CF1 /* UIKit.framework */; };
@@ -218,6 +223,13 @@
 		694B8AB319739D740068EC8D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		694B8AB61973A18D0068EC8D /* NWCircleLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWCircleLoadingView.h; sourceTree = "<group>"; };
 		694B8AB71973A18D0068EC8D /* NWCircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWCircleLoadingView.m; sourceTree = "<group>"; };
+		694B8ABC1973AEBD0068EC8D /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
+		694B8ABD1973AEBD0068EC8D /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burger@2x.png"; sourceTree = "<group>"; };
+		694B8AC51973B3CE0068EC8D /* NWMenuListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWMenuListView.h; sourceTree = "<group>"; };
+		694B8AC61973B3CE0068EC8D /* NWMenuListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWMenuListView.m; sourceTree = "<group>"; };
+		694B8AC81973B8740068EC8D /* NWCategoriesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWCategoriesTableViewCell.h; sourceTree = "<group>"; };
+		694B8AC91973B8740068EC8D /* NWCategoriesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWCategoriesTableViewCell.m; sourceTree = "<group>"; };
+		694B8ACA1973B8740068EC8D /* NWCategoriesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWCategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		694BDB83196ED7B100E60CF1 /* Dorapps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dorapps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694BDB86196ED7B100E60CF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		694BDB88196ED7B100E60CF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -474,6 +486,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		694B8ABB1973AEAF0068EC8D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				694B8ABC1973AEBD0068EC8D /* burger.png */,
+				694B8ABD1973AEBD0068EC8D /* burger@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		694B8AC41973B3A80068EC8D /* MenuList */ = {
+			isa = PBXGroup;
+			children = (
+				694B8AC51973B3CE0068EC8D /* NWMenuListView.h */,
+				694B8AC61973B3CE0068EC8D /* NWMenuListView.m */,
+				694B8AC81973B8740068EC8D /* NWCategoriesTableViewCell.h */,
+				694B8AC91973B8740068EC8D /* NWCategoriesTableViewCell.m */,
+				694B8ACA1973B8740068EC8D /* NWCategoriesTableViewCell.xib */,
+			);
+			path = MenuList;
+			sourceTree = "<group>";
+		};
 		694BDB7A196ED7B100E60CF1 = {
 			isa = PBXGroup;
 			children = (
@@ -581,6 +614,7 @@
 		694BDBD6196ED80700E60CF1 /* Common-UI */ = {
 			isa = PBXGroup;
 			children = (
+				694B8AC41973B3A80068EC8D /* MenuList */,
 				694BDBFA196ED80700E60CF1 /* TableView */,
 				694BDBDA196ED80700E60CF1 /* BannerView */,
 				694BDBDE196ED80700E60CF1 /* LoadingView */,
@@ -1032,6 +1066,7 @@
 		69B473B61970CF71002FCD82 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				694B8ABB1973AEAF0068EC8D /* Images */,
 				69B473B71970CF71002FCD82 /* Font */,
 				69B473B91970CF71002FCD82 /* Icon */,
 				69B473BB1970CF71002FCD82 /* Localization */,
@@ -1282,6 +1317,7 @@
 			files = (
 				694BDCCF196ED80700E60CF1 /* 1.png in Resources */,
 				694BDCDC196ED80700E60CF1 /* NWInterestTableViewCell.xib in Resources */,
+				694B8ACC1973B8740068EC8D /* NWCategoriesTableViewCell.xib in Resources */,
 				694BDCAC196ED80700E60CF1 /* placeholder-icon.png in Resources */,
 				694BDCAA196ED80700E60CF1 /* success@2x.png in Resources */,
 				694BDCD8196ED80700E60CF1 /* NWHistoryViewController.xib in Resources */,
@@ -1296,6 +1332,8 @@
 				694BDCC6196ED80700E60CF1 /* NWNavigationController.xib in Resources */,
 				694BDCE3196ED80700E60CF1 /* NWHotTableViewCell.xib in Resources */,
 				694BDCDA196ED80700E60CF1 /* NWInfoTableViewCell.xib in Resources */,
+				694B8ABE1973AEBD0068EC8D /* burger.png in Resources */,
+				694B8ABF1973AEBD0068EC8D /* burger@2x.png in Resources */,
 				694BDCA9196ED80700E60CF1 /* success.png in Resources */,
 				694BDCD0196ED80700E60CF1 /* 2.png in Resources */,
 				69B473CF1970CF71002FCD82 /* fontawesome-webfont.ttf in Resources */,
@@ -1356,6 +1394,7 @@
 				694BDCC9196ED80700E60CF1 /* NWTabBarViewController.m in Sources */,
 				694BDCDB196ED80700E60CF1 /* NWInterestTableViewCell.m in Sources */,
 				694BDD03196ED80700E60CF1 /* NWSearchViewController.m in Sources */,
+				694B8ACB1973B8740068EC8D /* NWCategoriesTableViewCell.m in Sources */,
 				694BDCC2196ED80700E60CF1 /* NWStringUtil.m in Sources */,
 				694BDCDD196ED80700E60CF1 /* NWIntroductionTableViewCell.m in Sources */,
 				694BDCB2196ED80700E60CF1 /* UIImageView+WebCache.m in Sources */,
@@ -1413,6 +1452,7 @@
 				694BDCF1196ED80700E60CF1 /* NWInstalledView.m in Sources */,
 				694BDB93196ED7B100E60CF1 /* main.m in Sources */,
 				69772F1B19725E4400118BBB /* NWManageViewController.m in Sources */,
+				694B8AC71973B3CE0068EC8D /* NWMenuListView.m in Sources */,
 				694BDCFB196ED80700E60CF1 /* NWLanguageViewController.m in Sources */,
 				694BDCD9196ED80700E60CF1 /* NWInfoTableViewCell.m in Sources */,
 				694BDCAF196ED80700E60CF1 /* SDWebImageDownloader.m in Sources */,

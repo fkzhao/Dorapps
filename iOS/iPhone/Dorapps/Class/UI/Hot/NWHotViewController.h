@@ -10,4 +10,6 @@
 
 @interface NWHotViewController : NWRootViewController
 
+
+-(void)selectCategoryAction:(NSInteger)selectIndex;
 @end
