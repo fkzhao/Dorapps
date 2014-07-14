@@ -22,6 +22,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		694B8AB419739D740068EC8D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 694B8AB119739D740068EC8D /* SVProgressHUD.bundle */; };
+		694B8AB519739D740068EC8D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AB319739D740068EC8D /* SVProgressHUD.m */; };
+		694B8AB81973A18D0068EC8D /* NWCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AB71973A18D0068EC8D /* NWCircleLoadingView.m */; };
 		694BDB87196ED7B100E60CF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDB86196ED7B100E60CF1 /* Foundation.framework */; };
 		694BDB89196ED7B100E60CF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDB88196ED7B100E60CF1 /* CoreGraphics.framework */; };
 		694BDB8B196ED7B100E60CF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694BDB8A196ED7B100E60CF1 /* UIKit.framework */; };
@@ -137,8 +140,6 @@
 		69772F2919727EA800118BBB /* NWUpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2819727EA800118BBB /* NWUpdateManager.m */; };
 		69772F2C19727F1900118BBB /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2B19727F1900118BBB /* UIAlertView+Blocks.m */; };
 		69772F2F19727F5900118BBB /* NWButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2E19727F5900118BBB /* NWButtonItem.m */; };
-		69772F341972900D00118BBB /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 69772F311972900D00118BBB /* ProgressHUD.bundle */; };
-		69772F351972900D00118BBB /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F331972900D00118BBB /* ProgressHUD.m */; };
 		69B473B31970CDBA002FCD82 /* UIViewController+NWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */; };
 		69B473CF1970CF71002FCD82 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */; };
 		69B473D01970CF71002FCD82 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473BA1970CF71002FCD82 /* icon.png */; };
@@ -212,6 +213,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		694B8AB119739D740068EC8D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		694B8AB219739D740068EC8D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		694B8AB319739D740068EC8D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		694B8AB61973A18D0068EC8D /* NWCircleLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWCircleLoadingView.h; sourceTree = "<group>"; };
+		694B8AB71973A18D0068EC8D /* NWCircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWCircleLoadingView.m; sourceTree = "<group>"; };
 		694BDB83196ED7B100E60CF1 /* Dorapps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dorapps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694BDB86196ED7B100E60CF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		694BDB88196ED7B100E60CF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -404,9 +410,6 @@
 		69772F2B19727F1900118BBB /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		69772F2D19727F5900118BBB /* NWButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWButtonItem.h; sourceTree = "<group>"; };
 		69772F2E19727F5900118BBB /* NWButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWButtonItem.m; sourceTree = "<group>"; };
-		69772F311972900D00118BBB /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
-		69772F321972900D00118BBB /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
-		69772F331972900D00118BBB /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		69B473B11970CDBA002FCD82 /* UIViewController+NWNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NWNavigationBar.h"; sourceTree = "<group>"; };
 		69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NWNavigationBar.m"; sourceTree = "<group>"; };
 		69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
@@ -609,11 +612,13 @@
 		694BDBDE196ED80700E60CF1 /* LoadingView */ = {
 			isa = PBXGroup;
 			children = (
-				694BDBDF196ED80700E60CF1 /* CTLoadingView.h */,
-				694BDBE0196ED80700E60CF1 /* CTLoadingView.m */,
 				694BDBE1196ED80700E60CF1 /* images */,
 				694BDBE6196ED80700E60CF1 /* RTSpinKitView.h */,
 				694BDBE7196ED80700E60CF1 /* RTSpinKitView.m */,
+				694BDBDF196ED80700E60CF1 /* CTLoadingView.h */,
+				694BDBE0196ED80700E60CF1 /* CTLoadingView.m */,
+				694B8AB61973A18D0068EC8D /* NWCircleLoadingView.h */,
+				694B8AB71973A18D0068EC8D /* NWCircleLoadingView.m */,
 			);
 			path = LoadingView;
 			sourceTree = "<group>";
@@ -1017,9 +1022,9 @@
 		69772F301972900D00118BBB /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				69772F311972900D00118BBB /* ProgressHUD.bundle */,
-				69772F321972900D00118BBB /* ProgressHUD.h */,
-				69772F331972900D00118BBB /* ProgressHUD.m */,
+				694B8AB119739D740068EC8D /* SVProgressHUD.bundle */,
+				694B8AB219739D740068EC8D /* SVProgressHUD.h */,
+				694B8AB319739D740068EC8D /* SVProgressHUD.m */,
 			);
 			path = ProgressHUD;
 			sourceTree = "<group>";
@@ -1285,6 +1290,7 @@
 				694BDCA4196ED80700E60CF1 /* banner.png in Resources */,
 				69B473D51970CF71002FCD82 /* manager.png in Resources */,
 				694BDCD4196ED80700E60CF1 /* NWDetailViewController.xib in Resources */,
+				694B8AB419739D740068EC8D /* SVProgressHUD.bundle in Resources */,
 				694BDCD6196ED80700E60CF1 /* NWHistoryTableViewCell.xib in Resources */,
 				694BDCF8196ED80700E60CF1 /* NWAboutViewController.xib in Resources */,
 				694BDCC6196ED80700E60CF1 /* NWNavigationController.xib in Resources */,
@@ -1307,7 +1313,6 @@
 				694BDCE8196ED80700E60CF1 /* twitter.png in Resources */,
 				69B473D81970CF71002FCD82 /* searching_hight.png in Resources */,
 				694BDCD1196ED80700E60CF1 /* 3.png in Resources */,
-				69772F341972900D00118BBB /* ProgressHUD.bundle in Resources */,
 				694BDCA8196ED80700E60CF1 /* error@2x.png in Resources */,
 				694BDB91196ED7B100E60CF1 /* InfoPlist.strings in Resources */,
 				69B473D11970CF71002FCD82 /* InfoPlist.strings in Resources */,
@@ -1364,7 +1369,6 @@
 				69B473B31970CDBA002FCD82 /* UIViewController+NWNavigationBar.m in Sources */,
 				694BDCBC196ED80700E60CF1 /* NWDownloadOperation.m in Sources */,
 				694BDCFD196ED80700E60CF1 /* NWMoreViewController.m in Sources */,
-				69772F351972900D00118BBB /* ProgressHUD.m in Sources */,
 				694BDCEC196ED80700E60CF1 /* NWDownloadingView.m in Sources */,
 				694BDCC4196ED80700E60CF1 /* NWServerController.m in Sources */,
 				694BDCB0196ED80700E60CF1 /* SDWebImageManager.m in Sources */,
@@ -1382,6 +1386,7 @@
 				694BDCC1196ED80700E60CF1 /* NWRuntime.m in Sources */,
 				694BDCCB196ED80700E60CF1 /* NWNavigationBar.m in Sources */,
 				694BDCF7196ED80700E60CF1 /* NWAboutViewController.m in Sources */,
+				694B8AB519739D740068EC8D /* SVProgressHUD.m in Sources */,
 				694BDCEF196ED80700E60CF1 /* NWInstalledCell.m in Sources */,
 				694BDCC7196ED80700E60CF1 /* NWNavigationControllerWrapper.m in Sources */,
 				694BDCC3196ED80700E60CF1 /* NWTableViewCellUtil.m in Sources */,
@@ -1415,6 +1420,7 @@
 				69772F1F19725F2F00118BBB /* DownloadApps.m in Sources */,
 				694BDB97196ED7B100E60CF1 /* NWAppDelegate.m in Sources */,
 				694BDCBB196ED80700E60CF1 /* NWDownloadModel.m in Sources */,
+				694B8AB81973A18D0068EC8D /* NWCircleLoadingView.m in Sources */,
 				694BDCFF196ED80700E60CF1 /* NWSettingViewController.m in Sources */,
 				694BDCBA196ED80700E60CF1 /* NWDownloader.m in Sources */,
 				69B47563197155C8002FCD82 /* NWCoreDataAdapter.m in Sources */,

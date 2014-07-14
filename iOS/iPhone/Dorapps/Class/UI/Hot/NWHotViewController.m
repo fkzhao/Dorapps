@@ -14,10 +14,12 @@
 #import "NWDetailViewCacheBean.h"
 #import "NWBannerTableViewCell.h"
 #import "NWTableView.h"
+#import "NWCircleLoadingView.h"
 
 @interface NWHotViewController ()<UITableViewDataSource,UITableViewDelegate> {
     NWHotViewCacheBean *cacheBean;
 }
+@property (nonatomic, strong) NWCircleLoadingView *loadingView;
 @property (weak, nonatomic) IBOutlet NWTableView *mainTableView;
 
 @end
@@ -47,6 +49,11 @@
 }
 
 -(void)initView {
+    self.loadingView = [[NWCircleLoadingView alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    self.loadingView.lineColor = NWColorRGB(255, 255, 255);
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.loadingView];
+    [self currentNavigationItem].rightBarButtonItem = rightBarButtonItem;
+    [self.loadingView startAnimation];
     [self.mainTableView setTableViewStateRefreshing];
     NWHotSender *sender = [[NWHotSender alloc]init];
     NWHotViewCacheBean *cache = [[NWHotViewCacheBean alloc]init];
@@ -54,9 +61,11 @@
     [self goToInsidePageWithModel:reslutModel cacheBean:cache successBlocks:^(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject) {
         cacheBean = (NWHotViewCacheBean *)self.viewCacheBean;
         [self.mainTableView reloadDataWithIsAllLoaded:NO];
+        [self.loadingView stopAnimation];
     } failedBlocks:^(NSString *businessCode, NSString *errorInformation, id goToPageObject) {
         NSLog(@"failed");
     }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,6 +111,7 @@
         return;
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     NWListAppModel *model = (NWListAppModel *)[cacheBean.appListArray objectAtIndex:indexPath.row-1];
     NWHotSender *sender = [[NWHotSender alloc]init];
     NWSenderResultModel *resultModel = [sender sendGetAppDetail:model.appID];

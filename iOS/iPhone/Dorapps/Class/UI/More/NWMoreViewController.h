@@ -8,6 +8,6 @@
 
 #import "NWRootViewController.h"
 
-@interface NWMoreViewController : NWRootViewController
+@interface NWMoreViewController : NWRootViewController<UIAlertViewDelegate>
 
 @end

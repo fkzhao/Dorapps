@@ -14,6 +14,6 @@
 @property (nonatomic, copy) NSString *currentServerVersion;
 
 + (NWUpdateManager *)sharedManager;
-- (void)checkForUpdates;
+- (void)checkForUpdates:(void(^)(BOOL isError,BOOL isLastVersion,BOOL isDisableAuto,NSString *statusStr))complete;
 - (void)performUpdate;
 @end

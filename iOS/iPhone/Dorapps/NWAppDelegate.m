@@ -39,7 +39,7 @@
     [self.window makeKeyAndVisible];
     
     NWUpdateManager *mgr = [NWUpdateManager sharedManager];
-    [mgr checkForUpdates];
+    [mgr checkForUpdates:nil];
     return YES;
 }
 

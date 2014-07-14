@@ -66,7 +66,7 @@ static NSString *const kPreferenceAskUpdate = @"pref_ask_update";
     [thisApp openURL:url];
 }
 
-- (void)checkForUpdates {
+- (void)checkForUpdates:(void(^)(BOOL isError,BOOL isLastVersion,BOOL isDisableAuto,NSString *statusStr))complete {
     [self setPListUrl:@"itms-services://?action=download-manifest&url=https://anselz.github.io/adhoc/dorapps.plist"];
     [self setVersionUrl:@"http://anselz.github.io/dora/update.json"];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -74,7 +74,11 @@ static NSString *const kPreferenceAskUpdate = @"pref_ask_update";
         NSError *error = nil;
         NSString *serverVersion = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
         if (error) {
-            NSLog(@"Fetch serverVersion ops.");
+            if (complete) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    complete(YES,NO,NO,@"Fetch serverVersion ops.");
+                });
+            }
             return;
         }
         NSString *currentVersion = [self appVersion];
@@ -82,13 +86,19 @@ static NSString *const kPreferenceAskUpdate = @"pref_ask_update";
         if ([self compareVersion:serverVersion toVersion:currentVersion] <= 0) {
             [thisApp setApplicationIconBadgeNumber:0];
             _currentServerVersion = currentVersion;
-            NSLog(@"The application is up to date.");
+            if (complete) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    complete(NO,YES,NO,@"The application is up to date.");
+                });
+            }
             return;
         }
         [thisApp setApplicationIconBadgeNumber:1];
         _currentServerVersion = serverVersion;
-        if (![self shouldAskForUpdate]) {
-            NSLog(@"There is a new version, but the user has opted to update manually later.");
+        if ([self shouldAskForUpdate]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                complete(NO,NO,YES,@"There is a new version, but the user has opted to update manually later.");
+            });
             return;
         }
         NWButtonItem *okButton = [NWButtonItem itemWithLabel:@"OK" action:^{

@@ -13,6 +13,7 @@
 #import "NWAboutViewController.h"
 #import "NWFeedbackViewController.h"
 #import "NWUpdateManager.h"
+#import "SVProgressHUD.h"
 
 @interface NWMoreViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -116,8 +117,21 @@
         if (indexPath.row == 0) {
             next = [[NWSettingViewController alloc]init];
         } else {
+            [SVProgressHUD showWithStatus:@"Checking..."];
             NWUpdateManager *mgr = [NWUpdateManager sharedManager];
-            [mgr checkForUpdates];
+            [mgr checkForUpdates:^(BOOL isError, BOOL isLastVersion, BOOL isDisableAuto, NSString *statusStr) {
+                [SVProgressHUD dismiss];
+                if (isError) {
+                    [SVProgressHUD showErrorWithStatus:statusStr];
+                }
+                if (isLastVersion) {
+                    [SVProgressHUD showSuccessWithStatus:statusStr];
+                }
+                if (isDisableAuto) {
+                    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:statusStr delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"设置", nil];
+                    [alertView show];
+                }
+            }];
             return;
         }
         
@@ -132,4 +146,13 @@
     
     [self pushViewController:next animated:YES];
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        NWSettingViewController *next = [[NWSettingViewController alloc]init];
+        [self pushViewController:next animated:YES];
+    }
+}
+
 @end
