@@ -7,6 +7,8 @@
 //
 
 #import "NWCategoryViewController.h"
+#import "NWTableViewCellUtil.h"
+#import "NWCategoriesTableViewCell.h"
 
 @interface NWCategoryViewController ()
 
@@ -40,6 +42,31 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NWCategoriesTableViewCell *cell = (NWCategoriesTableViewCell *)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([NWCategoriesTableViewCell class])];
+    if (cell == nil) {
+        cell = (NWCategoriesTableViewCell *)[NWTableViewCellUtil loadCell:NSStringFromClass([NWCategoriesTableViewCell class]) atIndex:0];
+    }
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self dismiss];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(selectMenuAtIndex:)]) {
+        [self.delegate selectMenuAtIndex:indexPath.row];
+    }
 }
 
 @end

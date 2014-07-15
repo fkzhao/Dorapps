@@ -40,7 +40,7 @@
     NWHotViewController *hot = [[NWHotViewController alloc]init];
     hot.tabBarItem =[[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:1];
     NWManageViewController *manage = [[NWManageViewController alloc]init];
-    manage.tabBarItem =[[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:1];
+    manage.tabBarItem =[[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemBookmarks tag:1];
     NWSearchViewController *search = [[NWSearchViewController alloc]init];
     search.tabBarItem = [[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemSearch tag:1];
     NWMoreViewController *more = [[NWMoreViewController alloc]init];
@@ -52,12 +52,14 @@
     rootVC.tabBar.tintColor = [UIColor colorWithRed:70.0/255.0 green:154.0/255.0 blue:233.0/255.0 alpha:1.0];
     rootVC.viewControllers = @[hot,search,manage,more];
     self.mainViewController = rootVC;
-    [self tabBarController:rootVC didSelectViewController:hot];
     
+    [self tabBarController:rootVC didSelectViewController:hot];
+
     NWNavigationController *rootNav = [[NWNavigationController alloc]initWithRootViewController:rootVC];
     self.rootViewController = rootNav;
     self.window.rootViewController = self.rootViewController;
 }
+
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
@@ -73,15 +75,24 @@
     tabBarController.title = viewController.title;
 }
 
+
 -(void)showAppCategory
 {
     NWCategoryViewController *viewController = [[NWCategoryViewController alloc]init];
+    viewController.delegate = (id)self;
     NWNavigationController *navController = [[NWNavigationController alloc]initWithRootViewController:viewController];
     viewController.edgesForExtendedLayout = UIRectEdgeNone;
     [self.mainViewController presentViewController:navController animated:YES completion:^{
         
     }];
 }
+
+-(void)selectMenuAtIndex:(NSInteger)selectIndex
+{
+    NWHotViewController *hot = (NWHotViewController *)self.mainViewController.selectedViewController ;
+    [hot selectCategoryAction:selectIndex];
+}
+
 -(void)checkAppUpdate
 {
     NWUpdateManager *mgr = [NWUpdateManager sharedManager];

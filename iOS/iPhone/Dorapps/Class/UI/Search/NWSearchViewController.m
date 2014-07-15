@@ -69,7 +69,8 @@
 }
 
 - (void) showSearchBar:(UISearchBar *)searchBar {
-    [[self currentNavigationController].navigationBar setBarStyle:UIBarStyleBlack];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
     [[self currentNavigationController] setNavigationBarHidden:YES animated:YES];
     [searchBar setShowsCancelButton:YES animated:YES] ;
     [UIView animateWithDuration:0.1 animations:^{
@@ -81,6 +82,8 @@
 
 - (void) hideSearchBar:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder] ;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     [[self currentNavigationController] setNavigationBarHidden:NO animated:YES];
     [searchBar setShowsCancelButton:NO animated:YES] ;
     [UIView animateWithDuration:0.1 animations:^{

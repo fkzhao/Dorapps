@@ -14,12 +14,14 @@
 #import "NWHistoryViewController.h"
 #import "NWManageViewController.h"
 #import "NWDetailViewCacheBean.h"
+#import "NWCircleLoadingView.h"
+#import "NWUIDefine.h"
 
 @interface NWDetailViewController ()<UITableViewDelegate,UITableViewDataSource,NWInterestTableViewCellDelegate,NWInfoTableViewCellDelegate> {
     NWDetailViewCacheBean *cacheBean;
 }
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
-
+@property (nonatomic, strong) NWCircleLoadingView *loadingView;
 @end
 
 @implementation NWDetailViewController
@@ -38,6 +40,14 @@
 {
     [super viewDidLoad];
     [self registerLoadingView];
+    
+    self.loadingView = [[NWCircleLoadingView alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    self.loadingView.lineColor = NWColorRGB(255, 255, 255);
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.loadingView];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    
+    [self.loadingView startAnimation];
+    
     cacheBean = (NWDetailViewCacheBean *)self.viewCacheBean;
     // Do any additional setup after loading the view from its nib.
 }
@@ -130,6 +140,7 @@
 
 -(void)reloadView
 {
+    [self.loadingView stopAnimation];
     [self.mainTableView reloadData];
 }
 @end

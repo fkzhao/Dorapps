@@ -8,6 +8,15 @@
 
 #import "NWRootViewController.h"
 
+
+@protocol NWCategoryViewControllerDelegate <NSObject>
+
+-(void)selectMenuAtIndex:(NSInteger)selectIndex;
+
+@end
+
 @interface NWCategoryViewController : NWRootViewController
+
+@property (nonatomic,assign) id<NWCategoryViewControllerDelegate> delegate;
 
 @end
