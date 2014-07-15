@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NWSearchViewController">
             <connections>
+                <outlet property="mainTableView" destination="SpU-W2-Qe3" id="UVz-DP-zWL"/>
                 <outlet property="searchBar" destination="8pX-Nx-30u" id="Cn2-J1-fgw"/>
                 <outlet property="searchDisplayController" destination="FrX-kE-y4U" id="xGS-Nf-i4K"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -18,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SpU-W2-Qe3">
-                    <rect key="frame" x="0.0" y="43" width="320" height="525"/>
+                    <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -27,8 +28,9 @@
                     </connections>
                 </tableView>
                 <searchBar contentMode="redraw" id="8pX-Nx-30u">
-                    <rect key="frame" x="0.0" y="-1" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="oc3-SW-T0b"/>

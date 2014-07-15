@@ -30,13 +30,27 @@
 }
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleLightContent;
+    if (self.navigationBar.hidden) {
+        return UIStatusBarStyleBlackTranslucent;
+    } else {
+        return UIStatusBarStyleLightContent;
+    }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initBaseView];
     // Do any additional setup after loading the view.
+}
+
+#pragma mark 初始化视图
+- (void)initBaseView
+{
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+    {
+//        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 - (void)didReceiveMemoryWarning

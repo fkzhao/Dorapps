@@ -34,6 +34,7 @@
     [super viewDidLoad];
     [self initBaseView];
 }
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
@@ -71,10 +72,16 @@
     [navigationController  pushViewController:viewController animated:animated];
     
 }
+- (UINavigationController *)currentNavigationController
+{
+    NWAppDelegate *delegate = (NWAppDelegate *)[UIApplication sharedApplication].delegate;
+    UITabBarController *tabbarViewController = delegate.mainViewController;
+    return tabbarViewController.navigationController;
+}
 
 - (UINavigationItem *)currentNavigationItem; {
     NWAppDelegate *delegate = (NWAppDelegate *)[UIApplication sharedApplication].delegate;
-    NWTabBarViewController *tabbarViewController = delegate.mainViewController;
+    UITabBarController *tabbarViewController = delegate.mainViewController;
     return tabbarViewController.navigationItem;
 }
 

@@ -20,12 +20,28 @@
     return self;
 }
 
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+    }
+    return self;
+}
+
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self initBaseView];
+}
 -(void)initBaseView
 {
     if (!_mainTableView) {
-        _mainTableView = [[UITableView alloc]initWithFrame:self.bounds style:UITableViewStylePlain];
         CGRect frame = self.bounds;
-        _mainTableView.frame = CGRectMake(frame.origin.x, -frame.size.height, frame.size.width, frame.size.height);
+        if (frame.size.height == 568) {
+            frame.size.height = 504;
+        }
+        _mainTableView.frame = frame;
+        _mainTableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStylePlain];
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
         _mainTableView.backgroundColor = [UIColor clearColor];

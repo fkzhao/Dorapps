@@ -29,6 +29,8 @@
 
 - (UINavigationItem *)currentNavigationItem;
 
+- (UINavigationController *)currentNavigationController;
+
 
 /**
  进入下一级页面 接口一

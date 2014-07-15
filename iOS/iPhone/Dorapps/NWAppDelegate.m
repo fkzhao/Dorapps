@@ -14,6 +14,8 @@
 #import "NWTabBarViewController.h"
 #import "NWCoreDataUtil.h"
 #import "NWUpdateManager.h"
+#import "NWUIConfig.h"
+#import "NWCategoryViewController.h"
 
 @implementation NWAppDelegate
 
@@ -23,26 +25,68 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    NWHotViewController *hot = [[NWHotViewController alloc]init];
-    NWManageViewController *manage = [[NWManageViewController alloc]init];
-    NWSearchViewController *search = [[NWSearchViewController alloc]init];
-    NWMoreViewController *more = [[NWMoreViewController alloc]init];
-    
-    NWTabBarViewController *rootVC = [[NWTabBarViewController alloc]initWithControlles:@[hot,search,manage,more]];
-    self.mainViewController = rootVC;
-    
-    NWNavigationController *rootNav = [[NWNavigationController alloc]initWithRootViewController:self.mainViewController];
-    self.rootViewController = rootNav;
-    self.window.rootViewController = self.rootViewController;
+    [self loadViewController];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    NWUpdateManager *mgr = [NWUpdateManager sharedManager];
-    [mgr checkForUpdates:nil];
     return YES;
 }
 
+
+
+-(void)loadViewController
+{
+    NWHotViewController *hot = [[NWHotViewController alloc]init];
+    hot.tabBarItem =[[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:1];
+    NWManageViewController *manage = [[NWManageViewController alloc]init];
+    manage.tabBarItem =[[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:1];
+    NWSearchViewController *search = [[NWSearchViewController alloc]init];
+    search.tabBarItem = [[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemSearch tag:1];
+    NWMoreViewController *more = [[NWMoreViewController alloc]init];
+    more.tabBarItem = [[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemMore tag:1];
+    
+    UITabBarController *rootVC = [[UITabBarController alloc] init];
+    rootVC.delegate = self;
+    rootVC.edgesForExtendedLayout = UIRectEdgeNone;
+    rootVC.tabBar.tintColor = [UIColor colorWithRed:70.0/255.0 green:154.0/255.0 blue:233.0/255.0 alpha:1.0];
+    rootVC.viewControllers = @[hot,search,manage,more];
+    self.mainViewController = rootVC;
+    [self tabBarController:rootVC didSelectViewController:hot];
+    
+    NWNavigationController *rootNav = [[NWNavigationController alloc]initWithRootViewController:rootVC];
+    self.rootViewController = rootNav;
+    self.window.rootViewController = self.rootViewController;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    if ([viewController isKindOfClass:[NWHotViewController class]]) {
+        UIButton *menuButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+        [menuButton setImage:[UIImage imageNamed:@"burger"] forState:UIControlStateNormal];
+        [menuButton addTarget:self action:@selector(showAppCategory) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuButton];
+        tabBarController.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    } else {
+        tabBarController.navigationItem.rightBarButtonItem = nil;
+    }
+    tabBarController.title = viewController.title;
+}
+
+-(void)showAppCategory
+{
+    NWCategoryViewController *viewController = [[NWCategoryViewController alloc]init];
+    NWNavigationController *navController = [[NWNavigationController alloc]initWithRootViewController:viewController];
+    viewController.edgesForExtendedLayout = UIRectEdgeNone;
+    [self.mainViewController presentViewController:navController animated:YES completion:^{
+        
+    }];
+}
+-(void)checkAppUpdate
+{
+    NWUpdateManager *mgr = [NWUpdateManager sharedManager];
+    [mgr checkForUpdates:nil];
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

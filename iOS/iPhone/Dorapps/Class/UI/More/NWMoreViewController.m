@@ -14,8 +14,9 @@
 #import "NWFeedbackViewController.h"
 #import "NWUpdateManager.h"
 #import "SVProgressHUD.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface NWMoreViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface NWMoreViewController ()<UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate>
 
 @end
 
@@ -139,7 +140,8 @@
         if (indexPath.row == 0) {
             next = [[NWAboutViewController alloc]init];
         } else {
-            next = [[NWFeedbackViewController alloc]init];
+            [self sendFeedBackMail];
+            return;
         }
     }
 
@@ -155,4 +157,30 @@
     }
 }
 
+-(void)sendFeedBackMail{
+    
+    MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+    
+    if([MFMailComposeViewController canSendMail]) {
+        [controller setToRecipients:@[@"feedback@dorapps.com"]];
+        [controller setSubject:@"Dorapps iOS Feedback"];
+        [controller setMessageBody:@"iOS Version: 7.1.2\n Platform:iPhone5,2" isHTML:NO];
+        controller.mailComposeDelegate = self;
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+}
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    if (result == MFMailComposeResultCancelled){
+        NSLog(@"Message cancelled");
+    }
+    else if(result == MFMailComposeResultSent) {
+        NSLog(@"Message sent");
+    }
+    else if (result == MFMailComposeResultFailed) {
+        NSLog(@"Message failed");
+    } else if (result) {
+        NSLog(@"Message Saved");
+    }
+}
 @end

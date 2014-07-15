@@ -10,10 +10,10 @@
 @class NWNavigationController;
 @class NWTabBarViewController;
 
-@interface NWAppDelegate : UIResponder <UIApplicationDelegate>
+@interface NWAppDelegate : UIResponder <UIApplicationDelegate,UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NWNavigationController *rootViewController;
-@property (strong, nonatomic) NWTabBarViewController *mainViewController;
+@property (strong, nonatomic) UITabBarController *mainViewController;
 
 @end
