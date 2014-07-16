@@ -8,9 +8,11 @@
 
 #import "NWViewCacheBean.h"
 #import "NWListAppModel.h"
+#import "NWBannerModel.h"
 
 @interface NWHotViewCacheBean : NWViewCacheBean
 
 @property (nonatomic,strong) NSMutableArray *appListArray;
+@property (nonatomic,strong) NSMutableArray *bannerListArray;
 
 @end

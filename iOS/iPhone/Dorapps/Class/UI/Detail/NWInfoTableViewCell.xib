@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NWInfoTableViewCell" rowHeight="177" id="KGk-i7-Jjw" customClass="NWInfoTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NWInfoTableViewCell" rowHeight="162" id="KGk-i7-Jjw" customClass="NWInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter.png" id="EjA-Zm-UKC">
@@ -46,25 +46,25 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="要求:需要 iOS 6.0 或更高版本。与 iPhone、iPad、iPod touch 兼容。 此 App 已针对 iPhone 5 进行优化。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WYp-tJ-70T">
-                        <rect key="frame" x="107" y="79" width="205" height="55"/>
+                        <rect key="frame" x="107" y="80" width="205" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.0" alpha="0.65000000000000002" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aHU-qz-1Wx">
-                        <rect key="frame" x="254" y="136" width="46" height="30"/>
+                        <rect key="frame" x="255" y="120" width="46" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <state key="normal" title="下载">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="downloadAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2jh-sh-YMG"/>
+                            <action selector="downloadAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Dii-S7-AZD"/>
                         </connections>
                     </button>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H92-3i-GLb">
-                        <rect key="frame" x="175" y="136" width="68" height="30"/>
+                        <rect key="frame" x="175" y="120" width="68" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <state key="normal" title="历史版本">
@@ -83,6 +83,7 @@
                 <outlet property="appReleaseNote" destination="WYp-tJ-70T" id="nFS-6X-kCN"/>
                 <outlet property="appSize" destination="CB0-68-KqQ" id="62g-av-viY"/>
                 <outlet property="appVersion" destination="qb2-dX-NhT" id="CWc-ws-oAc"/>
+                <outlet property="downloadBtn" destination="aHU-qz-1Wx" id="59c-PS-dYw"/>
             </connections>
         </tableViewCell>
     </objects>

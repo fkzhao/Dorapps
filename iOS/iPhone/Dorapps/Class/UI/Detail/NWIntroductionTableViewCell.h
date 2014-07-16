@@ -12,4 +12,5 @@
 
 -(void)displayCellWith:(NWDetailIntroductModel *)model;
 
++(CGFloat)heightForCell:(NWDetailIntroductModel *)model;
 @end

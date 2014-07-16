@@ -14,6 +14,7 @@
     self = [super init];
     if (self) {
         self.appListArray = [[NSMutableArray alloc]initWithCapacity:0];
+        self.bannerListArray = [[NSMutableArray alloc]initWithCapacity:0];
     }
     return self;
 }
@@ -34,6 +35,15 @@
             model.appSize = [NSString stringWithFormat:@"%@",[app objectForKey:@"size"]];
             model.appSort = [NSString stringWithFormat:@"%@",[app objectForKey:@"sort"]];
             [self.appListArray addObject:model];
+        }
+        NSArray *sliders = (NSArray *)[[dic objectForKey:@"data"] objectForKey:@"slider"];
+        for (id obj in sliders) {
+            NSDictionary *slider = (NSDictionary *)obj;
+            NWBannerModel *model = [[NWBannerModel alloc]init];
+            model.url =[NSString stringWithFormat:@"%@",[slider objectForKey:@"picURL"]];
+            model.appID =[NSString stringWithFormat:@"%@",[slider objectForKey:@"link"]];
+            model.title =[NSString stringWithFormat:@"%@",[slider objectForKey:@"title"]];
+            [self.bannerListArray addObject:model];
         }
     }
 }

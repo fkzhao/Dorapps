@@ -28,6 +28,7 @@
 		6979585E195945960017D864 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6979585D195945960017D864 /* Foundation.framework */; };
 		69795863195945960017D864 /* CoreBusiness.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69795862195945960017D864 /* CoreBusiness.h */; };
 		69795865195945960017D864 /* CoreBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 69795864195945960017D864 /* CoreBusiness.m */; };
+		697ED9B91976552000BC09D2 /* NWBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 697ED9B81976552000BC09D2 /* NWBannerModel.m */; };
 		69A42FE3195B409A00670DD1 /* libCoreNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A42FE2195B409A00670DD1 /* libCoreNetWork.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,8 @@
 		69795864195945960017D864 /* CoreBusiness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreBusiness.m; sourceTree = "<group>"; };
 		6979586B195945960017D864 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6979586E195945960017D864 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		697ED9B71976552000BC09D2 /* NWBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWBannerModel.h; sourceTree = "<group>"; };
+		697ED9B81976552000BC09D2 /* NWBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWBannerModel.m; sourceTree = "<group>"; };
 		69A42FE2195B409A00670DD1 /* libCoreNetWork.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCoreNetWork.a; path = "../CoreNetWork/build/Debug-iphoneos/libCoreNetWork.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +146,8 @@
 			children = (
 				6916EB3A196F7C40005705B5 /* NWListAppModel.h */,
 				6916EB3B196F7C40005705B5 /* NWListAppModel.m */,
+				697ED9B71976552000BC09D2 /* NWBannerModel.h */,
+				697ED9B81976552000BC09D2 /* NWBannerModel.m */,
 			);
 			path = hot;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				6916EB24196F7B14005705B5 /* NWSender.m in Sources */,
 				6916EB57196FBDA3005705B5 /* NWHotAppRequest.m in Sources */,
 				6916EB51196FA45D005705B5 /* NWViewCacheBeanManager.m in Sources */,
+				697ED9B91976552000BC09D2 /* NWBannerModel.m in Sources */,
 				6916EB44196F7C65005705B5 /* NWHotSender.m in Sources */,
 				6916EB40196F7C40005705B5 /* NWListAppModel.m in Sources */,
 				6916EB27196F7B86005705B5 /* NWViewCacheBean.m in Sources */,

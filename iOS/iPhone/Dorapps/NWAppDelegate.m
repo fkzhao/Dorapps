@@ -33,14 +33,13 @@
     return YES;
 }
 
-
-
 -(void)loadViewController
 {
     NWHotViewController *hot = [[NWHotViewController alloc]init];
-    hot.tabBarItem =[[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:1];
+    hot.title = @"Hot";
+    hot.tabBarItem =[[UITabBarItem alloc] initWithTitle:@"Hot" image:[self imageWithImage:[UIImage imageNamed:@"home"] scaledToSize:CGSizeMake(25, 25)] tag:1];
     NWManageViewController *manage = [[NWManageViewController alloc]init];
-    manage.tabBarItem =[[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemBookmarks tag:1];
+    manage.tabBarItem =[[UITabBarItem alloc] initWithTitle:@"Manager" image:[self imageWithImage:[UIImage imageNamed:@"manager"] scaledToSize:CGSizeMake(25, 25)] tag:1];
     NWSearchViewController *search = [[NWSearchViewController alloc]init];
     search.tabBarItem = [[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemSearch tag:1];
     NWMoreViewController *more = [[NWMoreViewController alloc]init];
@@ -60,6 +59,13 @@
     self.window.rootViewController = self.rootViewController;
 }
 
+- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {

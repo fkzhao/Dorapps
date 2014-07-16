@@ -65,13 +65,13 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
         case 0:
-            return 180;
+            return [NWInfoTableViewCell heightForCell:cacheBean.appInfo];
             break;
         case 1:
             return 155;
             break;
         case 2:
-            return 610;
+            return [NWIntroductionTableViewCell heightForCell:cacheBean.appIntroduct];
             break;
             
         default:

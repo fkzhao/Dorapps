@@ -9,13 +9,14 @@
 #import "NWBannerView.h"
 #import "UIImageView+WebCache.h"
 
+typedef void (^ClickBlock)(NSInteger selectIndex);
 @interface NWBannerView ()<UIScrollViewDelegate>
 {
     NSInteger countPages;
     NSInteger currentPage;
     NSTimer *timer;
 }
-
+@property (copy,nonatomic) ClickBlock clickBlock;
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) UIPageControl *pageControl;
 @end
@@ -52,14 +53,23 @@
     }
   
 }
--(void)setImageURLs:(NSArray *)imageArray
+-(void)setImageURLs:(NSArray *)imageArray withClickBlock:(void (^) (NSInteger selectIndex))clickblock
 {
+    if (clickblock) {
+        self.clickBlock = clickblock;
+    }
     CGFloat orignX = 0;
+    int i = 1000;
     for (NSString *image in imageArray) {
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(orignX, 0, self.frame.size.width, self.frame.size.height)];
-        [imageView setImageWithURL:[NSURL URLWithString:image] placeholderImage:[UIImage imageNamed:@"banner"]];
+        [imageView setImageWithURL:[NSURL URLWithString:image] placeholderImage:nil];
+        imageView.tag = i;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickImageAction:)];
+        [imageView addGestureRecognizer:tap];
+        imageView.userInteractionEnabled = YES;
         orignX = orignX + self.frame.size.width;
         [scrollView addSubview:imageView];
+        i ++;
     }
     countPages = imageArray.count;
     _pageControl.numberOfPages = countPages;
@@ -82,4 +92,10 @@
     [scrollView setContentOffset:CGPointMake(currentPage*self.frame.size.width, 0) animated:YES];
 }
 
+-(void)clickImageAction:(id)sender
+{
+    UITapGestureRecognizer *tap = (UITapGestureRecognizer *)sender;
+    UIView *view = tap.view;
+    self.clickBlock(view.tag - 1000);
+}
 @end

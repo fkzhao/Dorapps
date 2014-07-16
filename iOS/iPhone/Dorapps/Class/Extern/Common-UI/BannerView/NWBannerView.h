@@ -10,5 +10,5 @@
 
 @interface NWBannerView : UIView
 
--(void)setImageURLs:(NSArray *)imageArray;
+-(void)setImageURLs:(NSArray *)imageArray withClickBlock:(void (^) (NSInteger selectIndex))clickblock;
 @end

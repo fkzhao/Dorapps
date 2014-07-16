@@ -10,6 +10,6 @@
 
 @interface NWBannerTableViewCell : UITableViewCell
 
--(void)showBannerView;
+-(void)showBannerView:(NSArray *)array withClickBlock:(void (^) (NSInteger selectIndex))clickblock;
 
 @end

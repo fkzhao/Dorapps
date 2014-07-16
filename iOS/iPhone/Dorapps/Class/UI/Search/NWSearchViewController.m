@@ -8,6 +8,9 @@
 
 #import "NWSearchViewController.h"
 #import "NWHotTableViewCell.h"
+#import "NWHotSender.h"
+#import "NWDetailViewCacheBean.h"
+#import "NWDetailViewController.h"
 
 @interface NWSearchViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -126,9 +129,23 @@
     model.appSort = @"0";
     model.appID = @"52c4fbb2c3b951638a9d63c6";
     [cell displayCellWith:model];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
-
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    NWHotSender *sender = [[NWHotSender alloc]init];
+    NWSenderResultModel *resultModel = [sender sendGetAppDetail:@"52c4fbb2c3b951638a9d63c6"];
+    [self goToNextPageWithModel:resultModel cacheBean:nil saveParam:nil nextPageClass:[NWDetailViewController class] createNextPageCache:^NWViewCacheBean *{
+        return [[NWDetailViewCacheBean alloc]init];
+    } successBlocks:^(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject) {
+        NWDetailViewController *detail = (NWDetailViewController *)goToPageObject;
+        [detail reloadView];
+    } failedBlocks:^(NSString *businessCode, NSString *errorInformation, id goToPageObject) {
+        
+    }];
+
+}
 @end

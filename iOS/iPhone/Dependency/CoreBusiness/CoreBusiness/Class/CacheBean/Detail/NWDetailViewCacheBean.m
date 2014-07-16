@@ -27,6 +27,9 @@
 {
     if ([dic objectForKey:@"data"]) {
         NSDictionary *app = (NSDictionary *)[dic objectForKey:@"data"];
+        if ([app isKindOfClass:[NSNull class]]) {
+            return;
+        }
         self.appID = [NSString stringWithFormat:@"%@",[app objectForKey:@"ID"]];
         
         self.appInfo.appIcon = [NSString stringWithFormat:@"%@",[app objectForKey:@"icon"]];
@@ -36,7 +39,7 @@
         self.appInfo.appSize = [NSString stringWithFormat:@"%@",[app objectForKey:@"size"]];
         self.appInfo.appReleaseNote = [NSString stringWithFormat:@"%@",[app objectForKey:@"releaseNotes"]];
         
-        NSArray *screenShots = (NSArray *)[app objectForKey:@"ipadScreenshotUrls"];
+        NSArray *screenShots = (NSArray *)[app objectForKey:@"screenshotUrls"];
         for (id url in screenShots) {
             [self.appIntroduct.screenShots addObject:[NSString stringWithFormat:@"%@",url]];
         }

@@ -20,4 +20,6 @@
 @property(nonatomic,assign) id<NWInfoTableViewCellDelegate>delegate;
 
 -(void)displayCellWith:(NWDetailInfoModel *)model;
+
++(CGFloat)heightForCell:(NWDetailInfoModel *)model;
 @end

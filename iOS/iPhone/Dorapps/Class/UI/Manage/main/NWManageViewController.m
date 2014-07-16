@@ -11,6 +11,7 @@
 #import "NWDownloadingView.h"
 #import "NWInstalledView.h"
 #import "NWUpdateView.h"
+#import "NWSegmentedControl.H"
 
 @interface NWManageViewController ()
 {
@@ -20,7 +21,7 @@
 @property (nonatomic,strong) NWDownloadingView *downloadingView;
 @property (nonatomic,strong) NWInstalledView *installedView;
 @property (nonatomic,strong) NWUpdateView *updateView;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
+@property (strong, nonatomic)  NWSegmentedControl *segmentControl;
 
 @end
 
@@ -43,44 +44,63 @@
 
 -(void)initView
 {
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handlerSwipeView:)];
+    [swipe setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.view addGestureRecognizer:swipe];
+    swipe = nil;
+    swipe = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handlerSwipeView:)];
+    [swipe setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:swipe];
+    
     self.title = [NWStringUtil getLocalizationString:LocationFlag_Title_MANAGER];
-    if (_segmentControl) {
-        [_segmentControl setTitle:[NWStringUtil getLocalizationString:LocationFlag_UIViewController_Manager_Downloading] forSegmentAtIndex:0];
-        [_segmentControl setTitle:[NWStringUtil getLocalizationString:LocationFlag_UIViewController_Manager_Downloaded] forSegmentAtIndex:1];
-        [_segmentControl setTitle:[NWStringUtil getLocalizationString:LocationFlag_UIViewController_Manager_Installed] forSegmentAtIndex:2];
-        [_segmentControl setTitle:[NWStringUtil getLocalizationString:LocationFlag_UIViewController_Manager_Update] forSegmentAtIndex:3];
+    if (!_segmentControl) {
+        // Segmented control with scrolling
+        NSArray *titles = [NSArray arrayWithObjects:[NWStringUtil getLocalizationString:LocationFlag_UIViewController_Manager_Downloading], [NWStringUtil getLocalizationString:LocationFlag_UIViewController_Manager_Downloaded], [NWStringUtil getLocalizationString:LocationFlag_UIViewController_Manager_Installed], [NWStringUtil getLocalizationString:LocationFlag_UIViewController_Manager_Update], nil];
+        
+        _segmentControl = [[NWSegmentedControl alloc] initWithSectionTitles:titles];
+        _segmentControl.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
+        _segmentControl.frame = CGRectMake(0, 0, 320, 40);
+        _segmentControl.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 10);
+        _segmentControl.selectionStyle = NWSegmentedControlSelectionStyleFullWidthStripe;
+        _segmentControl.selectionIndicatorLocation = NWSegmentedControlSelectionIndicatorLocationDown;
+        [_segmentControl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
+        [self.view addSubview:_segmentControl];
+
     }
     if (!_downloadedView) {
-        _downloadedView = [[NWDownloadedView alloc]initWithFrame:CGRectMake(0, 28, 320, self.view.frame.size.height - 28)];
+        _downloadedView = [[NWDownloadedView alloc]initWithFrame:CGRectMake(0, 40, 320, self.view.frame.size.height - 40)];
     }
     if (!_downloadingView) {
-         _downloadingView = [[NWDownloadingView alloc]initWithFrame:CGRectMake(0, 28, 320, self.view.frame.size.height - 28)];
+         _downloadingView = [[NWDownloadingView alloc]initWithFrame:CGRectMake(0, 40, 320, self.view.frame.size.height - 40)];
     }
     if (!_installedView) {
-        _installedView = [[NWInstalledView alloc]initWithFrame:CGRectMake(0, 28, 320, self.view.frame.size.height - 28)];
+        _installedView = [[NWInstalledView alloc]initWithFrame:CGRectMake(0, 40, 320, self.view.frame.size.height - 40)];
     }
     if (!_updateView) {
-        _updateView = [[NWUpdateView alloc]initWithFrame:CGRectMake(0, 28, 320, self.view.frame.size.height - 28)];
+        _updateView = [[NWUpdateView alloc]initWithFrame:CGRectMake(0, 40, 320, self.view.frame.size.height - 40)];
     }
     _currentView = _downloadingView;
     [self.view addSubview:_currentView];
 }
 
-- (void)didReceiveMemoryWarning
+-(void)handlerSwipeView:(UISwipeGestureRecognizer *)recognizer
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+        if (_segmentControl.selectedSegmentIndex > 0) {
+            _segmentControl.selectedSegmentIndex = _segmentControl.selectedSegmentIndex - 1;
+            [self segmentedControlChangedValue:_segmentControl];
+        }
+    }
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+        if (_segmentControl.selectedSegmentIndex < 3) {
+             _segmentControl.selectedSegmentIndex = _segmentControl.selectedSegmentIndex + 1;
+            [self segmentedControlChangedValue:_segmentControl];
+        }
+    }
 }
 
--(void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self currentNavigationItem].rightBarButtonItem = nil;
-}
-- (IBAction)segmentChange:(id)sender {
-    UISegmentedControl *seg = (UISegmentedControl *)sender;
+- (void)segmentedControlChangedValue:(NWSegmentedControl *)segmentedControl {
+	NWSegmentedControl *seg = segmentedControl;
     UIView *tmpView = nil;
     switch (seg.selectedSegmentIndex) {
         case 0:
@@ -118,6 +138,20 @@
     [_currentView removeFromSuperview];
     _currentView = tmpView;
 
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self currentNavigationItem].rightBarButtonItem = nil;
 }
 
 -(void)updateAllApps {

@@ -8,7 +8,12 @@
 
 #import "NWHotTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "NWDownloadStatusBar.h"
+
 @interface NWHotTableViewCell ()
+{
+    NWListAppModel *_model;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *appIcon;
 @property (weak, nonatomic) IBOutlet UILabel *appName;
 @property (weak, nonatomic) IBOutlet UILabel *appRating;
@@ -30,6 +35,7 @@
 }
 
 -(void)displayCellWith:(NWListAppModel *)model {
+    _model = model;
     [self.appIcon setImageWithURL:[NSURL URLWithString:model.appIcon] placeholderImage:nil];
     self.appInfo.text = [NSString stringWithFormat:@"版本%@ | 大小%@",model.appVersion,model.appSize];
     self.appName.text = model.appTrackName;
@@ -43,5 +49,8 @@
         ratingStr = @"暂无评分";
     }
     self.appRating.text = ratingStr;
+}
+- (IBAction)downloadAction:(id)sender {
+    [NWDownloadStatusBar showStatusBar:[NSString stringWithFormat:@"%@ Add to Downloading...",_model.appTrackName]];
 }
 @end

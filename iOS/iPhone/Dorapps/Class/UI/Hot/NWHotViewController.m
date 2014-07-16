@@ -15,6 +15,7 @@
 #import "NWBannerTableViewCell.h"
 #import "NWTableView.h"
 #import "NWCircleLoadingView.h"
+#import "NWDownloadStatusBar.h"
 
 @interface NWHotViewController ()<UITableViewDataSource,UITableViewDelegate> {
     NWHotViewCacheBean *cacheBean;
@@ -71,8 +72,6 @@
     
 }
 
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -96,7 +95,10 @@
         if (cell == nil) {
             cell = (NWBannerTableViewCell *)[[[NSBundle mainBundle]loadNibNamed:NSStringFromClass([NWBannerTableViewCell class]) owner:nil options:nil]objectAtIndex:0];
         }
-        [cell showBannerView];
+        [cell showBannerView:cacheBean.bannerListArray withClickBlock:^(NSInteger selectIndex) {
+            NWBannerModel *model = [cacheBean.bannerListArray objectAtIndex:selectIndex];
+            [self gotoDetailWithBannerModel:model];
+        }];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
 
@@ -111,12 +113,27 @@
     }
 }
 
+
+-(void)gotoDetailWithBannerModel:(NWBannerModel *)model
+{
+    NWHotSender *sender = [[NWHotSender alloc]init];
+    NWSenderResultModel *resultModel = [sender sendGetAppDetail:model.appID];
+    [self goToNextPageWithModel:resultModel cacheBean:nil saveParam:nil nextPageClass:[NWDetailViewController class] createNextPageCache:^NWViewCacheBean *{
+        return [[NWDetailViewCacheBean alloc]init];
+    } successBlocks:^(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject) {
+        NWDetailViewController *detail = (NWDetailViewController *)goToPageObject;
+        [detail reloadView];
+    } failedBlocks:^(NSString *businessCode, NSString *errorInformation, id goToPageObject) {
+        
+    }];
+
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         return;
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
     NWListAppModel *model = (NWListAppModel *)[cacheBean.appListArray objectAtIndex:indexPath.row-1];
     NWHotSender *sender = [[NWHotSender alloc]init];
     NWSenderResultModel *resultModel = [sender sendGetAppDetail:model.appID];
