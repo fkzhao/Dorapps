@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NWUpdateViewCacheBean.h"
+
 
 @interface NWUpdateCell : UITableViewCell
 
+-(void)displayWithUpdateModel:(NWUpdateAppModel *)model;
 @end

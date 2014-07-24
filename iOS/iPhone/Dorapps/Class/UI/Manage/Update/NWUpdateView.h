@@ -7,7 +7,14 @@
 //
 
 #import "NWRootView.h"
+#import "NWUpdateViewCacheBean.h"
+#import "NWTableView.h"
 
+typedef void (^uploadBlock) ();
 @interface NWUpdateView : NWRootView
+
+@property (nonatomic,copy) uploadBlock updateBlock;
+@property (nonatomic,strong)NWTableView *mainTableView;
+@property (nonatomic,strong)NWUpdateViewCacheBean *cacheBean;
 -(void)updateAllApps;
 @end

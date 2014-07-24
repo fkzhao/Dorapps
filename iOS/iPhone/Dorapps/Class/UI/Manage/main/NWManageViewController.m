@@ -11,7 +11,9 @@
 #import "NWDownloadingView.h"
 #import "NWInstalledView.h"
 #import "NWUpdateView.h"
-#import "NWSegmentedControl.H"
+#import "NWSegmentedControl.h"
+#import "NWUpdateAppSender.h"
+#import "NWUpdateViewCacheBean.h"
 
 @interface NWManageViewController ()
 {
@@ -78,6 +80,10 @@
     }
     if (!_updateView) {
         _updateView = [[NWUpdateView alloc]initWithFrame:CGRectMake(0, 40, 320, self.view.frame.size.height - 40)];
+        __weak NWManageViewController *_weakSelf = self;
+        _updateView.updateBlock = ^(){
+            [_weakSelf pullUpadteViewTableView];
+        };
     }
     _currentView = _downloadingView;
     [self.view addSubview:_currentView];
@@ -123,8 +129,10 @@
             break;
         case 3:
         {
-            UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"更新全部" style:UIBarButtonItemStylePlain target:self action:@selector(updateAllApps)];
-            [self currentNavigationItem].rightBarButtonItem = rightBarButtonItem;
+//            UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"更新全部" style:UIBarButtonItemStylePlain target:self action:@selector(updateAllApps)];
+            [self pullUpadteViewTableView];
+            
+//            [self currentNavigationItem].rightBarButtonItem = rightBarButtonItem;
             tmpView = _updateView;
         }
             break;
@@ -160,5 +168,19 @@
     }
 }
 
+-(void)pullUpadteViewTableView
+{
+    [_updateView.mainTableView setTableViewStateRefreshing];
+    NWUpdateAppSender *sender = [[NWUpdateAppSender alloc]init];
+    NWUpdateViewCacheBean *cache = [[NWUpdateViewCacheBean alloc]init];
+    NWSenderResultModel *reslutModel = [sender sendUpdateChackApp];
+    [self goToInsidePageWithModel:reslutModel cacheBean:cache successBlocks:^(NSString *businessCode, NSUInteger subServiceCount, id goToPageObject) {
+        _updateView.cacheBean = (NWUpdateViewCacheBean *)self.viewCacheBean;
+        [_updateView updateAllApps];
+    } failedBlocks:^(NSString *businessCode, NSString *errorInformation, id goToPageObject) {
+        NSLog(@"failed:%@",errorInformation);
+        [_updateView.mainTableView reloadDataWithIsAllLoaded:NO];
+    }];
+}
 
 @end

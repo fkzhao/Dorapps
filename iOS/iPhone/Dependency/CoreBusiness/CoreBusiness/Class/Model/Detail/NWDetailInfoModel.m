@@ -21,6 +21,8 @@
         self.appVersion = @"";
         self.appSize = @"";
         self.appReleaseNote = @"";
+        self.jbDownloadURL = @"";
+        self.downloadURL = @"";
     }
     return self;
 }

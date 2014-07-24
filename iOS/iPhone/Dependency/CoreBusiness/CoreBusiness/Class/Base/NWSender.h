@@ -12,6 +12,7 @@
 #import "NWRequestQueue.h"
 #import "NWDateUtil.h"
 #import "NWViewCacheBeanManager.h"
+#import "NWViewCacheBean.h"
 
 @interface NWSender : NWServiceResultModel
 

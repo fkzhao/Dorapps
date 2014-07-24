@@ -38,7 +38,7 @@
         style.textColor = [UIColor whiteColor];
         style.barColor = NWColorRGB(105, 175, 240);;
         style.animationType = NWStatusBarAnimationTypeMove;
-        style.progressBarColor = [UIColor lightGrayColor];
+        style.progressBarColor = [UIColor whiteColor];
         style.progressBarPosition = NWStatusBarProgressBarPositionBottom;
         return style;
     }];

@@ -22,6 +22,13 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		690B928B1976C88500888C00 /* NWSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 69FFD6A319765E1100D88C66 /* NWSegmentedControl.m */; };
+		690B928C1976C88500888C00 /* NWDownloadStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 697ED9AF197640A900BC09D2 /* NWDownloadStatusBar.m */; };
+		690B928D1976C8CF00888C00 /* NWBubbleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 698984541974F49000A2D8BA /* NWBubbleButton.m */; };
+		690B928E1976C8CF00888C00 /* NWCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989845A1975097800A2D8BA /* NWCategoryViewController.m */; };
+		690B928F1976C8CF00888C00 /* NWStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 697ED9A619763E3600BC09D2 /* NWStatusBarNotification.m */; };
+		690B92901976C8CF00888C00 /* NWStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 697ED9A919763E5700BC09D2 /* NWStatusBarStyle.m */; };
+		690B92911976C8CF00888C00 /* NWStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 697ED9AC19763E6E00BC09D2 /* NWStatusBarView.m */; };
 		694B8AB419739D740068EC8D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 694B8AB119739D740068EC8D /* SVProgressHUD.bundle */; };
 		694B8AB519739D740068EC8D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AB319739D740068EC8D /* SVProgressHUD.m */; };
 		694B8AB81973A18D0068EC8D /* NWCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694B8AB71973A18D0068EC8D /* NWCircleLoadingView.m */; };
@@ -1806,6 +1813,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690B928D1976C8CF00888C00 /* NWBubbleButton.m in Sources */,
+				690B928E1976C8CF00888C00 /* NWCategoryViewController.m in Sources */,
+				690B928F1976C8CF00888C00 /* NWStatusBarNotification.m in Sources */,
+				690B92901976C8CF00888C00 /* NWStatusBarStyle.m in Sources */,
+				690B92911976C8CF00888C00 /* NWStatusBarView.m in Sources */,
+				690B928B1976C88500888C00 /* NWSegmentedControl.m in Sources */,
+				690B928C1976C88500888C00 /* NWDownloadStatusBar.m in Sources */,
 				69D3E2AF1974351D00172FEF /* NWFileManagerUtil.m in Sources */,
 				69D3E2B01974351D00172FEF /* NWTabBarViewController.m in Sources */,
 				69D3E2B11974351D00172FEF /* NWInterestTableViewCell.m in Sources */,

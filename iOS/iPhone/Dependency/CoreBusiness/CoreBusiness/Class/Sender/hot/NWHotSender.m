@@ -7,7 +7,6 @@
 //
 
 #import "NWHotSender.h"
-#import "NWViewCacheBean.h"
 #import "NWHotAppRequest.h"
 #import "NWHotAppResponse.h"
 #import "NWAppDetailRequest.h"
@@ -34,7 +33,8 @@
     NWHotAppResponse *response = [[NWHotAppResponse alloc]init];
     response.token = resultModel.resultToke;
     [[NWRequestQueue ShareQueue] submitNetWorkTask:resultModel.resultToke withRequest:request withResponse:response withCallBack:callBack];
-    return resultModel;}
+    return resultModel;
+}
 
 -(NWSenderResultModel *)sendGetMoreHotApps:(NSInteger)page {
     return nil;

@@ -47,10 +47,9 @@
 - (IBAction)downloadAction:(id)sender
 {
      [NWDownloadStatusBar showStatusBar:[NSString stringWithFormat:@"%@ Add to Downloading...",_model.appName]];
-//    if (self.delegate && [self.delegate respondsToSelector:@selector(downloadAction:)]) {
-//        [self.delegate downloadAction:nil];
-//    }
-
+    NSURL *url = [NSURL URLWithString:_model.downloadURL];
+    UIApplication *thisApp = [UIApplication sharedApplication];
+    [thisApp openURL:url];
 }
 +(CGFloat)heightForCell:(NWDetailInfoModel *)model
 {

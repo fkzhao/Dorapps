@@ -38,6 +38,8 @@
         self.appInfo.appVersion = [NSString stringWithFormat:@"%@",[app objectForKey:@"version"]];
         self.appInfo.appSize = [NSString stringWithFormat:@"%@",[app objectForKey:@"size"]];
         self.appInfo.appReleaseNote = [NSString stringWithFormat:@"%@",[app objectForKey:@"releaseNotes"]];
+        self.appInfo.jbDownloadURL = [NSString stringWithFormat:@"%@",[[app objectForKey:@"ipaURL"] objectForKey:@"jb"]];
+        self.appInfo.downloadURL = self.appInfo.jbDownloadURL = [NSString stringWithFormat:@"%@",[[app objectForKey:@"ipaURL"] objectForKey:@"signed"]];
         
         NSArray *screenShots = (NSArray *)[app objectForKey:@"screenshotUrls"];
         for (id url in screenShots) {

@@ -15,4 +15,6 @@
 @property (nonatomic,strong) NSString *appVersion;
 @property (nonatomic,strong) NSString *appSize;
 @property (nonatomic,strong) NSString *appReleaseNote;
+@property (nonatomic,strong) NSString *jbDownloadURL;
+@property (nonatomic,strong) NSString *downloadURL;
 @end

@@ -30,6 +30,9 @@
 		69795865195945960017D864 /* CoreBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 69795864195945960017D864 /* CoreBusiness.m */; };
 		697ED9B91976552000BC09D2 /* NWBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 697ED9B81976552000BC09D2 /* NWBannerModel.m */; };
 		69A42FE3195B409A00670DD1 /* libCoreNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A42FE2195B409A00670DD1 /* libCoreNetWork.a */; };
+		69C37B1D1980D1C500B1F0D0 /* NWUpdateAppSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C37B1C1980D1C500B1F0D0 /* NWUpdateAppSender.m */; };
+		69C37B201980D23000B1F0D0 /* NWUpdateAppRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C37B1F1980D23000B1F0D0 /* NWUpdateAppRequest.m */; };
+		69C37B251980D36B00B1F0D0 /* NWUpdateViewCacheBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C37B241980D36B00B1F0D0 /* NWUpdateViewCacheBean.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -93,6 +96,12 @@
 		697ED9B71976552000BC09D2 /* NWBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWBannerModel.h; sourceTree = "<group>"; };
 		697ED9B81976552000BC09D2 /* NWBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWBannerModel.m; sourceTree = "<group>"; };
 		69A42FE2195B409A00670DD1 /* libCoreNetWork.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCoreNetWork.a; path = "../CoreNetWork/build/Debug-iphoneos/libCoreNetWork.a"; sourceTree = "<group>"; };
+		69C37B1B1980D1C500B1F0D0 /* NWUpdateAppSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWUpdateAppSender.h; sourceTree = "<group>"; };
+		69C37B1C1980D1C500B1F0D0 /* NWUpdateAppSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWUpdateAppSender.m; sourceTree = "<group>"; };
+		69C37B1E1980D23000B1F0D0 /* NWUpdateAppRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWUpdateAppRequest.h; sourceTree = "<group>"; };
+		69C37B1F1980D23000B1F0D0 /* NWUpdateAppRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWUpdateAppRequest.m; sourceTree = "<group>"; };
+		69C37B231980D36B00B1F0D0 /* NWUpdateViewCacheBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWUpdateViewCacheBean.h; sourceTree = "<group>"; };
+		69C37B241980D36B00B1F0D0 /* NWUpdateViewCacheBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWUpdateViewCacheBean.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				6916EB41196F7C65005705B5 /* hot */,
+				69C37B1A1980D19D00B1F0D0 /* update */,
 			);
 			path = Sender;
 			sourceTree = "<group>";
@@ -218,6 +228,8 @@
 				6916EB56196FBDA3005705B5 /* NWHotAppRequest.m */,
 				6916EB5B196FBF2E005705B5 /* NWAppDetailRequest.h */,
 				6916EB5C196FBF2E005705B5 /* NWAppDetailRequest.m */,
+				69C37B1E1980D23000B1F0D0 /* NWUpdateAppRequest.h */,
+				69C37B1F1980D23000B1F0D0 /* NWUpdateAppRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -234,6 +246,7 @@
 		693CB003195D5C1800518DAC /* CacheBean */ = {
 			isa = PBXGroup;
 			children = (
+				69C37B221980D35500B1F0D0 /* Update */,
 				6916EB2B196F7C22005705B5 /* Hot */,
 				6916EB28196F7C22005705B5 /* Detail */,
 			);
@@ -243,6 +256,7 @@
 		693CB004195D5C1800518DAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				69C37B211980D33700B1F0D0 /* Update */,
 				6916EB39196F7C40005705B5 /* hot */,
 				6916EB30196F7C40005705B5 /* Detail */,
 			);
@@ -313,6 +327,31 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		69C37B1A1980D19D00B1F0D0 /* update */ = {
+			isa = PBXGroup;
+			children = (
+				69C37B1B1980D1C500B1F0D0 /* NWUpdateAppSender.h */,
+				69C37B1C1980D1C500B1F0D0 /* NWUpdateAppSender.m */,
+			);
+			path = update;
+			sourceTree = "<group>";
+		};
+		69C37B211980D33700B1F0D0 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
+		69C37B221980D35500B1F0D0 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				69C37B231980D36B00B1F0D0 /* NWUpdateViewCacheBean.h */,
+				69C37B241980D36B00B1F0D0 /* NWUpdateViewCacheBean.m */,
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,6 +407,7 @@
 				6916EB3D196F7C40005705B5 /* NWDetailInfoModel.m in Sources */,
 				6916EB5D196FBF2E005705B5 /* NWAppDetailRequest.m in Sources */,
 				6916EB47196F7C86005705B5 /* NWServiceUtil.m in Sources */,
+				69C37B201980D23000B1F0D0 /* NWUpdateAppRequest.m in Sources */,
 				6916EB3F196F7C40005705B5 /* NWDtailInterestModel.m in Sources */,
 				6916EB54196FA6F7005705B5 /* NWViewCacheBeanBlock.m in Sources */,
 				6916EB4E196FA443005705B5 /* NWViewCacheBeanPool.m in Sources */,
@@ -376,11 +416,13 @@
 				6916EB2E196F7C22005705B5 /* NWDetailViewCacheBean.m in Sources */,
 				6916EB2F196F7C22005705B5 /* NWHotViewCacheBean.m in Sources */,
 				69795865195945960017D864 /* CoreBusiness.m in Sources */,
+				69C37B251980D36B00B1F0D0 /* NWUpdateViewCacheBean.m in Sources */,
 				6916EB24196F7B14005705B5 /* NWSender.m in Sources */,
 				6916EB57196FBDA3005705B5 /* NWHotAppRequest.m in Sources */,
 				6916EB51196FA45D005705B5 /* NWViewCacheBeanManager.m in Sources */,
 				697ED9B91976552000BC09D2 /* NWBannerModel.m in Sources */,
 				6916EB44196F7C65005705B5 /* NWHotSender.m in Sources */,
+				69C37B1D1980D1C500B1F0D0 /* NWUpdateAppSender.m in Sources */,
 				6916EB40196F7C40005705B5 /* NWListAppModel.m in Sources */,
 				6916EB27196F7B86005705B5 /* NWViewCacheBean.m in Sources */,
 				6916EB21196F7A4C005705B5 /* NWSenderResultModel.m in Sources */,

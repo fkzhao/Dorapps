@@ -12,5 +12,7 @@
 #define NWGlobalHotAppListURL       @"http://app.dorapps.com/api/iphone/home_page";
 #define NWGlobalAppDetailURL        @"http://app.dorapps.com/api/app/detail";
 
+#define NWGlobalAppUpdateURL        @"http://app.dorapps.com/api/app/check_update"
+
 
 #endif

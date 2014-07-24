@@ -7,15 +7,15 @@
 //
 
 #import "NWUpdateView.h"
-#import "NWTableView.h"
 #import "NWUpdateCell.h"
+#import "NWUpdateAppSender.h"
+#import "NWUpdateViewCacheBean.h"
 
 @interface NWUpdateView ()<NWTableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *_dataSources;
 }
 
-@property (nonatomic,strong)NWTableView *mainTableView;
 
 @end
 
@@ -66,6 +66,7 @@
         _mainTableView.tableFooterView = nil;
         [self addSubview:_mainTableView];
     }
+    
 }
 
 -(void)willMoveToSuperview:(UIView *)newSuperview
@@ -80,11 +81,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataSources.count+1;
+    return self.cacheBean.appListArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 65.0f;
+    return 80.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -93,6 +94,8 @@
     if (cell == nil) {
         cell = (NWUpdateCell *)[NWTableViewCellUtil loadCell:NSStringFromClass([NWUpdateCell class]) atIndex:0];
     }
+    NWUpdateAppModel *model = [self.cacheBean.appListArray objectAtIndex:indexPath.row];
+    [cell displayWithUpdateModel:model];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -104,16 +107,12 @@
 
 - (void)pullDownToRefreshData:(NWTableView *)tableView
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        sleep(2);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.mainTableView reloadDataWithIsAllLoaded:NO];
-        });
-    });
+    if (self.updateBlock) {
+        self.updateBlock();
+    }
 }
 -(void)updateAllApps
 {
-    [self.mainTableView setTableViewStateRefreshing];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         sleep(2);
         dispatch_async(dispatch_get_main_queue(), ^{
