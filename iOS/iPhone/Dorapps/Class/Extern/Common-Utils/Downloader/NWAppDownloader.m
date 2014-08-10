@@ -7,6 +7,7 @@
 //
 
 #import "NWAppDownloader.h"
+#import "NSURL+Filters.h"
 
 #define callDelegateMethod(method,parameter) if(instance.delegate && [instance.delegate respondsToSelector:@selector(method)]) [instance.delegate performSelector:@selector(method) withObject:parameter];
 #define callDelegateMethodWithParameters(method,parameterOne, parameterTwo) if(instance.delegate && [instance.delegate respondsToSelector:@selector(method)]) [instance.delegate performSelector:@selector(method) withObject:parameterOne withObject:parameterTwo];
@@ -101,9 +102,8 @@ static dispatch_queue_t queue;
 	Reachability *reachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [reachability currentReachabilityStatus];
     if(networkStatus != NotReachable){
-		
 		//convert string to url
-		NSURL * url= [NSURL URLWithString:self.downloadURL];
+		NSURL * url= [NSURL urlWithString:self.downloadURL];
 		if(!url){
 			NSString *errorText=[NSString stringWithFormat:@"Could not create URL from string: %@",self.downloadURL];
 			callDelegateMethodWithParameters(didDownloadFailed:withError:, self, errorText);

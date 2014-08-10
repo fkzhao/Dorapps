@@ -13,6 +13,9 @@
 @interface NWDownloadingView ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *_dataSources;
+    
+    NSArray *_downloadingList;
+    NSArray *_watingList;
 }
 
 @property (nonatomic,strong) UITableView *mainTableView;
@@ -73,15 +76,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataSources.count;
+    return _dataSources.count + 2;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (_dataSources.count > 2) {
+    if (_dataSources.count+2 > 2) {
         return 2;
     }
-    if (_dataSources.count <= 2 && _dataSources.count >=1) {
+    if (_dataSources.count+2 <= 2 && _dataSources.count+2 >=1) {
         return 1;
     }
     return 0;
@@ -113,7 +116,6 @@
         cell.appName.text = @"WeChat";
         cell.iconImageView.image = [UIImage imageNamed:@"3"];
     }
-    [cell downloadTask:@"" withIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

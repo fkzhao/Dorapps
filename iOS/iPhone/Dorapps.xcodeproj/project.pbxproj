@@ -132,6 +132,10 @@
 		698984551974F49000A2D8BA /* NWBubbleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 698984541974F49000A2D8BA /* NWBubbleButton.m */; };
 		6989845C1975097800A2D8BA /* NWCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6989845A1975097800A2D8BA /* NWCategoryViewController.m */; };
 		6989845D1975097800A2D8BA /* NWCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6989845B1975097800A2D8BA /* NWCategoryViewController.xib */; };
+		699CDB871997C43B00F431A5 /* file_download_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 699CDB851997C43B00F431A5 /* file_download_normal.png */; };
+		699CDB881997C43B00F431A5 /* file_pause_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 699CDB861997C43B00F431A5 /* file_pause_normal.png */; };
+		699CDB8B1997C46B00F431A5 /* NWCircularProgressButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CDB8A1997C46B00F431A5 /* NWCircularProgressButton.m */; };
+		699CDB8E1997CE5A00F431A5 /* NSURL+Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CDB8D1997CE5A00F431A5 /* NSURL+Filters.m */; };
 		69B473B31970CDBA002FCD82 /* UIViewController+NWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */; };
 		69B473CF1970CF71002FCD82 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */; };
 		69B473D01970CF71002FCD82 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473BA1970CF71002FCD82 /* icon.png */; };
@@ -399,6 +403,12 @@
 		698984591975097800A2D8BA /* NWCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWCategoryViewController.h; sourceTree = "<group>"; };
 		6989845A1975097800A2D8BA /* NWCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWCategoryViewController.m; sourceTree = "<group>"; };
 		6989845B1975097800A2D8BA /* NWCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWCategoryViewController.xib; sourceTree = "<group>"; };
+		699CDB851997C43B00F431A5 /* file_download_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file_download_normal.png; sourceTree = "<group>"; };
+		699CDB861997C43B00F431A5 /* file_pause_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file_pause_normal.png; sourceTree = "<group>"; };
+		699CDB891997C46B00F431A5 /* NWCircularProgressButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWCircularProgressButton.h; sourceTree = "<group>"; };
+		699CDB8A1997C46B00F431A5 /* NWCircularProgressButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWCircularProgressButton.m; sourceTree = "<group>"; };
+		699CDB8C1997CE5A00F431A5 /* NSURL+Filters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Filters.h"; sourceTree = "<group>"; };
+		699CDB8D1997CE5A00F431A5 /* NSURL+Filters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Filters.m"; sourceTree = "<group>"; };
 		69B473B11970CDBA002FCD82 /* UIViewController+NWNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NWNavigationBar.h"; sourceTree = "<group>"; };
 		69B473B21970CDBA002FCD82 /* UIViewController+NWNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NWNavigationBar.m"; sourceTree = "<group>"; };
 		69B473B81970CF71002FCD82 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
@@ -486,6 +496,8 @@
 		694B8ABB1973AEAF0068EC8D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				699CDB851997C43B00F431A5 /* file_download_normal.png */,
+				699CDB861997C43B00F431A5 /* file_pause_normal.png */,
 				697ED9B11976500A00BC09D2 /* 112-group.png */,
 				697ED9B21976500A00BC09D2 /* 112-group@2x.png */,
 				694B8ABC1973AEBD0068EC8D /* burger.png */,
@@ -979,6 +991,8 @@
 			children = (
 				698984531974F49000A2D8BA /* NWBubbleButton.h */,
 				698984541974F49000A2D8BA /* NWBubbleButton.m */,
+				699CDB891997C46B00F431A5 /* NWCircularProgressButton.h */,
+				699CDB8A1997C46B00F431A5 /* NWCircularProgressButton.m */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1050,6 +1064,8 @@
 				69772F2E19727F5900118BBB /* NWButtonItem.m */,
 				69CCFC1A199671B4007D29AA /* UIDevice+JailBreak.h */,
 				69CCFC1B199671B4007D29AA /* UIDevice+JailBreak.m */,
+				699CDB8C1997CE5A00F431A5 /* NSURL+Filters.h */,
+				699CDB8D1997CE5A00F431A5 /* NSURL+Filters.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1351,6 +1367,7 @@
 				69B473D71970CF71002FCD82 /* searching.png in Resources */,
 				694BDCD2196ED80700E60CF1 /* 4.png in Resources */,
 				694BDCE5196ED80700E60CF1 /* NWHotViewController.xib in Resources */,
+				699CDB871997C43B00F431A5 /* file_download_normal.png in Resources */,
 				694BDCFA196ED80700E60CF1 /* NWFeedbackViewController.xib in Resources */,
 				694BDCEE196ED80700E60CF1 /* NWDownloadTableViewCell.xib in Resources */,
 				69B473D31970CF71002FCD82 /* home.png in Resources */,
@@ -1376,6 +1393,7 @@
 				69CCFC1119967096007D29AA /* SVProgressHUD.bundle in Resources */,
 				69B473DD1970CF71002FCD82 /* toolBar_shade.png in Resources */,
 				697ED9B41976500A00BC09D2 /* 112-group@2x.png in Resources */,
+				699CDB881997C43B00F431A5 /* file_pause_normal.png in Resources */,
 				69772F1C19725E4400118BBB /* NWManageViewController.xib in Resources */,
 				694BDB99196ED7B100E60CF1 /* Images.xcassets in Resources */,
 				69B473D91970CF71002FCD82 /* setting.png in Resources */,
@@ -1410,6 +1428,7 @@
 				694BDCCE196ED80700E60CF1 /* NWToolBarView.m in Sources */,
 				694BDCEB196ED80700E60CF1 /* NWDownloadedView.m in Sources */,
 				69772F2C19727F1900118BBB /* UIAlertView+Blocks.m in Sources */,
+				699CDB8B1997C46B00F431A5 /* NWCircularProgressButton.m in Sources */,
 				69B474F319712D8D002FCD82 /* NWStateView.m in Sources */,
 				69B473B31970CDBA002FCD82 /* UIViewController+NWNavigationBar.m in Sources */,
 				694BDCFD196ED80700E60CF1 /* NWMoreViewController.m in Sources */,
@@ -1474,6 +1493,7 @@
 				694BDD01196ED80700E60CF1 /* NWShareViewController.m in Sources */,
 				69772F2F19727F5900118BBB /* NWButtonItem.m in Sources */,
 				69CCFC0719967086007D29AA /* NWStatusBarView.m in Sources */,
+				699CDB8E1997CE5A00F431A5 /* NSURL+Filters.m in Sources */,
 				694BDCCD196ED80700E60CF1 /* NWToolbar.m in Sources */,
 				69CCFC0519967086007D29AA /* NWStatusBarNotification.m in Sources */,
 				697634761997003C00D4B1DF /* Reachability.m in Sources */,

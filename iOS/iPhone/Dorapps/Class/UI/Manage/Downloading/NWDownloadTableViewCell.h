@@ -14,5 +14,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *appName;
 
--(void)downloadTask:(NSString *)url withIndexPath:(NSIndexPath *)indexPath;
 @end

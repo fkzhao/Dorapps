@@ -10,6 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import "NWUIDefine.h"
 #import "NWDownloadStatusBar.h"
+#import "NWDownloaderCenter.h"
 
 @interface NWInfoTableViewCell ()
 {
@@ -46,10 +47,8 @@
 }
 - (IBAction)downloadAction:(id)sender
 {
-     [NWDownloadStatusBar showStatusBar:[NSString stringWithFormat:@"%@ Add to Downloading...",_model.appName]];
-    NSURL *url = [NSURL URLWithString:_model.downloadURL];
-    UIApplication *thisApp = [UIApplication sharedApplication];
-    [thisApp openURL:url];
+    [NWDownloadStatusBar showStatusBar:[NSString stringWithFormat:@"%@ Add to Downloading...",_model.appName]];
+    [NWDownloaderCenter addDownloadTask:_model.jbDownloadURL withDelegate:nil];
 }
 +(CGFloat)heightForCell:(NWDetailInfoModel *)model
 {
