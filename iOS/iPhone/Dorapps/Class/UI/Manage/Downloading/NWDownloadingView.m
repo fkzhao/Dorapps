@@ -107,7 +107,7 @@
         cell = (NWDownloadTableViewCell *)[NWTableViewCellUtil loadCell:NSStringFromClass([NWDownloadTableViewCell class]) atIndex:0];
     }
     if (indexPath.row == 0) {
-        cell.appName.text = @"WeiBo";
+        cell.appName.text = @"Weibo";
         cell.iconImageView.image = [UIImage imageNamed:@"4"];
     } else {
         cell.appName.text = @"WeChat";

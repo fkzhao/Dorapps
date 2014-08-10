@@ -69,7 +69,10 @@
     }
     if ([center.waitingArray containsObject:url]) {
         [center.waitingArray removeObject:url];
+        return;
     }
+    NWDownloadPool *pool = [NWDownloadPool downloadPool];
+    [pool cancelDownloadByURL:url];
 }
 
 @end
