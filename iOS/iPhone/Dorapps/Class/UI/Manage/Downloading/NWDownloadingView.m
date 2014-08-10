@@ -76,6 +76,26 @@
     return _dataSources.count;
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if (_dataSources.count > 2) {
+        return 2;
+    }
+    if (_dataSources.count <= 2 && _dataSources.count >=1) {
+        return 1;
+    }
+    return 0;
+}
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *title = @"";
+    if (section == 0) {
+        title = @"正在下载";
+    } else {
+        title = @"等待下载";
+    }
+    return title;
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100.0f;
 }

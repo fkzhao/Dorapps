@@ -7,8 +7,6 @@
 //
 
 #import "NWDownloadTableViewCell.h"
-#import "NWDownloader.h"
-#import "NWDownloadModel.h"
 
 @interface NWCellDownloadModel : NSObject
 
@@ -94,7 +92,7 @@
 @end
 
 
-@interface NWDownloadTableViewCell()<NWDownloaderDelegate>
+@interface NWDownloadTableViewCell()
 {
     
 }

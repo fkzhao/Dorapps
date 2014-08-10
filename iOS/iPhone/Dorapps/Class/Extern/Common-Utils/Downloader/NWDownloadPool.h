@@ -1,29 +1,23 @@
 //
 //  NWDownloadPool.h
-//  APPVV
+//  Dorapps
 //
-//  Created by Anselz on 14-6-30.
+//  Created by Anselz on 14-8-10.
 //  Copyright (c) 2014年 NeoWork. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "NWDownloadProtocol.h"
+#import "NWAppDownloader.h"
+#import "NWDownloaderDelegate.h"
 
-@class NWDownloadModel;
-@interface NWDownloadPool : NSOperation
+@interface NWDownloadPool : NSObject
 
-@property (nonatomic,strong) NSOperationQueue *operationQueue;
-+(instancetype)defaultDownloader;
+@property (retain, nonatomic) NSMutableArray* pool;
++ (NWDownloadPool *)downloadPool;
+-(NWAppDownloader*) addNewDownloadFromURL:(NSString*) url withDelegate:(id<NWDownloaderDelegate>) delegate;
+-(void) cancelAllDownloads;
+-(void) cancelDownloadByURL:(NSString*) url;
+-(void) cancelDownloadByTag:(NSInteger) tag;
 
--(NSString *)addDownloadTaskWith:(NSString *)url withDelegate:(id<NWDownloaderDelegate>)delegate;
-
--(void)cancelDownloadTaskWith:(NSString *)token;
-
--(void)setDownloadModel:(NSString *)token withModel:(NWDownloadModel *)newModel;
-
--(NWDownloadModel *)getDownloadModel:(NSString *)token;
-
-
--(void)downloadFinished:(NSString *)token withData:(NSData *)data;
 
 @end

@@ -16,6 +16,8 @@
 #import "NWUpdateManager.h"
 #import "NWUIConfig.h"
 #import "NWCategoryViewController.h"
+#import "UIDevice+JailBreak.h"
+#import "NWAppHelper.h"
 
 @implementation NWAppDelegate
 
@@ -27,9 +29,14 @@
     
     [self loadViewController];
     
+    if ([UIDevice isJailBreak]) {
+        NSLog(@"越狱");
+    } else {
+        NSLog(@"未越狱");
+    }
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
+    [NWAppHelper installApp:@""];
     return YES;
 }
 
