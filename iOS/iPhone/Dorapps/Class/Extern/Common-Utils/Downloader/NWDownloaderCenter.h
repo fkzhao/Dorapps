@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NWDownloadPool.h"
+#import "NWDowloadModel.h"
 
 /*!
  *  下载中心
@@ -47,10 +48,26 @@
 +(void)addDownloadTask:(NSString *)url withDelegate:(id<NWDownloaderDelegate>)delegate;
 
 /*!
+ *  添加下载任务
+ *
+ *  @param model      下载Model
+ *  @param delegate 代理
+ */
++(void)addDownloadTaskWith:(NWDowloadModel *)model withDelegate:(id<NWDownloaderDelegate>)delegate;
+
+/*!
  *  取消下载任务
  *
  *  @param url 下载的URL
  */
 +(void)cancelDownloadTask:(NSString *)url;
+
+/*!
+ *  取消下载任务
+ *
+ *  @param model 下载的Model
+ */
++(void)cancelDownloadTaskWith:(NWDowloadModel *)model;
+
 
 @end

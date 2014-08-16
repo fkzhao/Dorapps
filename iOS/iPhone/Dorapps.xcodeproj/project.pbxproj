@@ -121,7 +121,6 @@
 		6976346C1996FA8500D4B1DF /* NWAppDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976346B1996FA8500D4B1DF /* NWAppDownloader.m */; };
 		6976346F1996FA9500D4B1DF /* NWDownloaderCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976346E1996FA9500D4B1DF /* NWDownloaderCenter.m */; };
 		697634721996FE7D00D4B1DF /* NWDownloadPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 697634711996FE7D00D4B1DF /* NWDownloadPool.m */; };
-		697634761997003C00D4B1DF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 697634751997003C00D4B1DF /* Reachability.m */; };
 		69772F1B19725E4400118BBB /* NWManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F1919725E4400118BBB /* NWManageViewController.m */; };
 		69772F1C19725E4400118BBB /* NWManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69772F1A19725E4400118BBB /* NWManageViewController.xib */; };
 		69772F2C19727F1900118BBB /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 69772F2B19727F1900118BBB /* UIAlertView+Blocks.m */; };
@@ -155,6 +154,8 @@
 		69B473DE1970CF71002FCD82 /* toolBar_shade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B473CE1970CF71002FCD82 /* toolBar_shade@2x.png */; };
 		69B473E21970D036002FCD82 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B473E11970D036002FCD82 /* NSString+FontAwesome.m */; };
 		69B474F319712D8D002FCD82 /* NWStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B474F219712D8D002FCD82 /* NWStateView.m */; };
+		69C6355B199FEF1B0098D27E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C6355A199FEF1B0098D27E /* Reachability.m */; };
+		69C6355E199FF5710098D27E /* NWDowloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C6355D199FF5710098D27E /* NWDowloadModel.m */; };
 		69CCFBF319967086007D29AA /* NWHasApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CCFBB319967086007D29AA /* NWHasApp.m */; };
 		69CCFBF419967086007D29AA /* NWCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CCFBB719967086007D29AA /* NWCoreData.m */; };
 		69CCFBF519967086007D29AA /* NWCoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CCFBB919967086007D29AA /* NWCoreDataUtil.m */; };
@@ -379,15 +380,12 @@
 		694BDD31196EDAD500E60CF1 /* CoreBusiness.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreBusiness.xcodeproj; path = Dependency/CoreBusiness/CoreBusiness.xcodeproj; sourceTree = "<group>"; };
 		694BDD37196EDADD00E60CF1 /* CoreNetWork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreNetWork.xcodeproj; path = Dependency/CoreNetWork/CoreNetWork.xcodeproj; sourceTree = "<group>"; };
 		694BDD40196EDBF600E60CF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		6976346A1996FA8500D4B1DF /* NWAppDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWAppDownloader.h; sourceTree = "<group>"; };
 		6976346B1996FA8500D4B1DF /* NWAppDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWAppDownloader.m; sourceTree = "<group>"; };
 		6976346D1996FA9500D4B1DF /* NWDownloaderCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloaderCenter.h; sourceTree = "<group>"; };
 		6976346E1996FA9500D4B1DF /* NWDownloaderCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloaderCenter.m; sourceTree = "<group>"; };
 		697634701996FE7D00D4B1DF /* NWDownloadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDownloadPool.h; sourceTree = "<group>"; };
 		697634711996FE7D00D4B1DF /* NWDownloadPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDownloadPool.m; sourceTree = "<group>"; };
 		697634731996FE9900D4B1DF /* NWDownloaderDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NWDownloaderDelegate.h; sourceTree = "<group>"; };
-		697634741997003C00D4B1DF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		697634751997003C00D4B1DF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		69772F1819725E4400118BBB /* NWManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWManageViewController.h; sourceTree = "<group>"; };
 		69772F1919725E4400118BBB /* NWManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWManageViewController.m; sourceTree = "<group>"; };
 		69772F1A19725E4400118BBB /* NWManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWManageViewController.xib; sourceTree = "<group>"; };
@@ -433,6 +431,11 @@
 		69B473E11970D036002FCD82 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
 		69B474F119712D8D002FCD82 /* NWStateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWStateView.h; sourceTree = "<group>"; };
 		69B474F219712D8D002FCD82 /* NWStateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWStateView.m; sourceTree = "<group>"; };
+		69C63558199FEEC10098D27E /* NWAppDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWAppDownloader.h; sourceTree = "<group>"; };
+		69C63559199FEF1B0098D27E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		69C6355A199FEF1B0098D27E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		69C6355C199FF5710098D27E /* NWDowloadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWDowloadModel.h; sourceTree = "<group>"; };
+		69C6355D199FF5710098D27E /* NWDowloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWDowloadModel.m; sourceTree = "<group>"; };
 		69CCFBB219967086007D29AA /* NWHasApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWHasApp.h; sourceTree = "<group>"; };
 		69CCFBB319967086007D29AA /* NWHasApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWHasApp.m; sourceTree = "<group>"; };
 		69CCFBB619967086007D29AA /* NWCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWCoreData.h; sourceTree = "<group>"; };
@@ -963,15 +966,17 @@
 		697634691996FA6600D4B1DF /* Downloader */ = {
 			isa = PBXGroup;
 			children = (
-				697634741997003C00D4B1DF /* Reachability.h */,
-				697634751997003C00D4B1DF /* Reachability.m */,
+				69C63559199FEF1B0098D27E /* Reachability.h */,
+				69C6355A199FEF1B0098D27E /* Reachability.m */,
 				6976346D1996FA9500D4B1DF /* NWDownloaderCenter.h */,
 				6976346E1996FA9500D4B1DF /* NWDownloaderCenter.m */,
 				697634701996FE7D00D4B1DF /* NWDownloadPool.h */,
 				697634711996FE7D00D4B1DF /* NWDownloadPool.m */,
-				6976346A1996FA8500D4B1DF /* NWAppDownloader.h */,
+				69C63558199FEEC10098D27E /* NWAppDownloader.h */,
 				6976346B1996FA8500D4B1DF /* NWAppDownloader.m */,
 				697634731996FE9900D4B1DF /* NWDownloaderDelegate.h */,
+				69C6355C199FF5710098D27E /* NWDowloadModel.h */,
+				69C6355D199FF5710098D27E /* NWDowloadModel.m */,
 			);
 			path = Downloader;
 			sourceTree = "<group>";
@@ -1453,6 +1458,7 @@
 				694BDCAB196ED80700E60CF1 /* RTSpinKitView.m in Sources */,
 				694BDCF6196ED80700E60CF1 /* NWUpdateView.m in Sources */,
 				694BDCCC196ED80700E60CF1 /* NWRootView.m in Sources */,
+				69C6355E199FF5710098D27E /* NWDowloadModel.m in Sources */,
 				694BDCE2196ED80700E60CF1 /* NWHotTableViewCell.m in Sources */,
 				694BDCCB196ED80700E60CF1 /* NWNavigationBar.m in Sources */,
 				694BDCF7196ED80700E60CF1 /* NWAboutViewController.m in Sources */,
@@ -1492,11 +1498,11 @@
 				694BDCC8196ED80700E60CF1 /* NWRootViewController.m in Sources */,
 				694BDD01196ED80700E60CF1 /* NWShareViewController.m in Sources */,
 				69772F2F19727F5900118BBB /* NWButtonItem.m in Sources */,
+				69C6355B199FEF1B0098D27E /* Reachability.m in Sources */,
 				69CCFC0719967086007D29AA /* NWStatusBarView.m in Sources */,
 				699CDB8E1997CE5A00F431A5 /* NSURL+Filters.m in Sources */,
 				694BDCCD196ED80700E60CF1 /* NWToolbar.m in Sources */,
 				69CCFC0519967086007D29AA /* NWStatusBarNotification.m in Sources */,
-				697634761997003C00D4B1DF /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1634,7 +1640,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dorapps/Dorapps-Prefix.pch";
 				INFOPLIST_FILE = "Dorapps/Dorapps-Info.plist";
@@ -1652,7 +1658,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dorapps/Dorapps-Prefix.pch";
 				INFOPLIST_FILE = "Dorapps/Dorapps-Info.plist";

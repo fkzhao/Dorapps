@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+    eFileTypeDownloadFile,
+    eFileTypeOtherFile
+}eFileType;
+
 @interface NWFileManagerUtil : NSObject
 
 +(NSString *)getDocumentPath;
