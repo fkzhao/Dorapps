@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NWDowloadModel.h"
+#import "NWCircularProgressButton.h"
 
 @interface NWDownloadTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *appName;
+@property (weak, nonatomic) IBOutlet NWCircularProgressButton *progressButton;
 
+-(void)startDownload:(NWDowloadModel *)model;
 @end

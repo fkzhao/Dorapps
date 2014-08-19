@@ -9,6 +9,8 @@
 #import "NWDownloadingView.h"
 #import "NWDownloadTableViewCell.h"
 #import "NWTableViewCellUtil.h"
+#import "NWDowloadModel.h"
+#import "NWDownloaderCenter.h"
 
 @interface NWDownloadingView ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -74,17 +76,22 @@
     _dataSources = [[NSMutableArray alloc]initWithCapacity:0];
 }
 
+-(void)willMoveToSuperview:(UIView *)newSuperview
+{
+    _downloadingList = [NWDownloaderCenter defaultCenter].downloadingArray;
+    [self.mainTableView reloadData];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataSources.count + 2;
+    return _downloadingList.count;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (_dataSources.count+2 > 2) {
+    if (_downloadingList.count > 0 && _watingList.count > 0) {
         return 2;
     }
-    if (_dataSources.count+2 <= 2 && _dataSources.count+2 >=1) {
+    else if (_downloadingList.count > 0) {
         return 1;
     }
     return 0;
@@ -109,13 +116,11 @@
     if (cell == nil) {
         cell = (NWDownloadTableViewCell *)[NWTableViewCellUtil loadCell:NSStringFromClass([NWDownloadTableViewCell class]) atIndex:0];
     }
-    if (indexPath.row == 0) {
-        cell.appName.text = @"Weibo";
-        cell.iconImageView.image = [UIImage imageNamed:@"4"];
-    } else {
-        cell.appName.text = @"WeChat";
-        cell.iconImageView.image = [UIImage imageNamed:@"3"];
-    }
+    NWDowloadModel *model = (NWDowloadModel *)[_downloadingList objectAtIndex:indexPath.row];
+    cell.appName.text = model.appName;
+    [cell.iconImageView setImageWithURL:[NSURL URLWithString:model.appIcon]];
+    [cell startDownload:model];
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

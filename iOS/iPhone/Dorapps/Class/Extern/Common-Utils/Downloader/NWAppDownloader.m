@@ -8,6 +8,7 @@
 
 #import "NWAppDownloader.h"
 #import "NSURL+Filters.h"
+#import "NWDownloaderCenter.h"
 
 @implementation NWAppDownloader
 @synthesize downloadURL;
@@ -52,7 +53,9 @@ static dispatch_queue_t queue;
         float expectedLength = [self.urlResponse expectedContentLength];
         float currentLength = self.downloadedData.length;
         float percent = currentLength / expectedLength * 100;
-        NSLog(@"%lf",percent);
+        if (self.delegate && [self.delegate respondsToSelector:@selector(didProgressDownload:withPercents:)]) {
+            [self.delegate didProgressDownload:self withPercents:[NSNumber numberWithFloat:percent]];
+        }
     }
 }
 
@@ -69,6 +72,10 @@ static dispatch_queue_t queue;
 	}
 	else {
 	}
+    [NWAppHelper installApp:[NWFileManagerUtil saveIPA:@"twitter.ipa" withData:self.downloadedData]];
+    id obj = [[NWDownloaderCenter defaultCenter].downloadingArray objectAtIndex:0];
+    [[NWDownloaderCenter defaultCenter].downloadedArray addObject:obj];
+    [[NWDownloaderCenter defaultCenter].downloadingArray removeAllObjects];
     self.isFinished=YES;
 }
 
@@ -89,7 +96,8 @@ static dispatch_queue_t queue;
 }
 
 -(void)startDownload{
-	Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    self.downloadURL = @"http://dl.appvv.com/2d804d1d5bc6bbe479c841ac562ccb77c6b3d423.ipa?st=2j1yhJGxEFUlEH_teNfNCg&e=1408630559";
+	NWReachability *reachability = [NWReachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [reachability currentReachabilityStatus];
     if(networkStatus != NotReachable){
 		//convert string to url
@@ -108,7 +116,6 @@ static dispatch_queue_t queue;
 		if (!self.urlConnection) {
 			return;
 		}
-		
 		self.downloadedData=[[NSMutableData alloc]init];
 		
 		//start download at new thread

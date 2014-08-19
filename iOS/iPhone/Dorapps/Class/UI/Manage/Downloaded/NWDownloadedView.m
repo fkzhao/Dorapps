@@ -9,6 +9,9 @@
 #import "NWDownloadedView.h"
 #import "NWTableView.h"
 #import "NWDownloadedCell.h"
+#import "NWDownloaderCenter.h"
+#import "NWDowloadModel.h"
+
 @interface NWDownloadedView ()<NWTableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *_dataSources;
@@ -71,9 +74,14 @@
     _dataSources = [[NSMutableArray alloc]initWithCapacity:0];
 }
 
+-(void)willMoveToSuperview:(UIView *)newSuperview
+{
+    _dataSources = [[NWDownloaderCenter defaultCenter] downloadedArray];
+    [self.mainTableView reloadData];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataSources.count+1;
+    return _dataSources.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -86,6 +94,9 @@
     if (cell == nil) {
         cell = (NWDownloadedCell *)[NWTableViewCellUtil loadCell:NSStringFromClass([NWDownloadedCell class]) atIndex:0];
     }
+    NWDowloadModel *model = (NWDowloadModel *)[_dataSources objectAtIndex:indexPath.row];
+    cell.appName.text = model.appName;
+    [cell.appIcon setImageWithURL:[NSURL URLWithString:model.appIcon]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

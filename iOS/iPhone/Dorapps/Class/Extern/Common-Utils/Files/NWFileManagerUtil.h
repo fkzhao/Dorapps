@@ -20,6 +20,9 @@ typedef enum
 +(NSString *)getDownloaderPath;
 +(NSString *)getDownloaderItemPath:(NSString *)token;
 
++(BOOL)createDownloderFolder;
++(NSString *)saveIPA:(NSString *)ipaName withData:(NSData *)data;
+
 +(BOOL)createFolder:(NSString *)path;
 +(BOOL)removeFolder:(NSString *)path;
 

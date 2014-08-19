@@ -7,6 +7,7 @@
 //
 
 #import "NWDownloaderCenter.h"
+#import "NWDowloadModel.h"
 
 @implementation NWDownloaderCenter
 
@@ -45,6 +46,9 @@
 +(void)addDownloadTask:(NSString *)url withDelegate:(id<NWDownloaderDelegate>)delegate
 {
     NWDownloaderCenter *center = [NWDownloaderCenter defaultCenter];
+    if (center.downloadingArray.count > 0) {
+        return;
+    }
     if ([center.downloadingArray containsObject:url]) {
         return;
     }
@@ -54,7 +58,13 @@
     }
     NWDownloadPool *pool = [NWDownloadPool downloadPool];
     [pool addNewDownloadFromURL:url withDelegate:delegate];
-    
+    NWDowloadModel *model = [[NWDowloadModel alloc]init];
+    model.downloadURL = @"http://dl.appvv.com/2d804d1d5bc6bbe479c841ac562ccb77c6b3d423.ipa?st=2j1yhJGxEFUlEH_teNfNCg&e=1408630559";
+    model.appName = @"Twitter";
+    model.appVersion = @"6.11";
+    model.appSize = @"18.79MB";
+    model.appIcon = @"http://pic.appvv.com/8e654ea89ddc47f343d9714be46e71a4/175.png";
+    [center.downloadingArray addObject:model];
 }
 
 /*!
@@ -65,7 +75,8 @@
  */
 +(void)addDownloadTaskWith:(NWDowloadModel *)model withDelegate:(id<NWDownloaderDelegate>)delegate
 {
-    
+     NWDownloadPool *pool = [NWDownloadPool downloadPool];
+    [pool setDownloadDelegate:model.downloadURL withDelegate:delegate];
 }
 
 /*!

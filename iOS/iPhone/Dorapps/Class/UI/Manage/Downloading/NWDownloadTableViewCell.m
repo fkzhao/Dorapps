@@ -7,8 +7,10 @@
 //
 
 #import "NWDownloadTableViewCell.h"
+#import "NWDownloaderCenter.h"
+#import "NWDownloaderDelegate.h"
 
-@interface NWDownloadTableViewCell()
+@interface NWDownloadTableViewCell()<NWDownloaderDelegate>
 {
     
 }
@@ -74,5 +76,19 @@
 -(void)dealloc
 {
     
+}
+-(void)startDownload:(NWDowloadModel *)model
+{
+    [NWDownloaderCenter addDownloadTaskWith:model withDelegate:self];
+}
+
+-(void) didProgressDownload:(NWAppDownloader *) downloaderInst withPercents:(NSNumber *) percents
+{
+    if (percents.floatValue == 1.0) {
+        self.statusLabel.text = @"完成";
+    } else {
+        self.statusLabel.text = [NSString stringWithFormat:@"%.2lf%%",percents.floatValue];
+    }
+    [self.progressView setProgress:percents.floatValue/100];
 }
 @end

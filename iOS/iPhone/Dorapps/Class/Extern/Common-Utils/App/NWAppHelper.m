@@ -28,9 +28,9 @@
 
 +(void)installApp:(NSString *)path
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docDir = [paths objectAtIndex:0];
-    path = [NSString stringWithFormat:@"%@/test.ipa",docDir];
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *docDir = [paths objectAtIndex:0];
+//    path = [NSString stringWithFormat:@"%@/test.ipa",docDir];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         UIAlertView *alert = nil;
         if ([self IPAInstall:path]!= -1) {

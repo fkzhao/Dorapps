@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NWDownloadedCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *appName;
+@property (weak, nonatomic) IBOutlet UIImageView *appIcon;
 
 @end

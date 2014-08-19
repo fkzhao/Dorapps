@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "NWDownloaderDelegate.h"
-#import "Reachability.h"
+#import "NWReachability.h"
+#import "NWFileManagerUtil.h"
+#import "NWAppHelper.h"
 
 /*!
  *  下载器实例

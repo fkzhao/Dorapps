@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface NWDowloadModel : NSObject
 
 @property (nonatomic,strong) NSString *appName;
 @property (nonatomic,strong) NSString *appVersion;
 @property (nonatomic,strong) NSString *appSize;
 @property (nonatomic,strong) NSString *appIcon;
+@property (nonatomic,strong) NSString *downloadURL;
 
 @end

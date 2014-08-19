@@ -32,6 +32,11 @@
     return path;
 }
 
++(BOOL)createDownloderFolder
+{
+    [self createFolder:[self getDownloaderPath]];
+    return YES;
+}
 +(BOOL)createFolder:(NSString *)path
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -48,7 +53,14 @@
     } 
     return YES;
 }
-
++(NSString *)saveIPA:(NSString *)ipaName withData:(NSData *)data
+{
+    [self createDownloderFolder];
+    NSString *path = [self getDownloaderPath];
+    path = [path stringByAppendingPathComponent:ipaName];
+    [self witreFileTo:path withData:data];
+    return path;
+}
 +(BOOL)removeFolder:(NSString *)path
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];

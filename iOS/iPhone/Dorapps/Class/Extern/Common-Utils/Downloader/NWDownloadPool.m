@@ -53,7 +53,16 @@ static int tagCounter=0;
     [newDownloader startDownload];
     return newDownloader;
 }
-
+-(void)setDownloadDelegate:(NSString *)url withDelegate:(id<NWDownloaderDelegate>) delegate
+{
+    for (int i=0; i<[self.pool count]; i++) {
+        NWAppDownloader* downloader=((NWAppDownloader*)[self.pool objectAtIndex:i]);
+        if([downloader.downloadURL isEqualToString:url]){
+            downloader.delegate = delegate;
+            break;
+        }
+    }
+}
 -(void)cancelAllDownloads{
     for(int i=0;i<[self.pool count];i++)
     {

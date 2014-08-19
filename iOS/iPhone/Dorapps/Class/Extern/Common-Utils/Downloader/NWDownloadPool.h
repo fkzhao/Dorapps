@@ -15,6 +15,8 @@
 @property (retain, nonatomic) NSMutableArray* pool;
 + (NWDownloadPool *)downloadPool;
 -(NWAppDownloader*) addNewDownloadFromURL:(NSString*) url withDelegate:(id<NWDownloaderDelegate>) delegate;
+
+-(void)setDownloadDelegate:(NSString *)url withDelegate:(id<NWDownloaderDelegate>) delegate;
 -(void) cancelAllDownloads;
 -(void) cancelDownloadByURL:(NSString*) url;
 -(void) cancelDownloadByTag:(NSInteger) tag;

@@ -18,6 +18,7 @@
         self.appSize = @"";
         self.appVersion = @"";
         self.appIcon = @"";
+        self.downloadURL = @"";
     }
     return self;
 }
